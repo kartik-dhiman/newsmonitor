@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block title %} {{ id.name }} - Stories  {% endblock %}
+{% block content %}
+<br>
+
+<section id="main" class="wrapper">
+    <div class="inner">
+
+        <div>
+            <ul2>
+                <li>
+                    <label>
+                        <a href="/home" class="home">home</a>
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <a href="/elements/">Elements</a>
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <a href="/add_source/" >Add Source</a>
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <a href="/sources/" >Sources</a>
+                    </label>
+                </li>
+
+               <li>
+                    <label>
+                        <a href="/stories/" >Stories</a>
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <a href="/logout/">Logout - {{ user.username }}</a>
+                    </label>
+                </li>
+            </ul2>
+          </div>
+        <br>
+        <div class="content">
+           <div align="center">
+             <section class="container">
+                 <h3 style="font-size: 2rem">
+                     <a href="{{ rss_id.rss_url }}" target="_blank">
+                        <b> {{ rss_id.name }}  Stories</b>
+                     </a>
+                 </h3>
+
+                      {% for st in data %}
+                         <div style="text-align: left">
+                             <a href="{{ st.url }}" target="_blank">{{ st.title }} </a>
+                             <p style="font-size: small">
+                                 {{st.text|truncatewords:'100'}}
+                                 <br>
+                                 {% if st.publish_date %}
+                                    {{st.publish_date}}
+                                 {% endif %}
+                             </p>
+                         </div>
+                     {% endfor %}
+
+             </section>
+           </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block title %}Welcome to Django{% endblock %}
+{% block content %}
+<br>
+
+<section id="main" class="wrapper">
+    <div class="inner">
+        <div id="heading" >
+				<h1>Home</h1>
+        </div>
+        <br>
+        <div>
+            <ul2>
+                 <li>
+                    <label>
+                        <a href="/home" class="home">home</a>
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <a href="/elements/">Elements</a>
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <a href="/add_source/" >Add Source</a>
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <a href="/sources/" >Sources</a>
+                    </label>
+                </li>
+
+               <li>
+                    <label>
+                        <a href="/stories/" >Stories</a>
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <a href="/logout/">Logout - {{ user.username }}</a>
+                    </label>
+                </li>
+            </ul2>
+          </div>
+        <br>
+        <div class="content">
+           <div align="center">
+             <section class="container">
+                <p>
+                        Welcome {{ user.username }} !!!
+
+                </p>
+
+                 <div>
+                      {% for st in data %}
+                     <div style="text-align: left">
+                         <a href="{{ st.link }}">{{ st.title }} </a>
+                         <p style="font-size: small">
+                             {{st.text|truncatewords:'100'}}
+                         </p>
+                     </div>
+                     {% endfor %}
+                 </div>
+
+
+
+
+
+
+             </section>
+           </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

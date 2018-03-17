@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% block title %}Add Source{% endblock %}
+
+{% block content %}
+
+<section id="main" class="wrapper">
+    <div class="inner">
+        <br>
+         <div>
+           <ul2>
+                <li>
+                    <label>
+                        <a href="/home" class="home">home</a>
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <a href="/elements/">Elements</a>
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <a href="/add_source/" >Add Source</a>
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <a href="/sources/" >Sources</a>
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <a href="/add_story/" >Add Story</a>
+                    </label>
+                </li>
+
+
+               <li>
+                    <label>
+                        <a href="/stories/" >Stories</a>
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <a href="/logout/">Logout - {{ user.username }}</a>
+                    </label>
+                </li>
+            </ul2>
+          </div>
+         <br>
+        <div class="content">
+            <div class="testimonial" align="center">
+                 <section class="container">
+                     <form method="post" action=".">{% csrf_token %}
+                            <table class="add-source">
+                              <tr>
+                                    <th>
+                                        <label>Name</label>
+                                    </th>
+                                    <td>
+                                      {{ form.name }}
+                                    </td>
+                              </tr>
+                                <br>
+                              <tr>
+                                    <th>
+                                        <label >Url</label>
+                                    </th>
+                                    <td >
+                                     {{ form.rss_url }}
+                                    </td>
+                              </tr>
+                            </table >
+                        <button type="submit" class="small">Add</button>
+                     </form>
+                 </section>
+
+                {{ form.errors }}
+
+                  {% if form.non_field_errors %}
+                     {{ form.non_field_errors }}
+                  {% endif %}
+                 </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

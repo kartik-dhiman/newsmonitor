@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<!--
+    Industrious by TEMPLATED
+    templated.co @templatedco
+    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+    <head>
+        <title>News Monitoring {% block title %}{% endblock %}</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <link rel="stylesheet" href="{{ staticfiles }}/static/css/main.css" />
+        {% block headtag %}{% endblock %}
+    </head>
+    <body class="is-preload">
+        <div>
+        <!-- Header -->
+            <header id="header">
+                <a class="logo" href="/">News Monitoring</a>
+                <nav>
+                    <a href="#menu">Menu</a>
+                </nav>
+            </header>
+        </div>
+        <!-- Nav -->
+
+        <nav id="menu">
+            <ul class="links">
+                {% if user.is_authenticated %}
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/elements/">Elements</a></li>
+                    <li><a href="/sources">Sources</a> </li>
+
+                    <li><a href="/logout"> Logout</a> </li>
+                {% else %}
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/elements/">Elements</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+
+
+
+
+             {% block content %}
+
+
+
+
+
+             {% endblock %}
+
+        <!-- CTA -->
+            
+
+        <div>
+        <!-- Footer -->
+            <footer id="footer">
+                <div class="inner">
+                    <div class="content">
+                        <section>
+                            <h3>News Monitoring</h3>
+                            <p>
+                                News Monitoring keeps track of all the news you want either for your Business or your personal interest .
+                            </p>
+                        </section>
+                        <section>
+                            <h4>Anything</h4>
+                            <ul class="alt">
+                                <li><a href="#">Anything 1</a></li>
+                                <li><a href="#">Anything 2</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h4>Social Links</h4>
+                            <ul class="plain">
+                                <li><a href="http://www.twitter.com/kartikkd99" target="_blank"><i class="icon fa-twitter">&nbsp;</i>Twitter</a></li>
+                                <li><a href="http://facebook.com/kartik.dhiman3" target="_blank"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
+                                <li><a href="http://www.instagram.com/d_2amwriter" target="_blank"><i class="icon fa-instagram">&nbsp;</i>Instagram</a></li>
+                                <li><a href="http://www.github.com/kartikevold99" target="_blank"><i class="icon fa-github">&nbsp;</i>Github</a></li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div class="copyright">
+                        &copy; Kartik Dhiman , Software Developer, Contify</a>.
+                    </div>
+                </div>
+            </footer>
+
+        <!-- Scripts -->
+            <script src="{{ staticfiles }}/static/js/jquery.min.js"></script>
+            <script src="{{ staticfiles }}/static/js/browser.min.js"></script>
+            <script src="{{ staticfiles }}/static/js/breakpoints.min.js"></script>
+            <script src="{{ staticfiles }}/static/js/util.js"></script>
+            <script src="{{ staticfiles }}/static/js/main.js"></script>
+            
+    </body>
+</html>

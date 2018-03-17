@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+{% block title %}- Sources List{% endblock %}
+
+{% block content %}
+<br>
+<section id="main" class="wrapper">
+    <div class="inner">
+        <div>
+             <ul2>
+                <li>
+                    <label>
+                        <a href="/home" class="home">home</a>
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <a href="/elements/">Elements</a>
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <a href="/add_source/">Add Source</a>
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <a href="/sources/">Sources</a>
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <a href="/add_story/">Add Story</a>
+                    </label>
+                </li>
+
+
+               <li>
+                    <label>
+                        <a href="/stories/">Stories</a>
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        <a href="/logout/">Logout - {{ user.username }}</a>
+                    </label>
+                </li>
+
+                 <li>
+                    <form class="alt" method="get" action="/search/">{% csrf_token %}
+                            <li><input type="text" id="searchBox" class="small" name="q" placeholder="Search"></li>
+                            <li><input type="submit" class="button small--table" value="Search" ></li>
+                    </form>
+                 </li>
+            </ul2>
+          </div>
+        <br>
+        <div class="content">
+           <div align="center">
+             <section class="container">
+               <div style="float: right">
+                   Stories Count : {{ data|length }}
+               </div>
+                <table>
+                    <tr>
+
+                        <th>
+                            Name
+                        </th>
+
+                        <th>
+                            URL
+                        </th>
+
+                        <th >
+                            Feed
+                        </th>
+
+                        <th colspan="2" style="width: 15%;">
+                            Actions
+                        </th>
+                    </tr>
+
+                    {% for value in data %}
+                        <tr>
+                            <td>
+                                <label>
+                                    {{ value.name }}
+                                </label>
+                            </td>
+
+                            <td>
+                                <label>
+                                    <a href="{{ value.rss_url }}" target="_blank" >{{ value.rss_url }}</a>
+                                </label>
+                            </td>
+
+                            <td>
+                                <form class="alt" action="/fetch_story/" method="post">{% csrf_token %}
+                                       <input class="button small--table" type="hidden" name="item_id" value="{{value.id}}" />
+                                       <input class="button small--table" type="submit" value="Get" />
+                                </form>
+                            </td>
+
+                            <td>
+                                <form class="alt" action="/edit_source/" method="post">{% csrf_token %}
+                                       <input class="button small--table" type="hidden" name="item_id" value="{{value.id}}" />
+                                       <input class="button small--table" type="submit" value="Edit">
+                                </form>
+                            </td>
+
+                            <td>       
+                                <form class="alt" action="/remove_items/" method="post">{% csrf_token %}
+                                       <input class="button small--table" type="hidden" name="item_id" value="{{value.id}}" />
+                                       <input class="button small--table"  type="submit" value="Delete">
+                                </form>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </table>
+
+             </section>
+           </div>
+           <br>
+        </div>
+    </div>
+</section>
+{% endblock %}

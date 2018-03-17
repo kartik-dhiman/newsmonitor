@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+    <section id="cta" class="wrapper">
+        <div class="testimonials">
+            <section></section>
+            <section id="#cta" class="wrapper">
+                <div class="inner">
+                    <h2>Monitor News in your style</h2>
+                    <p>A new way to monitor news</p>
+                </div>
+
+            </section>
+            <section>
+                <div class="inner">
+                    <blockquote>
+                        <div class="content">
+                            <div class="wrapper" align="center">
+                                <section>
+                                    <form method="post" action=".">{% csrf_token %}
+                                        <table class="table-no-change" border="0">
+                                            <h2>Login</h2>
+                                            <br>
+                                            <div >
+
+                                                    {% if form.username.errors %}
+                                                          Username must contain only letters, numbers and underscores.
+                                                    {% endif %}
+
+                                                    {% if form.non_field_errors %}
+                                                          Username & Password does not match
+                                                    {% endif %}
+
+
+                                            </div>
+
+                                            {% for field in form %}
+                                                <tr>
+                                                  <td>
+                                                    {{ field }}
+                                                  </td>
+                                                </tr>
+                                            {% endfor %}
+
+                                            <tr>
+                                                <td>
+
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <button type="submit" class ="small">Login</button>
+                                    </form>
+
+
+                                    Not a User??<br>
+                                    <a href="sign_up/" ><button type="submit" class="small">Sign Up Instead</button></a>
+                                </section>
+                            </div>
+                        </div>
+                    </blockquote>
+                </div>
+            </section>
+        </div>
+    </section>
+{% endblock %}
