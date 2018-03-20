@@ -50,13 +50,15 @@
         <div class="content">
            <div align="center">
              <section class="container">
-                 <h3 style="font-size: 2rem">
-                     <a href="{{ rss_id.rss_url }}" target="_blank">
-                        <b> {{ rss_id.name }}  Stories</b>
-                     </a>
-                 </h3>
 
-                      {% for st in data %}
+                 {% if data %}
+                     <h3 style="font-size: 2rem">
+                         <a href="{{ rss_id.rss_url }}" target="_blank">
+                            <b> {{ rss_id.name }}  Stories</b>
+                         </a>
+                     </h3>
+
+                     {% for st in data %}
                          <div style="text-align: left">
                              <a href="{{ st.url }}" target="_blank">{{ st.title }} </a>
                              <p style="font-size: small">
@@ -68,6 +70,44 @@
                              </p>
                          </div>
                      {% endfor %}
+                 {% endif %}
+
+
+
+
+                 {% if url_error %}
+                     <h3 style="font-size: 2rem">
+                         <a href="/sources/" >
+                            <b> Sources</b>
+                         </a>
+                     </h3>
+
+                   {% for st in url_error %}
+                         <div style="text-align: left">
+                             <a href="/sources/">{{ st }} </a>
+                         </div>
+                     {% endfor %}
+
+                 {% endif %}
+
+                 {% if rss_error %}
+                     <h3 style="font-size: 2rem">
+                         <a href="/stories/">
+                            <b> Stories</b>
+                         </a>
+                     </h3>
+
+                   {% for st in rss_error %}
+                         <div style="text-align: left">
+                             <a href="/stories/">{{ st }} </a>
+                         </div>
+                     {% endfor %}
+
+                 {% endif %}
+
+
+
+
 
              </section>
            </div>

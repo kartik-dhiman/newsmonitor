@@ -182,33 +182,29 @@ def sources(request):
 #
 #     return HttpResponseRedirect('/sources/')
 
-
-
+@csrf_exempt
 def edit_source(request):
     if request.method == 'GET':
-        user = request.user
         if request.GET.get('item_id') is None:
             return HttpResponseRedirect('/sources/')
         else:
             item_id = int(request.GET.get('item_id'))
             item = Sourcing.objects.get(id=item_id)
             form = {
-                'name':item.name,
-                'rss_url':item.rss_url
+                'name': item.name,
+                'rss_url': item.rss_url,
+                'item':item
             }
-            form=EditSource(form, request.POST, user=request.user)
-            return render(request,'edit_source.html',{'form':form})
-    elif request.method == 'POST':
-        form = EditSource(request.POST, user=request.user)
+            form = EditSource(form, user = request.user)
+            return render_to_response('edit_source.html', {'form': form, 'user':request.user, 'id':item })
+    if request.method == 'POST':
+        form = EditSource(request.POST, user = request.user)
         if form.is_valid():
-            user = User.objects.get(id = request.user.id)
-            user = Sourcing(
-                name=form.cleaned_data['name'],
-                rss_url=form.cleaned_data['rss_url'],
-                created_by= user,
-                updated_by=user
-            )
-            user.save()
+            user = User.objects.get(id=request.user.id)
+            instance = Sourcing.objects.get(rss_url=form.cleaned_data['rss_url'], created_by_id=request.user.id)
+            instance.name = form.cleaned_data['name']
+            instance.rss_url = form.cleaned_data['rss_url']
+            instance.save()
             return HttpResponseRedirect('/sources/')
         else:
             return render(request, 'edit_source.html', {'form': form})
@@ -223,10 +219,9 @@ def edit_source(request):
 
 
 #-------------Remove item from database and return to Sources page with rest list of Sources
-@csrf_protect
 def remove_items(request):
-    if request.method == 'POST':
-        item_id = int(request.POST.get('item_id'))          # item_id    - ID of the item in the list of Sources page
+    if request.method == 'GET':
+        item_id = int(request.GET.get('item_id'))          # item_id    - ID of the item in the list of Sources page
         item = Sourcing.objects.get(id=item_id)             # Get the related database entry for that item
         item.delete()                                     # Deletes the item
         return HttpResponseRedirect('/sources/')            # Redirect to Sources view
@@ -238,6 +233,7 @@ def remove_items(request):
 
 #-------------Search the database for field - Name
 @login_required
+@csrf_protect
 def search(request):
     user = request.user
     query = request.GET['q']
@@ -257,21 +253,25 @@ def elements(request):
 
 # TODO fetch stories
 @login_required
-@csrf_protect
 def fetch_story(request):
-    if request.method == 'POST':
+    if request.method == 'GET':
         story_dict = []
-        id = request.POST.get('item_id')
+        id = request.GET.get('item_id')
         rss_url_id = Sourcing.objects.get(id__iexact=id)
         feed_data = feedparser.parse(rss_url_id.rss_url)
         if feed_data.bozo == 1:
-            data = {
+            url_error = {
                 'Possible Wrong URL. Click here to go back to Sources page.':'data'
             }
-            return render_to_response('fetch_story.html', {'data':data, 'user':request.user })
+            return render_to_response('fetch_story.html', {'url_error':url_error, 'user':request.user })
         else:
             for data in feed_data.get('entries'):
                 story_url = data.get('link')
+                if story_url is None:
+                    rss_error = {
+                        'Possible wrong RSS. Click here to go back to Stories page.': 'error'
+                    }
+                    return render_to_response('fetch_story.html', {'rss_error':rss_error, 'user': request.user})
                 article = Article(story_url)
                 article.download()
                 article.parse()
@@ -289,7 +289,7 @@ def fetch_story(request):
                 print(data,"**************************************************************************************")
                 story_dict += [data_var]
 
-            return render(request, 'fetch_story.html' , {'data':story_dict,
+            return render_to_response('fetch_story.html' , {'data':story_dict,
                                                          'rss_id':rss_url_id,
                                                          'user':request.user} )
     else:
@@ -313,6 +313,7 @@ def stories(request):
 
 
 @login_required
+@csrf_protect
 def search_stories(request):
     user = request.user
     query = request.GET['q']
@@ -326,10 +327,9 @@ def search_stories(request):
 
 
 #-------------Remove item from database and return to Sources page with rest list of Sources
-@csrf_protect
 def remove_story(request):
-    if request.method == 'POST':
-        item_id = int(request.POST.get('item_id'))          # item_id    - ID of the item in the list of Sources page
+    if request.method == 'GET':
+        item_id = int(request.GET.get('item_id'))          # item_id    - ID of the item in the list of Sources page
         item = Stories.objects.get(id=item_id)             # Get the related database entry for that item
         item.delete()                                       # Deletes the item
         return HttpResponseRedirect('/stories/')            # Redirect to Sources view

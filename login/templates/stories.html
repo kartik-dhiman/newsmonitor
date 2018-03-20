@@ -124,7 +124,7 @@
                                        <input class="button small--table" type="submit" value=" &nbsp;&nbsp;Edit&nbsp;&nbsp; ">
                                 </form>
 
-                                <form class="alt" action="/remove_story/" method="post">{% csrf_token %}
+                                <form class="alt" action="/remove_story/" method="get" onsubmit="return confirm('Do you really want to Delete');">{% csrf_token %}
                                        <input class="button small--table" type="hidden" name="item_id" value="{{value.id}}" />
                                        <input class="button small--table"  type="submit" value="Delete">
                                 </form>

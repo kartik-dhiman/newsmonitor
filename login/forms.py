@@ -80,9 +80,6 @@ class AddSource(forms.Form):
 
 
 
-
-
-
 class EditSource(forms.Form):
     name= forms.RegexField(regex=r'^[\w .@+-]+$', widget=forms.TextInput(attrs=dict(required=True,
                                                                                       max_length=300,
@@ -100,9 +97,9 @@ class EditSource(forms.Form):
         try:
             rss = Sourcing.objects.get(rss_url__iexact=self.cleaned_data['rss_url'],
                                        created_by_id=self.user.id)
+            return rss
         except Sourcing.DoesNotExist:
             return self.cleaned_data
-        raise forms.ValidationError(_("This Url already exist"))
 
 
 

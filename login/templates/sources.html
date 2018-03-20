@@ -100,7 +100,7 @@
                             </td>
 
                             <td>
-                                <form class="alt" action="/fetch_story/" method="post">{% csrf_token %}
+                                <form class="alt" action="/fetch_story/" method="get">
                                        <input class="button small--table" type="hidden" name="item_id" value="{{value.id}}" />
                                        <input class="button small--table" type="submit" value="Get" />
                                 </form>
@@ -114,7 +114,7 @@
                             </td>
 
                             <td>       
-                                <form class="alt" action="/remove_items/" method="post">{% csrf_token %}
+                                <form class="alt" action="/remove_items/" method="get" onsubmit="return confirm('Do you really want to Delete');">{% csrf_token %}
                                        <input class="button small--table" type="hidden" name="item_id" value="{{value.id}}" />
                                        <input class="button small--table"  type="submit" value="Delete">
                                 </form>
