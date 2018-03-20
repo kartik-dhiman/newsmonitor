@@ -12,7 +12,7 @@ from django.db.models import Q
 import feedparser
 from newspaper.article import Article
 from login.models import *
-from django.views.generic.edit import UpdateView
+from django.views.generic.edit import UpdateView , CreateView
 
 
 
@@ -104,7 +104,6 @@ def add_source(request):
         form = AddSource(request.POST, user=request.user)
         if form.is_valid():
             s = User.objects.get(id=request.user.id)
-            print(form.cleaned_data, "___________________________________________________________--")
             user = Sourcing(
                 name=form.cleaned_data['name'],
                 rss_url=form.cleaned_data['rss_url'],
@@ -115,26 +114,25 @@ def add_source(request):
             return HttpResponseRedirect('/add_source/')
         else:
             return render(request, 'add_source.html', {'form': form})
-    elif request.method == 'GET':
-        if request.GET.get('item_id') is None:
-            form = AddSource(request)
-            return render(request, 'add_source.html', {'form': form})
-        item_id = int(request.GET.get('item_id'))
-        item = Sourcing.objects.get(id=item_id)
-        form = {
-            'name':item.name,
-            'rss_url':item.rss_url
-        }
-        print(form,"________________________________HERE____________________________")
-        form=AddSource(form, user=request.user)
-        return render(request,'add_source.html', {'form':form})
-    else:
-        form = AddSource(user=request.user)
-        return render(request, 'add_source.html', {'form': form})
+    form = AddSource(user=request.user)
+    return render(request, 'add_source.html', {'form': form})
 
-
-
-
+    # elif request.method == 'GET':
+    #     if request.GET.get('item_id') is None:
+    #         form = AddSource()
+    #         return render(request, 'add_source.html', {'form': form})
+    #     item_id = int(request.GET.get('item_id'))
+    #     item = Sourcing.objects.get(id=item_id)
+    #     form = {
+    #         'name':item.name,
+    #         'rss_url':item.rss_url
+    #     }
+    #     print(form,"________________________________HERE____________________________")
+    #     form=AddSource(form, user=request.user)
+    #     return render_to_response('add_source.html', {'form':form})
+    # else:
+    #     form = AddSource(user=request.user)
+    #     return render(request, 'add_source.html', {'form': form})
 
 
 
@@ -150,7 +148,9 @@ def sources(request):
         data = Sourcing.objects.filter(created_by_id=s.id)
         return render(request, 'sources.html', {'data': data})
 
-#
+
+#backup EDIT_SOURCE
+# @csrf_protect
 # def edit_source(request):
 #     if request.method == 'GET':
 #         user = request.user
@@ -163,11 +163,11 @@ def sources(request):
 #                 'name':item.name,
 #                 'rss_url':item.rss_url
 #             }
-#             form=EditSource(form)
+#             form=EditSource(form, request.POST, user=request.user)
 #             return render_to_response('edit_source.html',{'form':form})
 #     elif request.method == 'POST':
 #         user = request.user
-#         form = EditSource()
+#         form = EditSource(request.POST, user=request.user)
 #         if form.is_valid():
 #             user = Sourcing(
 #                 name=form.cleaned_data['name'],
@@ -175,13 +175,50 @@ def sources(request):
 #                 created_by=user.id,
 #                 updated_by=user.id
 #             )
-#             user.save()
+#             user.update()
 #             return HttpResponseRedirect('/sources/')
 #         else:
 #             return render(request, 'edit_source.html', {'form': form})
 #
 #     return HttpResponseRedirect('/sources/')
-#
+
+
+
+def edit_source(request):
+    if request.method == 'GET':
+        user = request.user
+        if request.GET.get('item_id') is None:
+            return HttpResponseRedirect('/sources/')
+        else:
+            item_id = int(request.GET.get('item_id'))
+            item = Sourcing.objects.get(id=item_id)
+            form = {
+                'name':item.name,
+                'rss_url':item.rss_url
+            }
+            form=EditSource(form, request.POST, user=request.user)
+            return render(request,'edit_source.html',{'form':form})
+    elif request.method == 'POST':
+        form = EditSource(request.POST, user=request.user)
+        if form.is_valid():
+            user = User.objects.get(id = request.user.id)
+            user = Sourcing(
+                name=form.cleaned_data['name'],
+                rss_url=form.cleaned_data['rss_url'],
+                created_by= user,
+                updated_by=user
+            )
+            user.save()
+            return HttpResponseRedirect('/sources/')
+        else:
+            return render(request, 'edit_source.html', {'form': form})
+
+    return HttpResponseRedirect('/sources/')
+
+
+
+
+
 
 
 

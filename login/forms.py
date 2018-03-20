@@ -1,7 +1,7 @@
 #files.py
 import re
 from django import forms
-import datetime
+from django.views.decorators.csrf import  csrf_exempt
 from django.utils.translation import ugettext_lazy as _
 from login.models import *
 from django.contrib.auth.forms import AuthenticationForm
@@ -55,8 +55,6 @@ class RegistrationForm(forms.Form):
 
 
 class AddSource(forms.Form):
-
-
     name= forms.RegexField(regex=r'^[\w .@+-]+$', widget=forms.TextInput(attrs=dict(required=True,
                                                                                       max_length=300,
                                                                                       placeholder="Name")))
@@ -71,21 +69,46 @@ class AddSource(forms.Form):
         print(self.user)
         super(AddSource, self).__init__(*args, **kwargs)
 
-    #
-    # def clean(self):
-    #     try:
-    #         rss = Sourcing.objects.get(rss_url__iexact=self.cleaned_data['rss_url'],
-    #                                    created_by_id=self.user.id)
-    #     except Sourcing.DoesNotExist:
-    #         return self.cleaned_data
-    #     raise forms.ValidationError(_("This Url already exist"))
+
+    def clean(self):
+        try:
+            rss = Sourcing.objects.get(rss_url__iexact=self.cleaned_data['rss_url'],
+                                       created_by_id=self.user.id)
+        except Sourcing.DoesNotExist:
+            return self.cleaned_data
+        raise forms.ValidationError(_("This Url already exist"))
+
+
+
+
+
+
+class EditSource(forms.Form):
+    name= forms.RegexField(regex=r'^[\w .@+-]+$', widget=forms.TextInput(attrs=dict(required=True,
+                                                                                      max_length=300,
+                                                                                      placeholder="Name")))
+    rss_url= forms.URLField(widget=forms.URLInput(attrs=dict(required=True,
+                                                              max_length=300,
+                                                              placeholder="URL")))
+
+    def __init__(self, *args, **kwargs):
+        self.user = kwargs.pop('user', None)
+        print(self.user)
+        super(EditSource, self).__init__(*args, **kwargs)
+
+    def clean(self):
+        try:
+            rss = Sourcing.objects.get(rss_url__iexact=self.cleaned_data['rss_url'],
+                                       created_by_id=self.user.id)
+        except Sourcing.DoesNotExist:
+            return self.cleaned_data
+        raise forms.ValidationError(_("This Url already exist"))
+
 
 
 
 
 class AddStory(forms.Form):
-
-
     def __init__(self, *args, **kwargs):
         self.user = kwargs.pop('user', None)
         super(AddStory, self).__init__(*args, **kwargs)
