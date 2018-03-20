@@ -38,7 +38,8 @@ urlpatterns = [
     path('stories/', views.stories),
     path('search_stories/', views.search_stories),
     path('remove_story/', views.remove_story),
-    path('add_story/', views.add_story)
+    path('add_story/', views.add_story),
+    path('edit_source/', views.add_source)
 
 
 

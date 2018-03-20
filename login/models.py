@@ -24,8 +24,8 @@ class Sourcing(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
 
 
-    def __unicode__(self):
-        return self.name
+    def __str__(self):
+        return u'{0}'.format(self.name)
 
 
 class Stories(models.Model):
@@ -36,4 +36,4 @@ class Stories(models.Model):
     url = models.URLField(max_length=1000, null=True, blank=True)
 
     def __unicode__(self):
-        return self.title
+        return u'{0}'.format(self.name)

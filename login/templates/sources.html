@@ -107,7 +107,7 @@
                             </td>
 
                             <td>
-                                <form class="alt" action="/edit_source/" method="post">{% csrf_token %}
+                                <form class="alt" action="/edit_source/" method="get">
                                        <input class="button small--table" type="hidden" name="item_id" value="{{value.id}}" />
                                        <input class="button small--table" type="submit" value="Edit">
                                 </form>
