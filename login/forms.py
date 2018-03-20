@@ -93,14 +93,6 @@ class EditSource(forms.Form):
         print(self.user)
         super(EditSource, self).__init__(*args, **kwargs)
 
-    def clean(self):
-        try:
-            rss = Sourcing.objects.get(rss_url__iexact=self.cleaned_data['rss_url'],
-                                       created_by_id=self.user.id)
-            return rss
-        except Sourcing.DoesNotExist:
-            return self.cleaned_data
-
 
 
 
