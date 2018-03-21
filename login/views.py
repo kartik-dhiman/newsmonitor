@@ -1,12 +1,11 @@
-# Create your views here.
-
 import datetime
 from login.forms import *
 from django.views.decorators.csrf import csrf_protect, csrf_exempt
 from django.shortcuts import render, render_to_response
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth import logout
+from django.contrib.auth import logout, authenticate
+from django.contrib.auth import login as auth_login
 import feedparser
 from newspaper.article import Article
 from login.models import *
@@ -24,21 +23,13 @@ def register(request):
                 first_name=form.cleaned_data['fname'],
                 last_name=form.cleaned_data['lname']
             )
-            return HttpResponseRedirect('/register/success/')
+            # Authenticate and Login User after Sign Up
+            user = authenticate(username=form.cleaned_data['username'], password=form.cleaned_data['password1'])
+            auth_login(request, user)
+            return HttpResponseRedirect('/register_success/')
     else:
         form = RegistrationForm()
     return render(request, 'registration/sign_up.html', {'form': form})
-
-
-#
-# TODO in Register : Login the fresh USER
-# @csrf_protect
-# def login(request):
-#     if request.method == 'POST':
-#         form = Login(request.POST)
-#         if form.is_valid():
-#             user = authenticate(username=form.cleaned_data['username'], password=form.cleaned_data['password'])
-#             auth_login(request, user)
 
 
 # Show a register success page for 2 seconds. and then redirect to Login
@@ -85,6 +76,7 @@ def add_source(request):
 @login_required
 def sources_list(request):
     user = User.objects.get(username=request.user)
+    # If Staff/SuperUser show all else show User wise data
     if user.is_staff or user.is_superuser:
         data = Sourcing.objects.all()
         return render(request, 'sources.html', {'data': data})
@@ -113,6 +105,7 @@ def edit_source(request):
     if request.method == 'POST':
         form = EditSource(request.POST, user=request.user)
         if form.is_valid():
+            # Get Source instance and update its changed data.
             source_instance = Sourcing.objects.get(id=form.cleaned_data['item_id'])
             source_instance.name = form.cleaned_data['name']
             source_instance.rss_url = form.cleaned_data['rss_url']
@@ -142,11 +135,14 @@ def search_source(request):
     user = request.user
     query = request.GET['q']
     if query == '':
+        # Return to Sources LIst if Query is empty
         return HttpResponseRedirect('/sources_list/')
     elif request.user.is_staff or request.user.is_superuser:
+        # Query in whole Table for Staff/Super User
         data = Sourcing.objects.filter(models.Q(name__icontains=query) | models.Q(rss_url__icontains=query))
         return render_to_response('sources.html', {'data': data, 'user': request.user})
     else:
+        # Show data user-wise
         data = Sourcing.objects.filter(
             models.Q(name__icontains=query) | models.Q(rss_url__icontains=query),
             created_by_id=user.id
@@ -157,10 +153,16 @@ def search_source(request):
 @login_required
 def fetch_story(request):
     if request.method == 'GET':
+        # List to store all the parsed RSS entries.
         story_list = []
+        # Source Url Id and Fetch Source Url Object.
         source_id = request.GET.get('item_id')
         rss_obj = Sourcing.objects.get(id=source_id)
+
+        # Parse the RSS URL and get the data
         feed_data = feedparser.parse(rss_obj.rss_url)
+
+        # Detects if the Url is not well formed RSS
         if feed_data.bozo == 1:
             url_error = {
                 'Possible Wrong URL. Click here to go back to Sources page.'
@@ -169,11 +171,13 @@ def fetch_story(request):
         else:
             for data in feed_data.get('entries'):
                 story_url = data.get('link')
+                # If RSS is Empty return Story listing page
                 if story_url is None:
                     rss_error = {
                         'Either RSS is empty or RSS is broken. Click here to go back to Story Listing page'
                     }
                     return render_to_response('fetch_story.html', {'rss_error': rss_error, 'user': request.user})
+                # Use newspaper library to download the article
                 article = Article(story_url)
                 article.download()
                 article.parse()
@@ -188,8 +192,8 @@ def fetch_story(request):
                     url=article_instance.url
                 )
                 story.save()
+                # Add each downloaded article details to Story_list and pass to HTML template.
                 story_list += [article_instance]
-
             return render_to_response('fetch_story.html', {
                                                         'data': story_list,
                                                         'rss_id': rss_obj,
@@ -202,9 +206,11 @@ def fetch_story(request):
 def stories_list(request):
     user_id = User.objects.get(id=request.user.id)
     if user_id.is_staff or user_id.is_superuser:
+        # Show all stories to StaffUser or Superuser
         data = Stories.objects.all()
         return render(request, 'stories.html', {'data': data})
     else:
+        # Get stories created by Logged-In user.
         data = Stories.objects.filter(source_id__created_by_id=user_id)
     return render(request, 'stories.html', {'data': data})
 
@@ -212,13 +218,17 @@ def stories_list(request):
 @login_required
 @csrf_protect
 def search_stories(request):
+    # Get the item to be searched for.
     query = request.GET['q']
     if query == '':
-        return HttpResponseRedirect('/stories/')
+        # If query empty, reutrn to stories list page
+        return HttpResponseRedirect('/stories_list/')
     elif request.user.is_staff or request.user.is_superuser:
+        # If user is staff User of SuperUser, query for the whole Stories table.
         data = Stories.objects.filter(models.Q(body_text__icontains=query) | models.Q(title__icontains=query))
         return render_to_response('stories.html', {'data': data, 'user': request.user})
     else:
+        # Else query for the stories created by Logged-In user
         data = Stories.objects.filter(models.Q(
                                     body_text__icontains=query) | models.Q(title__icontains=query),
                                     source_id__created_by_id=request.user.id)
@@ -240,10 +250,12 @@ def add_story(request):
     if request.method == 'POST':
         form = AddStory(request.POST, user=request.user)
         if form.is_valid():
+            # Save story after validating data
             story = Stories(
                 title=form.cleaned_data['title'],
                 body_text=form.cleaned_data['body'],
                 pub_date=form.cleaned_data['pub_date'],
+                # Pass id of the Sourcing instance.
                 source_id=form.cleaned_data['source'].id,
                 url=form.cleaned_data['url']
             )
@@ -260,8 +272,10 @@ def add_story(request):
 def edit_story(request):
     if request.method == 'GET':
         if request.GET.get('item_id') is None:
+            # If edit item Id is not fetched.
             return HttpResponseRedirect('/stories_list/')
         else:
+            # Get Sourcing Instance of that item
             item_id = int(request.GET.get('item_id'))
             item = Stories.objects.get(id=item_id)
             form = {
@@ -269,14 +283,17 @@ def edit_story(request):
                 'url': item.url,
                 'body': item.body_text,
                 'source': item.source_id,
+                # Format time to date/time format
                 'pub_date': datetime.datetime.strftime(item.pub_date, '%Y-%m-%d %H:%M:%S'),
                 'item_id': item.id,
             }
+            # Pass this data to Edit Story form
             form = EditStory(form, user=request.user)
             return render_to_response('edit_story.html', {'form': form, 'user': request.user})
     if request.method == 'POST':
         form = EditStory(request.POST, user=request.user)
         if form.is_valid():
+            # If form is valid,  Get Story instance and update the Stories data.
             instance = Stories.objects.get(id=form.cleaned_data['item_id'])
             instance.title = form.cleaned_data['title']
             instance.url = form.cleaned_data['url']
@@ -287,5 +304,4 @@ def edit_story(request):
             return HttpResponseRedirect('/stories_list/')
         else:
             return render(request, 'edit_story.html', {'form': form})
-
     return HttpResponseRedirect('/stories_list/')

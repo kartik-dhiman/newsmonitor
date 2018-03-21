@@ -81,9 +81,13 @@
                      </form>
                  </section>
 
-                {{ form.errors }}
+                 <p>
                   {% if form.non_field_errors %}
                      {{ form.non_field_errors }}
+                  {% endif %}
+
+                  {% if form.errors %}
+                        {{ form.errors }}
                   {% endif %}
                  </p>
             </div>

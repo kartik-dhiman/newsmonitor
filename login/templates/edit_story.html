@@ -59,8 +59,7 @@
                                       {{ form.title }}
                                     </td>
                               </tr>
-                                <br>
-                                <tr>
+                              <tr>
                                     <th>
                                         <label >Body</label>
                                     </th>
@@ -68,7 +67,7 @@
                                      {{ form.body }}
                                     </td>
                               </tr>
-                                <tr>
+                              <tr>
                                     <th>
                                         <label >Publish Date</label>
                                     </th>
@@ -84,7 +83,7 @@
                                         {{ form.source }}
                                     </td>
                               </tr>
-                                <tr>
+                              <tr>
                                     <th>
                                         <label >Url</label>
                                     </th>
@@ -93,26 +92,26 @@
                                     </td>
                               </tr>
 
-                            <tr>
+                              <tr>
                                 <th>
 
                                 </th>
                                 <td >
                                  {{ form.item_id.as_hidden }}
                                 </td>
-                            </tr>
-
-                            </table >
+                              </tr>
+                            </table>
                         <button type="submit" class="small">Add</button>
                      </form>
                  </section>
 
-                {{ form.errors }}
-
-                  {% if form.non_field_errors %}
+                 {% if form.non_field_errors %}
                      {{ form.non_field_errors }}
-                  {% endif %}
+                 {% endif %}
 
+                 {% if form.errors %}
+                     {{ form.errors }}
+                 {% endif %}
             </div>
         </div>
     </div>

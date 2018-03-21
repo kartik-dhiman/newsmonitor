@@ -31,7 +31,7 @@
                     </label>
                 </li>
 
-               <li>
+                <li>
                     <label>
                         <a href="/stories_list/" >Stories</a>
                     </label>
@@ -43,19 +43,13 @@
                     </label>
                 </li>
                 <li>
-                <form class="alt" method="get" action="/search_stories/">
-                    <li><input type="text" id="searchBox" class="small" name="q" placeholder="Search"></li>
-                    <li><input type="submit" class="button small--table" value="Search" ></li>
+                    <form class="alt" method="get" action="/search_stories/">
+                        <li><input type="text" id="searchBox" class="small" name="q" placeholder="Search"></li>
+                        <li><input type="submit" class="button small--table" value="Search" ></li>
 
-                </form>
-                 </li>
+                    </form>
+                </li>
             </ul2>
-
-
-
-            <div>
-
-            </div>
           </div>
         <br>
     </div>
@@ -117,7 +111,7 @@
                                                <input class="button small--table" type="submit" value=" &nbsp;&nbsp;Edit&nbsp;&nbsp; ">
                                         </form>
 
-                                        <form class="alt" action="/remove_story/" method="get" onsubmit="return confirm('Do you really want to Delete');">{% csrf_token %}
+                                        <form class="alt" action="/remove_story/" method="get" onsubmit="return confirm('Do you really want to Delete');">
                                                <input class="button small--table" type="hidden" name="item_id" value="{{value.id}}" />
                                                <input class="button small--table"  type="submit" value="Delete">
                                         </form>
@@ -126,15 +120,11 @@
                             {% endfor %}
                         </table>
                  {% else %}
-
                             <p> There are no Stories.</p>
-
                  {% endif %}
-
              </section>
            </div>
            <br>
         </div>
-    </div>
 </section>
 {% endblock %}

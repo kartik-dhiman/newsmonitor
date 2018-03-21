@@ -42,5 +42,4 @@
 				side: 'right'
 			});
 
-
 })(jQuery);

@@ -22,12 +22,13 @@ from login import views
 from django.conf import settings
 from django.conf.urls.static import static
 
+
 urlpatterns = [
     path('', login, name='login', kwargs={"authentication_form": CustomAuthForm}),
     path('logout/', views.logout_page),
     path('accounts/login/', login),
     path('sign_up/', views.register),
-    path('register/success/', views.register_success),
+    path('register_success/', views.register_success),
     path('home/', views.home),
     path('add_source/', views.add_source),
     path('sources_list/', views.sources_list),
@@ -40,11 +41,8 @@ urlpatterns = [
     path('remove_story/', views.remove_story),
     path('add_story/', views.add_story),
     path('edit_story/', views.edit_story)
-
-
-
-
 ]
+
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

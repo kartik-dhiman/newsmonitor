@@ -1,5 +1,3 @@
-
-
 from django import forms
 from django.utils.translation import ugettext_lazy as _
 from login.models import *
@@ -60,7 +58,6 @@ class AddSource(forms.Form):
 
     def __init__(self, *args, **kwargs):
         self.user = kwargs.pop('user', None)
-        print(self.user)
         super(AddSource, self).__init__(*args, **kwargs)
 
     def clean(self):
@@ -152,7 +149,7 @@ class EditStory(forms.Form):
     )
 
     pub_date = forms.DateTimeField(
-        widget=forms.DateTimeInput(attrs=dict(placeholder="Date Format YYYY-mm-dd HH:MM:SS "),
+        widget=forms.DateTimeInput(attrs=dict(placeholder="Date Format YYYY-mm-dd HH:MM:SS"),
                                    format=['%Y-%m-%d %H:%M:%S.%f'])
     )
 

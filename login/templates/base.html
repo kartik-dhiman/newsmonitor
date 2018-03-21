@@ -30,9 +30,8 @@
             <ul class="links">
                 {% if user.is_authenticated %}
                     <li><a href="/home">Home</a></li>
-                    <li><a href="/elements/">Elements</a></li>
-                    <li><a href="/sources_list/">Sources</a> </li>
-
+                    <li><a href="/stories_list/">Stories</a></li>
+                    <li><a href="/sources_list/">Sources</a></li>
                     <li><a href="/logout/"> Logout</a> </li>
                 {% else %}
                     <li><a href="/">Home</a></li>
@@ -42,18 +41,11 @@
         </nav>
 
 
+        <!-- Block content for all the pages that inherit this page -->
+         {% block content %}
 
+         {% endblock %}
 
-             {% block content %}
-
-
-
-
-
-             {% endblock %}
-
-        <!-- CTA -->
-            
 
         <div>
         <!-- Footer -->
