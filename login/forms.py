@@ -1,48 +1,43 @@
-#files.py
-import re
+
+
 from django import forms
-from django.views.decorators.csrf import  csrf_exempt
 from django.utils.translation import ugettext_lazy as _
 from login.models import *
 from django.contrib.auth.forms import AuthenticationForm
 from django.forms.widgets import PasswordInput
 
 
-
 class RegistrationForm(forms.Form):
+    username = forms.RegexField(
+        regex=r'^\w+$',
+        widget=forms.TextInput(attrs=dict(required=True, max_length=30, placeholder="Username")),
+        error_messages={'invalid': _("This value must contain only letters, numbers and underscores.")}
+    )
 
-    username= forms.RegexField(regex=r'^\w+$',
-                               widget=forms.TextInput(
-                                   attrs=dict(required=True,
-                                              max_length=30,
-                                              placeholder="Username")),
-                               error_messages={ 'invalid': _("This value must contain only letters, numbers and underscores.")})
+    email = forms.EmailField(
+        widget=forms.EmailInput(attrs=dict(required=True, max_length=30, placeholder="Email"))
+    )
 
-    email = forms.EmailField(widget=forms.EmailInput(attrs=dict(required=True,
-                                                                max_length=30,
-                                                                placeholder="Email")))
+    password1 = forms.CharField(
+        widget=forms.PasswordInput(attrs=dict(required=True, max_length=30, render_value=False, placeholder="Password"))
+    )
 
-    password1 = forms.CharField(widget=forms.PasswordInput(attrs=dict(required=True,
-                                                                      max_length=30,
-                                                                      render_value=False,
-                                                                      placeholder="Password")))
+    password2 = forms.CharField(
+        widget=forms.PasswordInput(attrs=dict(required=True, max_length=30, render_value=False,
+                                              placeholder="Re-Enter Password"))
+    )
 
-    password2 = forms.CharField(widget=forms.PasswordInput(attrs=dict(required=True,
-                                                                      max_length=30,
-                                                                      render_value=False,
-                                                                      placeholder="Re-Enter Password")))
+    fname = forms.CharField(
+        widget=forms.TextInput(attrs=dict(required=True, max_length=30, placeholder="First Name"))
+    )
 
-    fname = forms.CharField(widget=forms.TextInput(attrs=dict(required=True,
-                                                              max_length=30,
-                                                              placeholder="First Name" )))
-
-    lname = forms.CharField(widget=forms.TextInput(attrs=dict(required=True,
-                                                              max_length=30,
-                                                              placeholder="Last Name")))
+    lname = forms.CharField(
+        widget=forms.TextInput(attrs=dict(required=True, max_length=30, placeholder="Last Name"))
+    )
 
     def clean_username(self):
         try:
-            user = User.objects.get(username__iexact=self.cleaned_data['username'])
+            User.objects.get(username__iexact=self.cleaned_data['username'])
         except User.DoesNotExist:
             return self.cleaned_data['username']
         raise forms.ValidationError(_("Username already exists. Please try another one."))
@@ -53,49 +48,48 @@ class RegistrationForm(forms.Form):
                 raise forms.ValidationError(_("The two password fields did not match."))
 
 
-
 class AddSource(forms.Form):
-    name= forms.RegexField(regex=r'^[\w .@+-]+$', widget=forms.TextInput(attrs=dict(required=True,
-                                                                                      max_length=300,
-                                                                                      placeholder="Name")))
+    name = forms.RegexField(
+        regex=r'^[\w .@+-]+$',
+        widget=forms.TextInput(attrs=dict(required=True, max_length=300, placeholder="Name"))
+    )
 
-    rss_url= forms.URLField(widget=forms.URLInput(attrs=dict(required=True,
-                                                              max_length=300,
-                                                              placeholder="URL")))
-
+    rss_url = forms.URLField(
+        widget=forms.URLInput(attrs=dict(required=True, max_length=300, placeholder="URL"))
+    )
 
     def __init__(self, *args, **kwargs):
         self.user = kwargs.pop('user', None)
         print(self.user)
         super(AddSource, self).__init__(*args, **kwargs)
 
-
     def clean(self):
         try:
-            rss = Sourcing.objects.get(rss_url__iexact=self.cleaned_data['rss_url'],
-                                       created_by_id=self.user.id)
+            Sourcing.objects.get(
+                rss_url__iexact=self.cleaned_data['rss_url'], created_by_id=self.user.id
+            )
+
         except Sourcing.DoesNotExist:
             return self.cleaned_data
         raise forms.ValidationError(_("This Url already exist"))
 
 
-
 class EditSource(forms.Form):
-    name= forms.RegexField(regex=r'^[\w .@+-]+$',
-                           widget=forms.TextInput(
-                               attrs=dict(required=True,max_length=300,placeholder="Name")))
-    rss_url= forms.URLField(widget=forms.URLInput(attrs=dict(required=True,
-                                                              max_length=300,
-                                                              placeholder="URL")))
+    name = forms.RegexField(
+        regex=r'^[\w .@+-]+$',
+        widget=forms.TextInput(attrs=dict(required=True, max_length=300, placeholder="Name"))
+    )
+
+    rss_url = forms.URLField(
+        widget=forms.URLInput(attrs=dict(required=True, max_length=300, placeholder="URL"))
+    )
+
     item_id = forms.CharField(required=False)
 
     def __init__(self, *args, **kwargs):
         self.user = kwargs.pop('user', None)
         print(self.user)
         super(EditSource, self).__init__(*args, **kwargs)
-
-
-
 
 
 class AddStory(forms.Form):
@@ -106,21 +100,22 @@ class AddStory(forms.Form):
         self.fields['source'] = forms.ModelChoiceField(queryset=Sourcing.objects.filter(created_by_id=self.user.id))
         print(self.fields['source'])
 
+    title = forms.CharField(
+        widget=forms.TextInput(attrs=dict(required=True, max_length=50, placeholder='Title'))
+    )
 
-    title = forms.CharField(widget=forms.TextInput(attrs=dict(required=True,
-                                                              max_length=50,
-                                                              placeholder='Title' )))
+    body = forms.CharField(
+        widget=forms.TextInput(attrs=dict(required=True, placeholder="Body"))
+    )
 
-    body = forms.CharField(widget=forms.TextInput(attrs=dict(required=True,
-                                                             placeholder="Body")))
+    pub_date = forms.DateTimeField(
+        widget=forms.DateTimeInput(attrs=dict(placeholder="Date Format YYYY-mm-dd HH:MM:SS "),
+                                   format=['%Y-%m-%d %H:%M:%S.%f'])
+    )
 
-    pub_date = forms.DateTimeField(widget=forms.DateTimeInput(attrs=dict(placeholder="Date Format YYYY-mm-dd HH:MM:SS "),
-                                                                         format=['%Y-%m-%d %H:%M:%S.%f']))
-
-
-    url = forms.URLField(widget=forms.URLInput(attrs=dict(required=True,
-                                                          placeholder='URL')))
-
+    url = forms.URLField(
+        widget=forms.URLInput(attrs=dict(required=True, placeholder='URL'))
+    )
 
 
 class CustomAuthForm(AuthenticationForm):
@@ -128,14 +123,14 @@ class CustomAuthForm(AuthenticationForm):
                                 widget=forms.TextInput(attrs=dict(required=True,
                                                                   max_length=30,
                                                                   placeholder="Username")),
-                                error_messages={'invalid': _("This value must contain only letters, numbers and underscores.")})
+                                error_messages={
+                                    'invalid': _("This value must contain only letters, numbers and underscores.")
+                                }
+                                )
 
-    password = forms.CharField(widget=PasswordInput(
-                                attrs={'placeholder':'Password'}))
-
-
-
-
+    password = forms.CharField(
+        widget=PasswordInput(attrs={'placeholder': 'Password'})
+    )
 
 
 class EditStory(forms.Form):
@@ -147,21 +142,22 @@ class EditStory(forms.Form):
             self.fields['source'] = forms.ModelChoiceField(queryset=Sourcing.objects.all())
         else:
             self.fields['source'] = forms.ModelChoiceField(queryset=Sourcing.objects.filter(created_by_id=self.user.id))
-        print(self.fields['source'],"____________________________________________________")
 
+    title = forms.CharField(
+        widget=forms.TextInput(attrs=dict(required=True, max_length=50, placeholder='Title'))
+    )
 
-    title = forms.CharField(widget=forms.TextInput(attrs=dict(required=True,
-                                                              max_length=50,
-                                                              placeholder='Title' )))
+    body = forms.CharField(
+        widget=forms.TextInput(attrs=dict(required=True, placeholder="Body"))
+    )
 
-    body = forms.CharField(widget=forms.TextInput(attrs=dict(required=True,
-                                                             placeholder="Body")))
+    pub_date = forms.DateTimeField(
+        widget=forms.DateTimeInput(attrs=dict(placeholder="Date Format YYYY-mm-dd HH:MM:SS "),
+                                   format=['%Y-%m-%d %H:%M:%S.%f'])
+    )
 
-    pub_date = forms.DateTimeField(widget=forms.DateTimeInput(attrs=dict(placeholder="Date Format YYYY-mm-dd HH:MM:SS "),
-                                                                         format=['%Y-%m-%d %H:%M:%S.%f']))
-
-
-    url = forms.URLField(widget=forms.URLInput(attrs=dict(required=True,
-                                                          placeholder='URL')))
+    url = forms.URLField(
+        widget=forms.URLInput(attrs=dict(required=True, placeholder='URL'))
+    )
 
     item_id = forms.CharField(required=False)

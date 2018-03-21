@@ -3,115 +3,100 @@
 {% block title %} {{ id.name }} - Stories  {% endblock %}
 {% block content %}
 <br>
+    <section id="main" class="wrapper">
+        <div class="inner">
+            <div>
+                <ul2>
+                    <li>
+                        <label>
+                            <a href="/home" class="home">home</a>
+                        </label>
+                    </li>
 
-<section id="main" class="wrapper">
-    <div class="inner">
+                    <li>
+                        <label>
+                            <a href="/add_source/" >Add Source</a>
+                        </label>
+                    </li>
 
-        <div>
-            <ul2>
-                <li>
-                    <label>
-                        <a href="/home" class="home">home</a>
-                    </label>
-                </li>
+                    <li>
+                        <label>
+                            <a href="/sources_list/" >Sources</a>
+                        </label>
+                    </li>
 
-                <li>
-                    <label>
-                        <a href="/add_source/" >Add Source</a>
-                    </label>
-                </li>
+                    <li>
+                        <label>
+                            <a href="/add_story/" >Add Story</a>
+                        </label>
+                    </li>
 
-                <li>
-                    <label>
-                        <a href="/sources/" >Sources</a>
-                    </label>
-                </li>
+                   <li>
+                        <label>
+                            <a href="/stories_list/" >Stories</a>
+                        </label>
+                    </li>
 
-                <li>
-                    <label>
-                        <a href="/add_story/" >Add Story</a>
-                    </label>
-                </li>
+                    <li>
+                        <label>
+                            <a href="/logout/">Logout - {{ user.username }}</a>
+                        </label>
+                    </li>
+                </ul2>
+              </div>
+            <br>
+            <div class="content">
+               <div align="center">
+                 <section class="container">
+                     {% if data %}
+                         <h3 style="font-size: 2rem">
+                             <a href="{{ rss_id.rss_url }}" target="_blank">
+                                <b> {{ rss_id.name }}  Stories</b>
+                             </a>
+                         </h3>
 
-               <li>
-                    <label>
-                        <a href="/stories/" >Stories</a>
-                    </label>
-                </li>
+                         {% for st in data %}
+                             <div style="text-align: left">
+                                 <a href="{{ st.url }}" target="_blank">{{ st.title }} </a>
+                                 <p style="font-size: small">
+                                     {{st.text|truncatewords:'100'}}
+                                     <br>
+                                     {% if st.publish_date %}
+                                        {{st.publish_date}}
+                                     {% endif %}
+                                 </p>
+                             </div>
+                         {% endfor %}
+                     {% endif %}
 
-                <li>
-                    <label>
-                        <a href="/logout/">Logout - {{ user.username }}</a>
-                    </label>
-                </li>
-            </ul2>
-          </div>
-        <br>
-        <div class="content">
-           <div align="center">
-             <section class="container">
+                     {% if url_error %}
+                         <h3 style="font-size: 2rem">
+                             <a href="/sources_list/" >
+                                <b> Sources</b>
+                             </a>
+                         </h3>
+                       {% for st in url_error %}
+                             <div style="text-align: left">
+                                 <a href="/sources_list/">{{ st }} </a>
+                             </div>
+                         {% endfor %}
+                     {% endif %}
 
-                 {% if data %}
-                     <h3 style="font-size: 2rem">
-                         <a href="{{ rss_id.rss_url }}" target="_blank">
-                            <b> {{ rss_id.name }}  Stories</b>
-                         </a>
-                     </h3>
-
-                     {% for st in data %}
-                         <div style="text-align: left">
-                             <a href="{{ st.url }}" target="_blank">{{ st.title }} </a>
-                             <p style="font-size: small">
-                                 {{st.text|truncatewords:'100'}}
-                                 <br>
-                                 {% if st.publish_date %}
-                                    {{st.publish_date}}
-                                 {% endif %}
-                             </p>
-                         </div>
-                     {% endfor %}
-                 {% endif %}
-
-
-
-
-                 {% if url_error %}
-                     <h3 style="font-size: 2rem">
-                         <a href="/sources/" >
-                            <b> Sources</b>
-                         </a>
-                     </h3>
-
-                   {% for st in url_error %}
-                         <div style="text-align: left">
-                             <a href="/sources/">{{ st }} </a>
-                         </div>
-                     {% endfor %}
-
-                 {% endif %}
-
-                 {% if rss_error %}
-                     <h3 style="font-size: 2rem">
-                         <a href="/stories/">
-                            <b> Stories</b>
-                         </a>
-                     </h3>
-
-                   {% for st in rss_error %}
-                         <div style="text-align: left">
-                             <a href="/stories/">{{ st }} </a>
-                         </div>
-                     {% endfor %}
-
-                 {% endif %}
-
-
-
-
-
-             </section>
-           </div>
+                     {% if rss_error %}
+                         <h3 style="font-size: 2rem">
+                             <a href="/stories_list/">
+                                <b> Stories</b>
+                             </a>
+                         </h3>
+                        {% for st in rss_error %}
+                             <div style="text-align: left">
+                                 <a href="/stories_list/">{{ st }} </a>
+                             </div>
+                        {% endfor %}
+                     {% endif %}
+                 </section>
+               </div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 {% endblock %}

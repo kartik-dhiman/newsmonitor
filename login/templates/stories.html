@@ -21,7 +21,7 @@
 
                 <li>
                     <label>
-                        <a href="/sources/" >Sources</a>
+                        <a href="/sources_list/" >Sources</a>
                     </label>
                 </li>
 
@@ -33,7 +33,7 @@
 
                <li>
                     <label>
-                        <a href="/stories/" >Stories</a>
+                        <a href="/stories_list/" >Stories</a>
                     </label>
                 </li>
 
@@ -42,13 +42,12 @@
                         <a href="/logout/">Logout - {{ user.username }}</a>
                     </label>
                 </li>
+                <li>
+                <form class="alt" method="get" action="/search_stories/">
+                    <li><input type="text" id="searchBox" class="small" name="q" placeholder="Search"></li>
+                    <li><input type="submit" class="button small--table" value="Search" ></li>
 
-
-                 <li>
-                    <form class="alt" method="get" action="/search_stories/">
-                            <li><input type="text" id="searchBox" class="small" name="q" placeholder="Search"></li>
-                            <li><input type="submit" class="button small--table" value="Search" ></li>
-                    </form>
+                </form>
                  </li>
             </ul2>
 
@@ -67,65 +66,70 @@
                      Stories Count : {{ data|length }} <br>
 
                  </div>
+                 {% if data %}
+                        <table class="table-no-change" >
+                            <tr>
+                                <th>
+                                    Title
+                                </th>
 
-                <table class="table-no-change" >
-                    <tr>
-                        <th>
-                            Title
-                        </th>
-
-                        <th >
-                            Body
-                        </th>
-
-
-                        <th >
-                            Published on
-                        </th>
+                                <th >
+                                    Body
+                                </th>
 
 
-                        <th>
-                            Source
-                        </th>
-                        <th>    </th>
-                        <th colspan="2">
-                           Action
-                        </th>
-                    </tr>
+                                <th >
+                                    Published on
+                                </th>
 
-                    {% for value in data %}
-                        <tr>
-                            <td width="15%">
-                                <label>
-                                    <a href="{{ value.url }}" target="_blank" >{{ value.title|truncatewords:'9' }}</a>
-                                </label>
-                            </td>
 
-                            <td>
-                                    {{ value.body_text|truncatewords:'30'}}
-                            </td>
-                            <td>
-                                    {{ value.pub_date }}
-                            </td>
+                                <th>
+                                    Source
+                                </th>
+                                <th>    </th>
+                                <th colspan="2">
+                                   Action
+                                </th>
+                            </tr>
 
-                             <td>
-                                    <a href="{{ value.source.rss_url }}" target="_blank" >{{ value.source.name }}</a>
-                            </td>
-                            <td> </td>
-                            <td>
-                                <form class="alt" action="/edit_story/" method="get">{% csrf_token %}
-                                       <input class="button small--table" type="hidden" name="item_id" value="{{value.id}}" />
-                                       <input class="button small--table" type="submit" value=" &nbsp;&nbsp;Edit&nbsp;&nbsp; ">
-                                </form>
+                            {% for value in data %}
+                                <tr>
+                                    <td width="15%">
+                                        <label>
+                                            <a href="{{ value.url }}" target="_blank" >{{ value.title|truncatewords:'9' }}</a>
+                                        </label>
+                                    </td>
 
-                                <form class="alt" action="/remove_story/" method="get" onsubmit="return confirm('Do you really want to Delete');">{% csrf_token %}
-                                       <input class="button small--table" type="hidden" name="item_id" value="{{value.id}}" />
-                                       <input class="button small--table"  type="submit" value="Delete">
-                                </form>
-                            </td>
-                        </tr>
-                    {% endfor %}
-                </table>
+                                    <td>
+                                            {{ value.body_text|truncatewords:'30'}}
+                                    </td>
+                                    <td>
+                                            {{ value.pub_date }}
+                                    </td>
+
+                                     <td>
+                                            <a href="{{ value.source.rss_url }}" target="_blank" >{{ value.source.name }}</a>
+                                    </td>
+                                    <td> </td>
+                                    <td>
+                                        <form class="alt" action="/edit_story/" method="get">
+                                               <input class="button small--table" type="hidden" name="item_id" value="{{value.id}}" />
+                                               <input class="button small--table" type="submit" value=" &nbsp;&nbsp;Edit&nbsp;&nbsp; ">
+                                        </form>
+
+                                        <form class="alt" action="/remove_story/" method="get" onsubmit="return confirm('Do you really want to Delete');">{% csrf_token %}
+                                               <input class="button small--table" type="hidden" name="item_id" value="{{value.id}}" />
+                                               <input class="button small--table"  type="submit" value="Delete">
+                                        </form>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                 {% else %}
+
+                            <p> There are no Stories.</p>
+
+                 {% endif %}
 
              </section>
            </div>

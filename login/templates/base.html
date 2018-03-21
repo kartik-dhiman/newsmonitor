@@ -31,11 +31,11 @@
                 {% if user.is_authenticated %}
                     <li><a href="/home">Home</a></li>
                     <li><a href="/elements/">Elements</a></li>
-                    <li><a href="/sources">Sources</a> </li>
+                    <li><a href="/sources_list/">Sources</a> </li>
 
-                    <li><a href="/logout"> Logout</a> </li>
+                    <li><a href="/logout/"> Logout</a> </li>
                 {% else %}
-                    <li><a href="/home">Home</a></li>
+                    <li><a href="/">Home</a></li>
                     <li><a href="/elements/">Elements</a></li>
                 {% endif %}
             </ul>
@@ -84,7 +84,7 @@
                         </section>
                     </div>
                     <div class="copyright">
-                        &copy; Kartik Dhiman , Software Developer, Contify</a>.
+                        &copy; Kartik Dhiman , Software Developer, <a href="https://www.contify.com">Contify</a>.
                         &nbsp; Modified <a href="https://templated.co/industrious"> Industrious</a> Template by <a href="industrious"> TEMPLATED </a>
                     </div>
                 </div>
@@ -96,6 +96,6 @@
             <script src="{{ staticfiles }}/static/js/breakpoints.min.js"></script>
             <script src="{{ staticfiles }}/static/js/util.js"></script>
             <script src="{{ staticfiles }}/static/js/main.js"></script>
-            
+        </div>
     </body>
 </html>

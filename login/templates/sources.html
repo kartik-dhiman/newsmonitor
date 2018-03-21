@@ -21,7 +21,7 @@
 
                 <li>
                     <label>
-                        <a href="/sources/" >Sources</a>
+                        <a href="/sources_list/" >Sources</a>
                     </label>
                 </li>
 
@@ -33,7 +33,7 @@
 
                <li>
                     <label>
-                        <a href="/stories/" >Stories</a>
+                        <a href="/stories_list/" >Stories</a>
                     </label>
                 </li>
 
@@ -44,7 +44,7 @@
                 </li>
 
                  <li>
-                    <form class="alt" method="get" action="/search/">
+                    <form class="alt" method="get" action="/search_source/">
                             <li><input type="text" id="searchBox" class="small" name="q" placeholder="Search"></li>
                             <li><input type="submit" class="button small--table" value="Search" ></li>
                     </form>
@@ -58,63 +58,69 @@
                <div style="float: right">
                    Stories Count : {{ data|length }}
                </div>
-                <table>
-                    <tr>
+                 {% if data %}
+                        <table>
+                            <tr>
 
-                        <th>
-                            Name
-                        </th>
+                                <th>
+                                    Name
+                                </th>
 
-                        <th>
-                            URL
-                        </th>
+                                <th>
+                                    URL
+                                </th>
 
-                        <th >
-                            Feed
-                        </th>
+                                <th >
+                                    Feed
+                                </th>
 
-                        <th colspan="2" style="width: 15%;">
-                            Actions
-                        </th>
-                    </tr>
+                                <th colspan="2" style="width: 15%;">
+                                    Actions
+                                </th>
+                            </tr>
 
-                    {% for value in data %}
-                        <tr>
-                            <td>
-                                <label>
-                                    {{ value.name }}
-                                </label>
-                            </td>
+                            {% for value in data %}
+                                <tr>
+                                    <td>
+                                        <label>
+                                            {{ value.name }}
+                                        </label>
+                                    </td>
 
-                            <td>
-                                <label>
-                                    <a href="{{ value.rss_url }}" target="_blank" >{{ value.rss_url }}</a>
-                                </label>
-                            </td>
+                                    <td>
+                                        <label>
+                                            <a href="{{ value.rss_url }}" target="_blank" >{{ value.rss_url }}</a>
+                                        </label>
+                                    </td>
 
-                            <td>
-                                <form class="alt" action="/fetch_story/" method="get">
-                                       <input class="button small--table" type="hidden" name="item_id" value="{{value.id}}" />
-                                       <input class="button small--table" type="submit" value="Get" />
-                                </form>
-                            </td>
+                                    <td>
+                                        <form class="alt" action="/fetch_story/" method="get">
+                                               <input class="button small--table" type="hidden" name="item_id" value="{{value.id}}" />
+                                               <input class="button small--table" type="submit" value="Get" />
+                                        </form>
+                                    </td>
 
-                            <td>
-                                <form class="alt" action="/edit_source/" method="get">
-                                       <input class="button small--table" type="hidden" name="item_id" value="{{value.id}}" />
-                                       <input class="button small--table" type="submit" value="Edit">
-                                </form>
-                            </td>
+                                    <td>
+                                        <form class="alt" action="/edit_source/" method="get">
+                                               <input class="button small--table" type="hidden" name="item_id" value="{{value.id}}" />
+                                               <input class="button small--table" type="submit" value="Edit">
+                                        </form>
+                                    </td>
 
-                            <td>       
-                                <form class="alt" action="/remove_items/" method="get" onsubmit="return confirm('Do you really want to Delete');">{% csrf_token %}
-                                       <input class="button small--table" type="hidden" name="item_id" value="{{value.id}}" />
-                                       <input class="button small--table"  type="submit" value="Delete">
-                                </form>
-                            </td>
-                        </tr>
-                    {% endfor %}
-                </table>
+                                    <td>
+                                        <form class="alt" action="/remove_source/" method="get" onsubmit="return confirm('Do you really want to Delete');">
+                                               <input class="button small--table" type="hidden" name="item_id" value="{{value.id}}" />
+                                               <input class="button small--table"  type="submit" value="Delete">
+                                        </form>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                 {% else %}
+
+                            <p> There are no Sources.</p>
+
+                 {% endif %}
 
              </section>
            </div>

@@ -2,75 +2,59 @@
 {% block title %}User Registration{% endblock %}
 
 {% block content %}
-<section id="cta" class="wrapper">
-  <div class="testimonials">
-    <section>
-      <div class="inner">
-      </div>
-    </section>
+  <section id="cta" class="wrapper">
+    <div class="testimonials">
+      <section>
+        <div class="inner">
+        </div>
+      </section>
 
-    <section id="#cta" class="wrapper">
-      <div class="inner">
-        <h2>Monitor News in your style</h2>
-        <p>A new way to monitor news</p>
-      </div>
-    </section>
+      <section id="#cta" class="wrapper">
+        <div class="inner">
+          <h2>Monitor News in your style</h2>
+          <p>A new way to monitor news</p>
+        </div>
+      </section>
 
-    <section>
-      <div class="inner">
-        <blockquote>
-          <div class="content">
-            <div class="wrapper" align="center">
-              <section>
-                <form method="post" action=".">{% csrf_token %}
-                  <b>
-                          <h2>Sign Up</h2>
-                  </b>
-                  <table class="table-no-border" border="0">
-                    {% for field in form %}
+      <section>
+        <div class="inner">
+          <blockquote>
+            <div class="content">
+              <div class="wrapper" align="center">
+                <section>
+                  <form method="post" action=".">{% csrf_token %}
+                    <b>
+                            <h2>Sign Up</h2>
+                    </b>
+                    <table class="table-no-border" border="0">
+                      {% for field in form %}
+                          <tr>
+                            <td>
+                              {% if field.errors %}
+                                <div>
+                                    {{ field.errors }}
+                                </div>
+                              {% endif  %}
+                              {{ field }}
+                            </td>
+                          </tr>
+                      {% endfor %}
+                    </table>
+                     <button type="submit" class="small" >Sign Up</button>
 
+                          <button type="reset" class="small">Reset</button>
+                  </form>
 
-                        <tr>
-                          <td>
-                            {% if field.errors %}
-                              <div>
-                                  {{ field.errors }}
-                              </div>
-                            {% endif  %}
-                            {{ field }}
-                          </td>
-                        </tr>
-                    {% endfor %}
-
-                    <br>
-
-                    <tr>
-
-
-
-                    </tr>
-                  </table>
-                   <button type="submit" class="small" >Sign Up</button>
-
-                        <button type="reset" class="small">Reset</button>
-                </form>
-
-             </section>
-                Already a User ?
-                <a href="/" >
-                  <button type="submit" class="small">Login</button>
-                </a>
+               </section>
+                  Already a User ?
+                  <a href="/" >
+                    <button type="submit" class="small">Login</button>
+                  </a>
+              </div>
             </div>
-          </div>
-        </blockquote>
-      </div>
-    </section>
-  </div>
-</section>
-
-
-
-
-
-
+          </blockquote>
+        </div>
+      </section>
+    </div>
+  </section>
 {% endblock %}
