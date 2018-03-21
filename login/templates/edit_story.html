@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Edit Source{% endblock %}
+{% block title %}Edit Story{% endblock %}
 
 {% block content %}
 
@@ -49,43 +49,70 @@
         <div class="content">
             <div class="testimonial" align="center">
                  <section class="container">
-                     <form method="post" action=".">
-                            <table class="add-source">
+                     <form method="post" action=".">{% csrf_token %}
+                            <table >
                               <tr>
                                     <th>
-                                        <label>Name</label>
+                                        <label>Title</label>
                                     </th>
                                     <td>
-                                      {{ form.name }}
+                                      {{ form.title }}
                                     </td>
                               </tr>
                                 <br>
+                                <tr>
+                                    <th>
+                                        <label >Body</label>
+                                    </th>
+                                    <td >
+                                     {{ form.body }}
+                                    </td>
+                              </tr>
+                                <tr>
+                                    <th>
+                                        <label >Publish Date</label>
+                                    </th>
+                                    <td >
+                                     {{ form.pub_date }}
+                                    </td>
+                              </tr>
                               <tr>
+                                    <th>
+                                        <label >Source</label>
+                                    </th>
+                                    <td >
+                                        {{ form.source }}
+                                    </td>
+                              </tr>
+                                <tr>
                                     <th>
                                         <label >Url</label>
                                     </th>
                                     <td >
-                                     {{ form.rss_url }}
+                                     {{ form.url }}
                                     </td>
                               </tr>
-                                 <tr>
-                                    <th>
 
-                                    </th>
-                                    <td >
-                                     {{ form.item_id.as_hidden }}
-                                    </td>
-                                </tr>
+                            <tr>
+                                <th>
+
+                                </th>
+                                <td >
+                                 {{ form.item_id.as_hidden }}
+                                </td>
+                            </tr>
+
                             </table >
                         <button type="submit" class="small">Add</button>
                      </form>
                  </section>
 
                 {{ form.errors }}
+
                   {% if form.non_field_errors %}
                      {{ form.non_field_errors }}
                   {% endif %}
-                 </p>
+
             </div>
         </div>
     </div>

@@ -149,38 +149,38 @@ def sources(request):
         return render(request, 'sources.html', {'data': data})
 
 
-#backup EDIT_SOURCE
-# @csrf_protect
+# backup EDIT_SOURCE
+# @csrf_exempt
 # def edit_source(request):
 #     if request.method == 'GET':
-#         user = request.user
 #         if request.GET.get('item_id') is None:
 #             return HttpResponseRedirect('/sources/')
 #         else:
 #             item_id = int(request.GET.get('item_id'))
 #             item = Sourcing.objects.get(id=item_id)
 #             form = {
-#                 'name':item.name,
-#                 'rss_url':item.rss_url
+#                 'name': item.name,
+#                 'rss_url': item.rss_url,
+#                 'item':item
 #             }
-#             form=EditSource(form, request.POST, user=request.user)
-#             return render_to_response('edit_source.html',{'form':form})
-#     elif request.method == 'POST':
-#         user = request.user
-#         form = EditSource(request.POST, user=request.user)
+#             form = EditSource(form, user = request.user)
+#             return render_to_response('edit_source.html', {'form': form, 'user':request.user, 'id':item })
+#     if request.method == 'POST':
+#         form = EditSource(request.POST, user = request.user)
 #         if form.is_valid():
-#             user = Sourcing(
-#                 name=form.cleaned_data['name'],
-#                 rss_url=form.cleaned_data['rss_url'],
-#                 created_by=user.id,
-#                 updated_by=user.id
-#             )
-#             user.update()
+#             user = User.objects.get(id=request.user.id)
+#             instance = Sourcing.objects.get(rss_url=form.cleaned_data['rss_url'], created_by_id=request.user.id)
+#             instance.name = form.cleaned_data['name']
+#             instance.rss_url = form.cleaned_data['rss_url']
+#             instance.save()
 #             return HttpResponseRedirect('/sources/')
 #         else:
 #             return render(request, 'edit_source.html', {'form': form})
 #
 #     return HttpResponseRedirect('/sources/')
+#
+
+
 
 @csrf_exempt
 def edit_source(request):
@@ -190,10 +190,11 @@ def edit_source(request):
         else:
             item_id = int(request.GET.get('item_id'))
             item = Sourcing.objects.get(id=item_id)
+            print(item.id,"________________*******************_________________________________--")
             form = {
                 'name': item.name,
                 'rss_url': item.rss_url,
-                'item':item
+                'item_id': item.id,
             }
             form = EditSource(form, user = request.user)
             return render_to_response('edit_source.html', {'form': form, 'user':request.user, 'id':item })
@@ -201,9 +202,13 @@ def edit_source(request):
         form = EditSource(request.POST, user = request.user)
         if form.is_valid():
             user = User.objects.get(id=request.user.id)
-            instance = Sourcing.objects.get(rss_url=form.cleaned_data['rss_url'], created_by_id=request.user.id)
+            print(form.cleaned_data,"_______________FORM__________________________________________---")
+            instance = Sourcing.objects.get(id=form.cleaned_data['item_id'])
+            print(instance,"__________________________________ID___________________________________s")
+            # instance = Sourcing.objects.get(rss_url=form.cleaned_data['rss_url'], created_by_id=request.user.id)
             instance.name = form.cleaned_data['name']
             instance.rss_url = form.cleaned_data['rss_url']
+            instance.updated_by_id=request.user.id
             instance.save()
             return HttpResponseRedirect('/sources/')
         else:
@@ -357,3 +362,45 @@ def add_story(request):
     else:
         form = AddStory(user = request.user)
         return render(request, 'add_story.html', {'form': form})
+
+
+
+#Edit Story
+
+@csrf_exempt
+def edit_story(request):
+    if request.method == 'GET':
+        if request.GET.get('item_id') is None:
+            return HttpResponseRedirect('/stories/')
+        else:
+            item_id = int(request.GET.get('item_id'))
+            item = Stories.objects.get(id=item_id)
+            print(item.id,"__________________________________________________________________________________-")
+            form = {
+                'title': item.title,
+                'url': item.url,
+                'body': item.body_text,
+                'source':item.source_id,
+                'item_id':item.id,
+            }
+            form = EditStory(form, user = request.user)
+            return render_to_response('edit_story.html', {'form': form, 'user':request.user })
+    if request.method == 'POST':
+        form = EditStory(request.POST, user = request.user)
+        if form.is_valid():
+            print(form.cleaned_data,"******************************************************************************")
+            user = User.objects.get(id=request.user.id)
+            instance = Stories.objects.get(id=form.cleaned_data['item_id'])
+            instance.title = form.cleaned_data['title']
+            instance.url = form.cleaned_data['url']
+            instance.pub_date = form.cleaned_data['pub_date']
+            instance.body_text = form.cleaned_data['body']
+            instance.source_id=form.cleaned_data['source'].id
+            instance.save()
+            return HttpResponseRedirect('/stories/')
+        else:
+            return render(request, 'edit_story.html', {'form': form})
+
+    return HttpResponseRedirect('/stories/')
+
+

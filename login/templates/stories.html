@@ -15,12 +15,6 @@
 
                 <li>
                     <label>
-                        <a href="/elements/">Elements</a>
-                    </label>
-                </li>
-
-                <li>
-                    <label>
                         <a href="/add_source/" >Add Source</a>
                     </label>
                 </li>
@@ -37,7 +31,6 @@
                     </label>
                 </li>
 
-
                <li>
                     <label>
                         <a href="/stories/" >Stories</a>
@@ -49,6 +42,7 @@
                         <a href="/logout/">Logout - {{ user.username }}</a>
                     </label>
                 </li>
+
 
                  <li>
                     <form class="alt" method="get" action="/search_stories/">
@@ -119,7 +113,7 @@
                             </td>
                             <td> </td>
                             <td>
-                                <form class="alt" action="/edit_source/" method="post">{% csrf_token %}
+                                <form class="alt" action="/edit_story/" method="get">{% csrf_token %}
                                        <input class="button small--table" type="hidden" name="item_id" value="{{value.id}}" />
                                        <input class="button small--table" type="submit" value=" &nbsp;&nbsp;Edit&nbsp;&nbsp; ">
                                 </form>

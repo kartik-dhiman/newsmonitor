@@ -81,12 +81,13 @@ class AddSource(forms.Form):
 
 
 class EditSource(forms.Form):
-    name= forms.RegexField(regex=r'^[\w .@+-]+$', widget=forms.TextInput(attrs=dict(required=True,
-                                                                                      max_length=300,
-                                                                                      placeholder="Name")))
+    name= forms.RegexField(regex=r'^[\w .@+-]+$',
+                           widget=forms.TextInput(
+                               attrs=dict(required=True,max_length=300,placeholder="Name")))
     rss_url= forms.URLField(widget=forms.URLInput(attrs=dict(required=True,
                                                               max_length=300,
                                                               placeholder="URL")))
+    item_id = forms.CharField(required=False)
 
     def __init__(self, *args, **kwargs):
         self.user = kwargs.pop('user', None)
@@ -132,3 +133,32 @@ class CustomAuthForm(AuthenticationForm):
     password = forms.CharField(widget=PasswordInput(
                                 attrs={'placeholder':'Password'}))
 
+
+
+
+
+
+class EditStory(forms.Form):
+    def __init__(self, *args, **kwargs):
+        self.user = kwargs.pop('user', None)
+        super(EditStory, self).__init__(*args, **kwargs)
+
+        self.fields['source'] = forms.ModelChoiceField(queryset=Sourcing.objects.filter(created_by_id=self.user.id))
+        print(self.fields['source'])
+
+
+    title = forms.CharField(widget=forms.TextInput(attrs=dict(required=True,
+                                                              max_length=50,
+                                                              placeholder='Title' )))
+
+    body = forms.CharField(widget=forms.TextInput(attrs=dict(required=True,
+                                                             placeholder="Body")))
+
+    pub_date = forms.DateTimeField(widget=forms.DateTimeInput(attrs=dict(placeholder="Date Format YYYY-mm-dd HH:MM:SS "),
+                                                                         format=['%Y-%m-%d %H:%M:%S.%f']))
+
+
+    url = forms.URLField(widget=forms.URLInput(attrs=dict(required=True,
+                                                          placeholder='URL')))
+
+    item_id = forms.CharField(required=False)
