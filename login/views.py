@@ -327,6 +327,9 @@ def search_stories(request):
     query = request.GET['q']
     if (query==''):                                                              # If query Empty -> redirect to Sources
         return HttpResponseRedirect('/stories/')
+    elif request.user.is_staff or request.user.is_superuser:
+        data = Stories.objects.filter(models.Q(body_text__icontains=query) | models.Q(title__icontains=query))  # Filter Entries by Name : ( Created by Self )
+        return render_to_response('stories.html', {'data': data, 'user': request.user})  # Return list to Sources
     else:
         data = Stories.objects.filter(models.Q(body_text__icontains=query) | models.Q(title__icontains=query) , source_id__created_by_id=user.id)        # Filter Entries by Name : ( Created by Self )
         return render_to_response('stories.html', {'data': data , 'user':request.user } )

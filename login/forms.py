@@ -143,8 +143,11 @@ class EditStory(forms.Form):
         self.user = kwargs.pop('user', None)
         super(EditStory, self).__init__(*args, **kwargs)
 
-        self.fields['source'] = forms.ModelChoiceField(queryset=Sourcing.objects.filter(created_by_id=self.user.id))
-        print(self.fields['source'])
+        if self.user.is_staff or self.user.is_superuser:
+            self.fields['source'] = forms.ModelChoiceField(queryset=Sourcing.objects.all())
+        else:
+            self.fields['source'] = forms.ModelChoiceField(queryset=Sourcing.objects.filter(created_by_id=self.user.id))
+        print(self.fields['source'],"____________________________________________________")
 
 
     title = forms.CharField(widget=forms.TextInput(attrs=dict(required=True,
