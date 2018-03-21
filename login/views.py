@@ -244,8 +244,11 @@ def search(request):
     query = request.GET['q']
     if (query==''):                                                              # If query Empty -> redirect to Sources
         return HttpResponseRedirect('/sources/')
+    elif request.user.id == 1:
+        data = Sourcing.objects.filter(models.Q(name__icontains=query) | models.Q(rss_url__icontains=query))  # Filter Entries by Name : ( Created by Self )
+        return render_to_response('sources.html', {'data': data, 'user': request.user})  # Return list to Sources
     else:
-        data = Sourcing.objects.filter(name__contains=query, created_by_id=user.id)        # Filter Entries by Name : ( Created by Self )
+        data = Sourcing.objects.filter(models.Q(name__icontains=query) | models.Q(rss_url__icontains=query), created_by_id=user.id)        # Filter Entries by Name : ( Created by Self )
         return render_to_response('sources.html', {'data': data , 'user':request.user } )                # Return list to Sources
 
 
