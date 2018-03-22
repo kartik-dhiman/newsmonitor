@@ -92,8 +92,11 @@ class AddStory(forms.Form):
     def __init__(self, *args, **kwargs):
         self.user = kwargs.pop('user', None)
         super(AddStory, self).__init__(*args, **kwargs)
-
-        self.fields['source'] = forms.ModelChoiceField(queryset=Sourcing.objects.filter(created_by_id=self.user.id))
+        # Creates a field Source, that queries databse for
+        if self.user.is_staff or self.user.is_superuser:
+            self.fields['source'] = forms.ModelChoiceField(queryset=Sourcing.objects.all())
+        else:
+            self.fields['source'] = forms.ModelChoiceField(queryset=Sourcing.objects.filter(created_by_id=self.user.id))
 
     title = forms.CharField(
         widget=forms.TextInput(attrs=dict(required=True, max_length=50, placeholder='Title'))
