@@ -76,7 +76,7 @@ def add_source(request):
 @login_required
 def sources_list(request):
     user = User.objects.get(username=request.user)
-    # If Staff/SuperUser show all else show User wise data
+    # If Staff/SuperUser show all sources else show User wise data
     if user.is_staff or user.is_superuser:
         data = Sourcing.objects.all()
         return render(request, 'sources.html', {'data': data})

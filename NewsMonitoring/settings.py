@@ -80,7 +80,6 @@ TEMPLATE_DIRS = (
 )
 
 
-
 WSGI_APPLICATION = 'NewsMonitoring.wsgi.application'
 
 
@@ -93,8 +92,8 @@ DATABASES = {
         'NAME': 'newsmon',
         'USER': 'ghostman',
         'PASSWORD': 'postgres',
-        'HOST':'localhost',
-        'PORT':'5432', 
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
@@ -137,11 +136,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = "/home/ghostman/Desktop/Project/NewsMon/static/"
-
-'''
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static"),
-)'''
 
 
 # Method access authentication

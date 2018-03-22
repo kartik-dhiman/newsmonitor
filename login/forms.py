@@ -85,7 +85,6 @@ class EditSource(forms.Form):
 
     def __init__(self, *args, **kwargs):
         self.user = kwargs.pop('user', None)
-        print(self.user)
         super(EditSource, self).__init__(*args, **kwargs)
 
 
@@ -95,7 +94,6 @@ class AddStory(forms.Form):
         super(AddStory, self).__init__(*args, **kwargs)
 
         self.fields['source'] = forms.ModelChoiceField(queryset=Sourcing.objects.filter(created_by_id=self.user.id))
-        print(self.fields['source'])
 
     title = forms.CharField(
         widget=forms.TextInput(attrs=dict(required=True, max_length=50, placeholder='Title'))

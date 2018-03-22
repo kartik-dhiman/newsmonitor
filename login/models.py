@@ -24,5 +24,5 @@ class Stories(models.Model):
     body_text = models.TextField(blank=True)
     url = models.URLField(max_length=1000, null=True, blank=True)
 
-    def __unicode__(self):
+    def __str__(self):
         return u'{0}'.format(self.title)
