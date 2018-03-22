@@ -20,27 +20,37 @@
             <header id="header">
                 <a class="logo" href="/">News Monitoring</a>
                 <nav>
-                    <a href="#menu">Menu</a>
+                     {% if user.is_authenticated %}
+                       <div id='cssmenu'>
+                        <ul>
+                          <li><a href="/home" class="home">home</a></li>
+                           <li><a href="/sources_list/" >Sources</a>
+                              <ul>
+                                 <li>
+                                     <a href="/add_source/" >Add Source</a>
+                                 </li>
+                              </ul>
+                           </li>
+                            <li><a href="/stories_list/" >Stories</a>
+                              <ul>
+                                 <li>
+                                     <a href="/add_story/" >Add Story</a>
+                                 </li>
+                              </ul>
+                           </li>
+                            <li><a>Logout</a>
+                              <ul>
+                                 <li>
+                                     <a href="/logout/"> {{ user.username|upper }}  </a>
+                                 </li>
+                              </ul>
+                           </li>
+                        </ul>
+                        </div>
+                     {% endif %}
                 </nav>
             </header>
         </div>
-        <!-- Nav -->
-
-        <nav id="menu">
-            <ul class="links">
-                {% if user.is_authenticated %}
-                    <li><a href="/home">Home</a></li>
-                    <li><a href="/stories_list/">Stories</a></li>
-                    <li><a href="/sources_list/">Sources</a></li>
-                    <li><a href="/logout/"> Logout</a> </li>
-                {% else %}
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/elements/">Elements</a></li>
-                {% endif %}
-            </ul>
-        </nav>
-
-
         <!-- Block content for all the pages that inherit this page -->
          {% block content %}
 

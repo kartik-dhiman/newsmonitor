@@ -3,54 +3,16 @@
 
 {% block content %}
 <br>
+
 <section id="main" class="wrapper">
     <div class="inner">
-        <div>
-             <ul2>
-                <li>
-                    <label>
-                        <a href="/home" class="home">home</a>
-                    </label>
-                </li>
+        <div style="float: right;">
+            <form class="alt" method="get" action="/search_source/">
+                   <input type="text" id="searchBox" class="small" name="q" placeholder="Search">
+                    <input type="submit" class="button small--table" value="Search" >
+            </form>
+        </div>
 
-                <li>
-                    <label>
-                        <a href="/add_source/" >Add Source</a>
-                    </label>
-                </li>
-
-                <li>
-                    <label>
-                        <a href="/sources_list/" >Sources</a>
-                    </label>
-                </li>
-
-                <li>
-                    <label>
-                        <a href="/add_story/" >Add Story</a>
-                    </label>
-                </li>
-
-               <li>
-                    <label>
-                        <a href="/stories_list/" >Stories</a>
-                    </label>
-                </li>
-
-                <li>
-                    <label>
-                        <a href="/logout/">Logout - {{ user.username }}</a>
-                    </label>
-                </li>
-
-                 <li>
-                    <form class="alt" method="get" action="/search_source/">
-                            <li><input type="text" id="searchBox" class="small" name="q" placeholder="Search"></li>
-                            <li><input type="submit" class="button small--table" value="Search" ></li>
-                    </form>
-                 </li>
-            </ul2>
-          </div>
         <br>
         <div class="content">
            <div align="center">

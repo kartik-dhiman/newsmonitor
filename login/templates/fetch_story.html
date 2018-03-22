@@ -5,58 +5,16 @@
 <br>
     <section id="main" class="wrapper">
         <div class="inner">
-            <div>
-                <ul2>
-                    <li>
-                        <label>
-                            <a href="/home" class="home">home</a>
-                        </label>
-                    </li>
-
-                    <li>
-                        <label>
-                            <a href="/add_source/" >Add Source</a>
-                        </label>
-                    </li>
-
-                    <li>
-                        <label>
-                            <a href="/sources_list/" >Sources</a>
-                        </label>
-                    </li>
-
-                    <li>
-                        <label>
-                            <a href="/add_story/" >Add Story</a>
-                        </label>
-                    </li>
-
-                   <li>
-                        <label>
-                            <a href="/stories_list/" >Stories</a>
-                        </label>
-                    </li>
-
-                    <li>
-                        <label>
-                            <a href="/logout/">Logout - {{ user.username }}</a>
-                        </label>
-                    </li>
-                </ul2>
-              </div>
             <br>
             <div class="content">
                <div align="center">
                  <section class="container">
                      {% if data %}
                          <h3 style="font-size: 2rem">
-
-                                <b> Stories for
+                                <b> Stories for </b>
                                      <a href="{{ rss_id.rss_url }}" target="_blank">
                                          {{ rss_id.name }}
                                      </a>
-                                </b>
-
                          </h3>
 
                          {% for st in data %}

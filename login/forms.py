@@ -47,8 +47,7 @@ class RegistrationForm(forms.Form):
 
 
 class AddSource(forms.Form):
-    name = forms.RegexField(
-        regex=r'^[\w .@+-]+$',
+    name = forms.CharField(
         widget=forms.TextInput(attrs=dict(required=True, max_length=300, placeholder="Name"))
     )
 
@@ -72,8 +71,7 @@ class AddSource(forms.Form):
 
 
 class EditSource(forms.Form):
-    name = forms.RegexField(
-        regex=r'^[\w .@+-]+$',
+    name = forms.CharField(
         widget=forms.TextInput(attrs=dict(required=True, max_length=300, placeholder="Name"))
     )
 
