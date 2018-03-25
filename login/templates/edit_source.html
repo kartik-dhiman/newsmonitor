@@ -5,36 +5,38 @@
 
 <section id="main" class="wrapper">
          <br>
+    <div class="inner">
         <div class="content">
             <div class="testimonial" align="center">
                  <section class="container">
                      <form method="post" action=".">
-                            <table class="add-source">
+                         <h2>Edit Source</h2>
+                            <table class="table-separate">
                               <tr>
-                                    <th>
-                                        <label>Name</label>
-                                    </th>
                                     <td>
-                                      {{ form.name }}
+                                        Name
+                                    </td>
+                                    <td>
+                                     {{ form.name }}
                                     </td>
                               </tr>
-                                <br>
-                              <tr>
-                                    <th>
-                                        <label >Url</label>
-                                    </th>
-                                    <td >
-                                     {{ form.rss_url }}
-                                    </td>
-                              </tr>
-                                 <tr>
-                                    <th>
 
-                                    </th>
-                                    <td >
-                                     {{ form.item_id.as_hidden }}
+                              <tr>
+                                    <td>
+                                        Url
                                     </td>
-                                </tr>
+                                    <td >
+                                         {{ form.rss_url }}
+                                    </td>
+                              </tr>
+                              <tr>
+                                <td>
+
+                                </td>
+                                <td >
+                                 {{ form.item_id.as_hidden }}
+                                </td>
+                             </tr>
                             </table >
                         <button type="submit" class="small">Add</button>
                      </form>

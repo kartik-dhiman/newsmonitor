@@ -20,20 +20,12 @@
                                     <form method="post" action=".">{% csrf_token %}
                                         <h2>Login</h2>
                                         <br>
-                                        <table class="table-no-change" border="0">
+                                        <table>
                                             {% for field in form %}
                                                 <tr>
-                                                  <td>
                                                     {{ field }}
-                                                  </td>
                                                 </tr>
                                             {% endfor %}
-
-                                            <tr>
-                                                <td>
-
-                                                </td>
-                                            </tr>
                                         </table>
                                         <div>
                                             {% if form.username.errors %}

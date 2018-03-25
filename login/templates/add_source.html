@@ -1,39 +1,38 @@
 {% extends "base.html" %}
 {% block title %}Add Source{% endblock %}
-
 {% block content %}
-
-
 <section id="main" class="wrapper">
-         <br>
+    <br>
     <div class="inner">
         <div class="content">
             <div class="testimonial" align="center">
                  <section class="container">
-                     <form method="post" action=".">{% csrf_token %}
-                            <table class="add-source">
-                              <tr>
-                                    <th>
-                                        <label>Name</label>
-                                    </th>
+                      <div class="content">
+                          <h2> <b>Add Source </b></h2>
+                             <form method="post" action=".">{% csrf_token %}
+                                <table class="table-separate">
+                                  <tr>
+                                    <td>
+                                        Name
+                                    </td>
                                     <td>
                                      {{ form.name }}
                                     </td>
-                              </tr>
-                                <br>
-                              <tr>
-                                    <th>
-                                        <label >Url</label>
-                                    </th>
-                                    <td >
-                                         {{ form.rss_url }}
-                                    </td>
-                              </tr>
+                                  </tr>
 
-
-                            </table >
-                        <button type="submit" class="small">Add</button>
-                     </form>
+                                  <tr>
+                                        <td>
+                                            Url
+                                        </td>
+                                        <td >
+                                             {{ form.rss_url }}
+                                        </td>
+                                  </tr>
+                                </table >
+                                <button type="submit" class="small">Add</button>
+                                 <button type="reset" class="small">Reset</button>
+                             </form>
+                      </div>
                  </section>
 
 

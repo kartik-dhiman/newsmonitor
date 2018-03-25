@@ -1,30 +1,27 @@
 {% extends "base.html" %}
-{% block title %}- Sources List{% endblock %}
-
+{% block title %}- Sources List
+  <meta name="viewport" content="width=device-width, initial-scale=0" />
+{% endblock %}
 {% block content %}
 <br>
-
 <section id="main" class="wrapper">
-    <div class="inner">
-        <div style="float: right; ">
-            <form class="alt" method="get" action="/search_stories/">
-                       <nobr>
-                           <input type="text" id="searchBox" class="small" name="q" placeholder="Search">
-                           <input type="submit" class="button small--table" value="Search" >
-                       </nobr>
-
-            </form>
-        </div>
-        <br>
-         <div class="content">
-           <div align="center">
+    <div class="inner"><br>
+        <div class="content" align="center">
              <section class="container">
-                 <div style="float: right">
-                     Stories Count : {{ data|length }} <br>
-
-                 </div>
-                 {% if data %}
-                        <table class="table-no-change" >
+                <form class="alt" method="get" action="/search_stories/">
+                    <div style="display: inline-flex; float: right;" align="right">
+                               <input type="text" id="searchBox" class="small" name="q" placeholder="Search"> &nbsp;
+                               <input type="submit" class="button small--search" value="Search" >
+                    </div>
+                    <br>
+                </form>
+                 <div class="testimonial"><br>
+                     <div style="float: left;">
+                           Stories Count : {{ data|length }} <br>
+                     </div>
+                     <br>
+                     {% if data %}
+                        <table>
                             <tr>
                                 <th>
                                     Title
@@ -34,31 +31,28 @@
                                     Body
                                 </th>
 
-
                                 <th >
                                     Published on
                                 </th>
 
-
                                 <th>
                                     Source
                                 </th>
-                                <th>    </th>
-                                <th colspan="2">
+
+                                <th>
                                    Action
                                 </th>
                             </tr>
 
                             {% for value in data %}
                                 <tr>
-                                    <td width="15%">
-                                        <label>
-                                            <a href="{{ value.url }}" target="_blank" >{{ value.title|truncatewords:'9' }}</a>
-                                        </label>
+                                    <td width="18%">
+                                            <a href="{{ value.url }}" target="_blank">
+                                                {{ value.title|truncatewords:'9' }}
+                                            </a>
                                     </td>
-
                                     <td>
-                                            {{ value.body_text|truncatewords:'30'}}
+                                        {{ value.body_text|truncatewords:'30'}}
                                     </td>
                                     <td>
                                             {{ value.pub_date }}
@@ -67,7 +61,7 @@
                                      <td>
                                             <a href="{{ value.source.rss_url }}" target="_blank" >{{ value.source.name }}</a>
                                     </td>
-                                    <td> </td>
+
                                     <td>
                                         <form class="alt" action="/edit_story/" method="get">
                                                <input class="button small--table" type="hidden" name="item_id" value="{{value.id}}" />
@@ -80,13 +74,14 @@
                                         </form>
                                     </td>
                                 </tr>
+
                             {% endfor %}
                         </table>
-                 {% else %}
-                            <p> There are no Stories.</p>
-                 {% endif %}
+                     {% else %}
+                        <p> There are no Stories.</p>
+                     {% endif %}
+                 </div>
              </section>
-           </div>
            <br>
         </div>
     </div>

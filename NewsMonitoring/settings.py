@@ -28,7 +28,7 @@ SECRET_KEY = '&184!dl4y10o-o--u+tag_bfdbwilma*5$m7hjd&bdtc7%vj0!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [ '127.0.0.1','192.168.1.31']
+ALLOWED_HOSTS = [ '127.0.0.1','192.168.0.8','10.42.0.1']
 
 
 # Application definition
@@ -145,3 +145,4 @@ django.contrib.auth.LOGIN_URL = '/'
 #login redirect Url
 LOGIN_REDIRECT_URL = '/home/'
 
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True

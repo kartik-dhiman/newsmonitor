@@ -55,6 +55,7 @@ class AddSource(forms.Form):
         widget=forms.URLInput(attrs=dict(required=True, max_length=300, placeholder="URL"))
     )
 
+
     def __init__(self, *args, **kwargs):
         self.user = kwargs.pop('user', None)
         super(AddSource, self).__init__(*args, **kwargs)

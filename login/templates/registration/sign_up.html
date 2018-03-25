@@ -26,17 +26,15 @@
                     <b>
                             <h2>Sign Up</h2>
                     </b>
-                    <table class="table-no-border" border="0">
+                    <table>
                       {% for field in form %}
                           <tr>
-                            <td>
                               {% if field.errors %}
                                 <div>
                                     {{ field.errors }}
                                 </div>
                               {% endif  %}
                               {{ field }}
-                            </td>
                           </tr>
                       {% endfor %}
                     </table>

@@ -114,5 +114,21 @@ $("#cssmenu").menumaker({
    format: "multitoggle"
 });
 
+$(document).ready(function() {
+    $('.showmenu').click(function() {
+         if ($(this).text() === 'Add Source')
+         {
+              $('.menu').toggle("slide");
+                 $('.showmenu').text('Hide');
+         }
+         else
+             {
+                  $('.menu').toggle("slide");
+                 $('.showmenu').text("Add Source");
+             };
+
+        });
 });
+});
+
 })(jQuery);

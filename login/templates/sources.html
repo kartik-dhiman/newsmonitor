@@ -3,91 +3,85 @@
 
 {% block content %}
 <br>
-
 <section id="main" class="wrapper">
     <div class="inner">
-        <div style="float: right;">
-            <form class="alt" method="get" action="/search_source/">
-                   <input type="text" id="searchBox" class="small" name="q" placeholder="Search">
-                    <input type="submit" class="button small--table" value="Search" >
-            </form>
-        </div>
-
         <br>
-        <div class="content">
-           <div align="center">
+        <div class="content" align="center">
              <section class="container">
-               <div style="float: right">
-                   Stories Count : {{ data|length }}
-               </div>
-                 {% if data %}
-                        <table>
-                            <tr>
+                 <div style="float: right;">
+                     <form class="alt" method="get" action="/search_source/">
+                         <div style="display: inline-flex; float: right;">
+                           <input type="text" id="searchBox" class="small" name="q" placeholder="Search">&nbsp;
+                           <input type="submit" class="button small--search" value="Search" >
+                         </div><br>
+                    </form>
+                 </div>
 
-                                <th>
-                                    Name
-                                </th>
+                 <div class="testimonial"><br><br>
 
-                                <th>
-                                    URL
-                                </th>
+                     <div style="float: left;">
+                           Sources Count : {{ data|length }} <br>
+                     </div>
+                     <br>
 
-                                <th >
-                                    Feed
-                                </th>
-
-                                <th colspan="2" style="width: 15%;">
-                                    Actions
-                                </th>
-                            </tr>
-
-                            {% for value in data %}
+                     {% if data %}
+                            <table class="table-no-change">
                                 <tr>
-                                    <td>
-                                        <label>
-                                            {{ value.name }}
-                                        </label>
-                                    </td>
+                                    <th>
+                                        Name
+                                    </th>
 
-                                    <td>
-                                        <label>
-                                            <a href="{{ value.rss_url }}" target="_blank" >{{ value.rss_url }}</a>
-                                        </label>
-                                    </td>
+                                    <th>
+                                        URL
+                                    </th>
 
-                                    <td>
-                                        <form class="alt" action="/fetch_story/" method="get">
-                                               <input class="button small--table" type="hidden" name="item_id" value="{{value.id}}" />
-                                               <input class="button small--table" type="submit" value="Get" />
-                                        </form>
-                                    </td>
+                                    <th >
+                                        Feed
+                                    </th>
 
-                                    <td>
-                                        <form class="alt" action="/edit_source/" method="get">
-                                               <input class="button small--table" type="hidden" name="item_id" value="{{value.id}}" />
-                                               <input class="button small--table" type="submit" value="Edit">
-                                        </form>
-                                    </td>
-
-                                    <td>
-                                        <form class="alt" action="/remove_source/" method="get" onsubmit="return confirm('Do you really want to Delete');">
-                                               <input class="button small--table" type="hidden" name="item_id" value="{{value.id}}" />
-                                               <input class="button small--table"  type="submit" value="Delete">
-                                        </form>
-                                    </td>
+                                    <th>
+                                        Actions
+                                    </th>
                                 </tr>
-                            {% endfor %}
-                        </table>
-                 {% else %}
 
-                            <p> There are no Sources.</p>
+                                {% for value in data %}
+                                    <tr>
+                                        <td width="18%">
+                                                {{ value.name }}
+                                        </td>
 
-                 {% endif %}
+                                        <td>
+                                                <a href="{{ value.rss_url }}" target="_blank" >{{ value.rss_url }}</a>
+                                        </td>
 
+                                        <td>
+                                            <form class="alt" action="/fetch_story/" method="get">
+                                                   <input class="button small--table" type="hidden" name="item_id" value="{{value.id}}" />
+                                                   <input class="button small--table" type="submit" value="Get" />
+                                            </form>
+                                        </td>
+
+                                        <td>
+                                            <form class="alt" action="/edit_source/" method="get">
+                                                   <input class="button small--table" type="hidden" name="item_id" value="{{value.id}}" />
+                                                   <input class="button small--table" type="submit" value=" &nbsp;&nbsp;Edit&nbsp;&nbsp; ">
+                                            </form>
+
+                                            <form class="alt" action="/remove_source/" method="get" onsubmit="return confirm('Do you really want to Delete');">
+                                                   <input class="button small--table" type="hidden" name="item_id" value="{{value.id}}" />
+                                                   <input class="button small--table"  type="submit" value="Delete">
+                                            </form>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </table>
+                     {% else %}
+                                <p> There are no Sources.</p>
+                     {% endif %}
+                 </div>
              </section>
+            <br>
            </div>
-           <br>
-        </div>
     </div>
 </section>
 {% endblock %}

@@ -5,64 +5,68 @@
 
 <section id="main" class="wrapper">
          <br>
-        <div class="content">
+        <div class="inner">
             <div class="testimonial" align="center">
+                <div class="content">
                  <section class="container">
-                     <form method="post" action=".">{% csrf_token %}
-                            <table >
+                     <div class="content">
+                         <h2>Edit Story</h2>
+                         <form method="post" action=".">{% csrf_token %}
+                            <table class="table-separate">
                               <tr>
-                                    <th>
-                                        <label>Title</label>
-                                    </th>
+                                    <td width="20%">
+                                        Title
+                                    </td>
                                     <td>
                                       {{ form.title }}
                                     </td>
                               </tr>
                               <tr>
-                                    <th>
-                                        <label >Body</label>
-                                    </th>
+                                    <td>
+                                        Body
+                                    </td>
                                     <td >
                                      {{ form.body }}
                                     </td>
                               </tr>
                               <tr>
-                                    <th>
-                                        <label >Publish Date</label>
-                                    </th>
+                                    <td>
+                                        Publish Date
+                                    </td>
                                     <td >
                                      {{ form.pub_date }}
                                     </td>
                               </tr>
                               <tr>
-                                    <th>
-                                        <label >Source</label>
-                                    </th>
+                                    <td>
+                                        Source
+                                    </td>
                                     <td >
                                         {{ form.source }}
                                     </td>
                               </tr>
                               <tr>
-                                    <th>
-                                        <label >Url</label>
-                                    </th>
+                                    <td>
+                                        Url
+                                    </td>
                                     <td >
                                      {{ form.url }}
                                     </td>
                               </tr>
 
                               <tr>
-                                <th>
+                                <td>
 
-                                </th>
+                                </td>
                                 <td >
                                  {{ form.item_id.as_hidden }}
                                 </td>
                               </tr>
                             </table>
-                        <button type="submit" class="small">Add</button>
-                     </form>
-                 </section>
+                            <button type="submit" class="small">Add</button>
+                        </form>
+                     </div>
+                 </section></div>
 
                  {% if form.non_field_errors %}
                      {{ form.non_field_errors }}

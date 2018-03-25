@@ -68,21 +68,28 @@ def add_source(request):
                 updated_by=user_id,
             )
             source.save()
-            return HttpResponseRedirect('/add_source/')
-    form = AddSource(user=request.user)
-    return render(request, 'add_source.html', {'form': form})
+            return HttpResponseRedirect('/sources_list/')
+        else:
+            return render(request, 'add_source.html', {'form':form})
+    form = AddSource()
+    return render(request,'add_source.html', {'form': form})
 
 
 @login_required
 def sources_list(request):
     user = User.objects.get(username=request.user)
+    form = AddSource(request)
     # If Staff/SuperUser show all sources else show User wise data
     if user.is_staff or user.is_superuser:
         data = Sourcing.objects.all()
-        return render(request, 'sources.html', {'data': data})
+        return render(request, 'sources.html', {'data': data,
+                                                'form': form})
     else:
         data = Sourcing.objects.filter(created_by_id=user.id)
-    return render(request, 'sources.html', {'data': data})
+        form = AddSource()
+    return render(request, 'sources.html', {'data': data,
+                                            'form': form}
+                  )
 
 
 @csrf_exempt

@@ -11,12 +11,12 @@
                  <section class="container">
                      {% if data %}
                          <h3 style="font-size: 2rem">
-                                <b> Stories for </b>
-                                     <a href="{{ rss_id.rss_url }}" target="_blank">
+                                <b>
+                                    <a href="{{ rss_id.rss_url }}" target="_blank">
                                          {{ rss_id.name }}
-                                     </a>
+                                     </a></b>
                          </h3>
-
+                         <hr>
                          {% for st in data %}
                              <div style="text-align: left">
                                  <a href="{{ st.url }}" target="_blank">{{ st.title }} </a>
