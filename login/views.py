@@ -1,4 +1,5 @@
 import datetime
+from django.contrib import messages
 from login.forms import *
 from django.views.decorators.csrf import csrf_protect, csrf_exempt
 from django.shortcuts import render, render_to_response
@@ -9,7 +10,10 @@ from django.contrib.auth import login as auth_login
 import feedparser
 from newspaper.article import Article
 from login.models import *
+import logging
 
+logging.basicConfig(filename="story_fetching.log", filemode="w+", level=logging.DEBUG)
+logging.Formatter('%(asctime)s %(levelname)s %(message)s')
 
 @csrf_protect
 def register(request):
@@ -68,11 +72,12 @@ def add_source(request):
                 updated_by=user_id,
             )
             source.save()
+            messages.success(request, 'Source added successfully!')
             return HttpResponseRedirect('/sources_list/')
         else:
-            return render(request, 'add_source.html', {'form':form})
+            return render(request, 'add_source.html', {'form': form})
     form = AddSource()
-    return render(request,'add_source.html', {'form': form})
+    return render(request, 'add_source.html', {'form': form})
 
 
 @login_required
@@ -118,6 +123,7 @@ def edit_source(request):
             source_instance.rss_url = form.cleaned_data['rss_url']
             source_instance.updated_by_id = request.user.id
             source_instance.save()
+            messages.success(request, 'Updated Successfully.')
             return HttpResponseRedirect('/sources_list/')
         else:
             return render(request, 'edit_source.html', {'form': form})
@@ -132,6 +138,7 @@ def remove_source(request):
         # Get Sourcing Obj
         source_instance = Sourcing.objects.get(id=item_id)
         source_instance.delete()
+        messages.success(request, 'Source deleted successfully!')
         return HttpResponseRedirect('/sources_list/')
     return HttpResponseRedirect('/sources_list/')
 
@@ -187,18 +194,30 @@ def fetch_story(request):
                 # Use newspaper library to download the article
                 article = Article(story_url)
                 article.download()
-                article.parse()
+
+                # Try to Parse Article
+                try:
+                    article.parse()
+                except Exception:
+                    logging.debug("Exception in Article parse")
+                    logging.info(print(Exception))
+
                 article_instance = article
                 if article_instance.publish_date is None:
                     article_instance.publish_date = datetime.datetime.now()
-                story = Stories(
-                    title=article_instance.title,
-                    source=rss_obj,
-                    pub_date=article_instance.publish_date,
-                    body_text=article_instance.text,
-                    url=article_instance.url
-                )
-                story.save()
+                try:
+                    # Check if story exist
+                    Stories.objects.get(url=story_url, source_id=source_id)
+                except Stories.DoesNotExist:
+                    story = Stories(
+                        title=article_instance.title,
+                        source=rss_obj,
+                        pub_date=article_instance.publish_date,
+                        body_text=article_instance.text,
+                        url=article_instance.url
+                    )
+                    story.save()
+
                 # Add each downloaded article details to Story_list and pass to HTML template.
                 story_list += [article_instance]
             return render_to_response('fetch_story.html', {
@@ -248,6 +267,7 @@ def remove_story(request):
         item_id = int(request.GET.get('item_id'))
         story_instance = Stories.objects.get(id=item_id)
         story_instance.delete()
+        messages.info(request, 'Story deleted successfully!')
     return HttpResponseRedirect('/stories_list/')
 
 

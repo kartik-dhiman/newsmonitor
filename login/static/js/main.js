@@ -107,28 +107,11 @@
 })(jQuery);
 
 (function($){
-$(document).ready(function(){
-
-$("#cssmenu").menumaker({
-   title: "Menu",
-   format: "multitoggle"
-});
-
 $(document).ready(function() {
-    $('.showmenu').click(function() {
-         if ($(this).text() === 'Add Source')
-         {
-              $('.menu').toggle("slide");
-                 $('.showmenu').text('Hide');
-         }
-         else
-             {
-                  $('.menu').toggle("slide");
-                 $('.showmenu').text("Add Source");
-             };
 
-        });
+    $("#cssmenu").menumaker({
+        title: "Menu",
+        format: "multitoggle"
+    });
 });
-});
-
 })(jQuery);

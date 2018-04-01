@@ -142,7 +142,24 @@ STATIC_ROOT = "/home/ghostman/Desktop/Project/NewsMon/static/"
 # If viewing a method requires authentication, it redirects user to login
 django.contrib.auth.LOGIN_URL = '/'
 
-#login redirect Url
+# Login redirect Url
 LOGIN_REDIRECT_URL = '/home/'
 
+# Expire Session on browser close
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+
+# Logging format
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'filters': {
+        'require_debug_false': {
+            '()': 'django.utils.log.RequireDebugFalse'
+        },
+    },
+    'formatters': {
+        'info_format': {
+            'format': '%(asctime)s %(levelname)s - %(message)s',
+        },
+    }
+}

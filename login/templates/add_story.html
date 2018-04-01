@@ -12,57 +12,54 @@
                          <form method="post" action=".">{% csrf_token %}
                                 <table class="table-separate">
                                   <tr>
-                                        <th width="15%">
+                                        <td width="15%">
                                             Title
-                                        </th>
+                                        </td>
                                         <td>
                                           {{ form.title }}
                                         </td>
                                   </tr>
                                     <br>
                                     <tr>
-                                        <th>
+                                        <td>
                                             Body
-                                        </th>
+                                        </td>
                                         <td >
                                          {{ form.body }}
                                         </td>
                                   </tr>
                                     <tr>
-                                        <th>
+                                        <td>
                                             Publish Date
-                                        </th>
+                                        </td>
                                         <td >
                                          {{ form.pub_date }}
                                         </td>
                                   </tr>
                                   <tr>
-                                        <th>
+                                        <td>
                                             Source
-                                        </th>
+                                        </td>
                                         <td >
                                             {{ form.source }}
                                         </td>
                                   </tr>
                                     <tr>
-                                        <th>
+                                        <td>
                                             Url
-                                        </th>
+                                        </td>
                                         <td >
                                          {{ form.url }}
                                         </td>
                                   </tr>
                                 </table >
                             <button type="submit" class="small">Add</button>
-                              <button type="reset" class="small">Reset</button>
+                            <button type="reset" class="small">Reset</button>
                          </form>
-
                  </section>
-
                   {% if form.non_field_errors %}
                      {{ form.non_field_errors }}
                   {% endif %}
-
             </div>
         </div>
     </div>

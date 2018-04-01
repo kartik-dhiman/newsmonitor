@@ -55,7 +55,6 @@ class AddSource(forms.Form):
         widget=forms.URLInput(attrs=dict(required=True, max_length=300, placeholder="URL"))
     )
 
-
     def __init__(self, *args, **kwargs):
         self.user = kwargs.pop('user', None)
         super(AddSource, self).__init__(*args, **kwargs)
@@ -114,12 +113,22 @@ class AddStory(forms.Form):
         widget=forms.URLInput(attrs=dict(required=True, placeholder='URL'))
     )
 
+    def clean(self):
+        try:
+            Stories.objects.get(
+                url=self.cleaned_data['url'], source_id = self.cleaned_data['source'].id
+            )
+        except Stories.DoesNotExist:
+            return self.cleaned_data
+        raise forms.ValidationError(_("Same Url under this Source already Exists"))
+
 
 class CustomAuthForm(AuthenticationForm):
     username = forms.RegexField(regex=r'^\w+$',
-                                widget=forms.TextInput(attrs=dict(required=True,
-                                                                  max_length=30,
-                                                                  placeholder="Username")),
+                                widget=forms.TextInput(attrs=dict(
+                                    required=True,
+                                    max_length=30,
+                                    placeholder="Username")),
                                 error_messages={
                                     'invalid': _("This value must contain only letters, numbers and underscores.")
                                 }
