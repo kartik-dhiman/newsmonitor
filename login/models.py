@@ -25,4 +25,4 @@ class Stories(models.Model):
     url = models.URLField(max_length=1000, null=True, blank=True)
 
     def __str__(self):
-        return u'{0}'.format(self.title)
+        return u'{0}'.format(self.url)
