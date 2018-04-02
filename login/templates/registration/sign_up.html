@@ -27,20 +27,74 @@
                             <h2>Sign Up</h2>
                     </b>
                     <table>
-                      {% for field in form %}
-                          <tr>
-                              {% if field.errors %}
+                        <tr>
+                            {% if form.username.errors %}
                                 <div>
-                                    {{ field.errors }}
+                                    {{ form.username.errors }}
+                                </div>
+                            {% endif  %}
+                            <!-- Fianlly this code returns the value to field -->
+                            {% if form.username.value %}
+                                    <input  type="text"  name="username" placeholder="Username" value="{{ form.username.value }}" required />
+                            {% else %}
+                                    <input  type="text"  name="username" placeholder="Username" required />
+                            {% endif %}
+                        </tr>
+
+                        <!-- Passwords will be cleared -->
+                        <tr>
+                          {% if form.non_field_errors %}
+                            <div>
+                                {{ form.non_field_errors  }}
+                            </div>
+                          {% endif  %}
+                         <input  type="password" name="password1" placeholder="Password" required/>
+                         <input  type="password"  name="password2" placeholder="Re-Enter Password" required/>
+                        </tr>
+
+                        <!-- Returns First Name and Last Name to field -->
+                        <tr>
+                            {% if form.email.errors %}
+                                <div>
+                                    {{ form.email.errors }}
+                                </div>
+                            {% endif  %}
+                            {% if form.email.value %}
+                                    <input  type="email" name="email" placeholder="Email" value="{{ form.email.value }}" required/>
+                            {% else %}
+                                    <input  type="email" name="email" placeholder="Email" required/>
+                            {% endif %}
+                        </tr>
+
+                        <!-- Returns First Name and Last Name to field -->
+                        <tr>
+                            {% if form.fname.errors %}
+                                <div>
+                                    {{ form.fname.errors }}
                                 </div>
                               {% endif  %}
-                              {{ field }}
-                          </tr>
-                      {% endfor %}
+                            {% if form.fname.value %}
+                                    <input  type="text" name="fname" placeholder="First Name" value="{{ form.fname.value }}" required/>
+                            {% else %}
+                                <input  type="text" name="fname" placeholder="First Name" required/>
+                            {% endif %}
+                        </tr>
+
+                        <tr>
+                            {% if form.lname.errors %}
+                                <div>
+                                    {{ form.lname.errors }}
+                                </div>
+                              {% endif  %}
+                            {% if form.lname.value %}
+                                <input  type="text" name="lname" placeholder="Last Name" value="{{ form.lname.value }}" required/>
+                            {% else %}
+                                <input  type="text" name="lname" placeholder="Last Name" required/>
+                            {% endif %}
+                        </tr>
                     </table>
                      <button type="submit" class="small" >Sign Up</button>
-
-                          <button type="reset" class="small">Reset</button>
+                      <button type="reset" class="small">Reset</button>
                   </form>
 
                </section>

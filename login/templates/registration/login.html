@@ -21,11 +21,13 @@
                                         <h2>Login</h2>
                                         <br>
                                         <table>
-                                            {% for field in form %}
-                                                <tr>
-                                                    {{ field }}
-                                                </tr>
-                                            {% endfor %}
+                                            <tr>
+                                               <input type="text" name="username" placeholder="Username"/>
+                                            </tr>
+                                            <tr>
+                                                 <input type="password" name="password" placeholder="Password"/>
+                                            </tr>
+
                                         </table>
                                         <div>
                                             {% if form.username.errors %}

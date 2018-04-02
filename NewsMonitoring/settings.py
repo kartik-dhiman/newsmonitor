@@ -157,6 +157,7 @@ LOGGING = {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
             'filename': 'story_fetching.log',
+            'formatter': 'info_format',
         },
     },
     'loggers': {
@@ -174,6 +175,12 @@ LOGGING = {
     'formatters': {
         'info_format': {
             'format': '%(asctime)s %(levelname)s - %(message)s',
+            'datefmt': "%d/%b/%Y %H:%M:%S",
         },
+    },
+    'login': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
     }
+
 }

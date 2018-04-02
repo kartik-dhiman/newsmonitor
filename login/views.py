@@ -199,8 +199,8 @@ def fetch_story(request):
                 try:
                     article.parse()
                 except Exception:
-                    logging.debug("Exception in Article parse")
-                    logging.info(print(Exception))
+                    logging.debug(print(Exception))
+                    logging.info("Exception in Article parse")
 
                 article_instance = article
                 if article_instance.publish_date is None:

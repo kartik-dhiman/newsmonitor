@@ -9,7 +9,7 @@ class RegistrationForm(forms.Form):
     username = forms.RegexField(
         regex=r'^\w+$',
         widget=forms.TextInput(attrs=dict(required=True, max_length=30, placeholder="Username")),
-        error_messages={'invalid': _("This value must contain only letters, numbers and underscores.")}
+        error_messages={'invalid': _("Username must contain only letters, numbers and underscores.")}
     )
 
     email = forms.EmailField(
@@ -116,7 +116,7 @@ class AddStory(forms.Form):
     def clean(self):
         try:
             Stories.objects.get(
-                url=self.cleaned_data['url'], source_id = self.cleaned_data['source'].id
+                url=self.cleaned_data['url'], source_id=self.cleaned_data['source'].id
             )
         except Stories.DoesNotExist:
             return self.cleaned_data
@@ -130,7 +130,7 @@ class CustomAuthForm(AuthenticationForm):
                                     max_length=30,
                                     placeholder="Username")),
                                 error_messages={
-                                    'invalid': _("This value must contain only letters, numbers and underscores.")
+                                    'invalid': _("Username must contain only letters, numbers and underscores.")
                                 }
                                 )
 

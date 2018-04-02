@@ -2,10 +2,8 @@ from django.core.management.base import BaseCommand, CommandError
 
 from login.models import *
 
-import pytz
 import feedparser
 import datetime
-from datetime import timezone
 
 from newspaper.article import Article
 
@@ -25,14 +23,14 @@ class Command(BaseCommand):
 
                 # Detects if the Url is not well formed RSS
                 if feed_data.bozo == 1:
-                    logging.info("Not a proper url :    %s" % list_item.rss_url)
+                    logging.debug("Not a proper url :    %s" % list_item.rss_url)
                 else:
                     for data in feed_data.get('entries'):
                         story_url = data.get('link')
 
                         # If RSS is Empty return Story listing page
                         if story_url is None:
-                            logging.info("Story URl broken for %s" % data)
+                            logging.debug("Story URl broken for %s" % data)
                         else:
                             # Use newspaper library to download the article
                             article = Article(story_url)
@@ -42,7 +40,7 @@ class Command(BaseCommand):
                             try:
                                 article.parse()
                             except Exception:
-                                logging.info("Exception while downloading article %s", article)
+                                logging.debug("Exception while downloading article %s", article)
 
                             article_instance = article
 
