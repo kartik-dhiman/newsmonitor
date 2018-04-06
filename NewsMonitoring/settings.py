@@ -148,39 +148,3 @@ LOGIN_REDIRECT_URL = '/home/'
 # Expire Session on browser close
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
-# Logging format
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'file': {
-            'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-            'filename': 'story_fetching.log',
-            'formatter': 'info_format',
-        },
-    },
-    'loggers': {
-        'django': {
-            'handlers': ['file'],
-            'level': 'DEBUG',
-            'propagate': False,
-        },
-    },
-    'filters': {
-        'require_debug_false': {
-            '()': 'django.utils.log.RequireDebugFalse'
-        },
-    },
-    'formatters': {
-        'info_format': {
-            'format': '%(asctime)s %(levelname)s - %(message)s',
-            'datefmt': "%d/%b/%Y %H:%M:%S",
-        },
-    },
-    'login': {
-            'handlers': ['file'],
-            'level': 'DEBUG',
-    }
-
-}

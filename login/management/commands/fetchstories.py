@@ -5,9 +5,12 @@ from login.models import *
 import feedparser
 import datetime
 
-from newspaper.article import Article
+from newspaper.article import Article, ArticleException
 
 import logging
+logger = logging.getLogger(__name__)
+
+from tqdm import tqdm
 
 from progressbar import ProgressBar
 pbar = ProgressBar()
@@ -17,40 +20,46 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         source_obj = Sourcing.objects.all()
-        for list_item in pbar(source_obj):
+        for list_item in tqdm(source_obj):
                 # Parse the RSS URL and get the data
                 feed_data = feedparser.parse(list_item.rss_url)
 
                 # Detects if the Url is not well formed RSS
                 if feed_data.bozo == 1:
-                    logging.debug("Not a proper url :    %s" % list_item.rss_url)
+                    logger.debug("Not a RSS url :    %s" % list_item.rss_url)
                 else:
-                    for data in feed_data.get('entries'):
+                    for data in tqdm(feed_data.get('entries')):
                         story_url = data.get('link')
 
                         # If RSS is Empty return Story listing page
                         if story_url is None:
-                            logging.debug("Story URl broken for %s" % data)
+                            logger.debug("No feed data in RSS URL:   %s" % list_item.rss_url)
                         else:
+
                             # Use newspaper library to download the article
                             article = Article(story_url)
-                            article.download()
+                            try:
+                                article.download()
+                            except ArticleException:
+                                logger.debug("Article Download exception in : %s" % story_url)
+
 
                             # Try to Parse Article
                             try:
                                 article.parse()
-                            except Exception:
-                                logging.debug("Exception while downloading article %s", article)
+                            except ArticleException:
+                                logger.debug("Article parse exception in : %s" % story_url)
 
                             article_instance = article
 
                             if article_instance.publish_date is None:
-                                article_instance.publish_date = datetime.datetime.now()
+                                article_instance.publish_date = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
+                            # Check if story exist
                             try:
-                                # Check if story exist
-                                Stories.objects.get(url=story_url)
-                            except Stories.DoesNotExist:
+                                check_story_url = Stories.objects.get(url=story_url)
+
+                            except check_story_url.DoesNotExist:
                                 story = Stories(
                                     title=article_instance.title,
                                     source=list_item,

@@ -4,16 +4,26 @@ from login.forms import *
 from django.views.decorators.csrf import csrf_protect, csrf_exempt
 from django.shortcuts import render, render_to_response
 from django.http import HttpResponseRedirect
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib.auth import logout, authenticate
 from django.contrib.auth import login as auth_login
 import feedparser
-from newspaper.article import Article
+from newspaper.article import Article, ArticleException
 from login.models import *
+
+
 import logging
 
-logging.basicConfig(filename="story_fetching.log", filemode="w+", level=logging.DEBUG)
-logging.Formatter('%(asctime)s %(levelname)s %(message)s')
+logger = logging.getLogger(__name__)
+logging.basicConfig(filename='story_fetching.log', level=logging.DEBUG,
+                    format='%(asctime)s:%(levelname)s:%(message)s')
+
+
+def user_required(view_func):
+    user_login_required = user_passes_test(lambda user: user.is_active, login_url='/')
+    decorated_view_func = login_required(user_login_required(view_func))
+    return decorated_view_func
+
 
 @csrf_protect
 def register(request):
@@ -37,6 +47,7 @@ def register(request):
 
 
 # Show a register success page for 2 seconds. and then redirect to Login
+@login_required
 def register_success(request):
     return render(request, 'registration/success.html',)
 
@@ -62,9 +73,12 @@ def home(request):
 def add_source(request):
     if request.method == 'POST':
         form = AddSource(request.POST, user=request.user)
+
+        # Get user instance
+        user_id = User.objects.get(id=request.user.id)
+
         # If form is valid, Save source.
         if form.is_valid():
-            user_id = User.objects.get(id=request.user.id)
             source = Sourcing(
                 name=form.cleaned_data['name'],
                 rss_url=form.cleaned_data['rss_url'],
@@ -73,7 +87,7 @@ def add_source(request):
             )
             source.save()
             messages.success(request, 'Source added successfully!')
-            return HttpResponseRedirect('/sources_list/')
+            return HttpResponseRedirect('/add_source/')
         else:
             return render(request, 'add_source.html', {'form': form})
     form = AddSource()
@@ -81,30 +95,35 @@ def add_source(request):
 
 
 @login_required
+@csrf_protect
 def sources_list(request):
-    user = User.objects.get(username=request.user)
     form = AddSource(request)
+
     # If Staff/SuperUser show all sources else show User wise data
-    if user.is_staff or user.is_superuser:
-        data = Sourcing.objects.all()
+    if request.user.is_staff or request.user.is_superuser:
+        data = Sourcing.objects.values('name', 'rss_url', 'id')
         return render(request, 'sources.html', {'data': data,
                                                 'form': form})
     else:
-        data = Sourcing.objects.filter(created_by_id=user.id)
+        data = Sourcing.objects.values('name', 'rss_url', 'id').filter(created_by_id=request.user.id)
         form = AddSource()
     return render(request, 'sources.html', {'data': data,
                                             'form': form}
                   )
 
 
+@login_required
 @csrf_exempt
 def edit_source(request):
     if request.method == 'GET':
         if request.GET.get('item_id') is None:
             return HttpResponseRedirect('/sources_list/')
+        elif request.GET.get('item_id') == '':
+            return HttpResponseRedirect('/sources_list/')
         else:
             # Get id of the Source URL
             item_id = int(request.GET.get('item_id'))
+
             # Get Sourcing obj for this id.
             source_obj = Sourcing.objects.get(id=item_id)
             form = {
@@ -113,24 +132,27 @@ def edit_source(request):
                 'item_id': source_obj.id,
             }
             form = EditSource(form, user=request.user)
+
         return render_to_response('edit_source.html', {'form': form, 'user': request.user, 'id': source_obj})
     if request.method == 'POST':
         form = EditSource(request.POST, user=request.user)
         if form.is_valid():
             # Get Source instance and update its changed data.
             source_instance = Sourcing.objects.get(id=form.cleaned_data['item_id'])
+
+            # Save data
             source_instance.name = form.cleaned_data['name']
             source_instance.rss_url = form.cleaned_data['rss_url']
             source_instance.updated_by_id = request.user.id
             source_instance.save()
             messages.success(request, 'Updated Successfully.')
             return HttpResponseRedirect('/sources_list/')
-        else:
-            return render(request, 'edit_source.html', {'form': form})
+        return render(request, 'edit_source.html', {'form': form})
     return HttpResponseRedirect('/sources_list/')
 
 
 # Remove item from database and return to Sources page with rest list of Sources
+@login_required
 def remove_source(request):
     if request.method == 'GET':
         # Get id of the item to be deleted
@@ -138,6 +160,7 @@ def remove_source(request):
         # Get Sourcing Obj
         source_instance = Sourcing.objects.get(id=item_id)
         source_instance.delete()
+        messages.add_message(request, messages.SUCCESS, 'Source deleted successfully!')
         messages.success(request, 'Source deleted successfully!')
         return HttpResponseRedirect('/sources_list/')
     return HttpResponseRedirect('/sources_list/')
@@ -167,9 +190,11 @@ def search_source(request):
 @login_required
 def fetch_story(request):
     if request.method == 'GET':
+
         # List to store all the parsed RSS entries.
         story_list = []
-        # Source Url Id and Fetch Source Url Object.
+
+        # Get Source Object from 'item_id' passed through Request
         source_id = request.GET.get('item_id')
         rss_obj = Sourcing.objects.get(id=source_id)
 
@@ -178,6 +203,7 @@ def fetch_story(request):
 
         # Detects if the Url is not well formed RSS
         if feed_data.bozo == 1:
+            logger.debug("Not a RSS URL: %s" % rss_obj.rss_url)
             url_error = {
                 'Possible Wrong URL. Click here to go back to Sources page.'
             }
@@ -187,20 +213,24 @@ def fetch_story(request):
                 story_url = data.get('link')
                 # If RSS is Empty return Story listing page
                 if story_url is None:
+                    logger.debug("No feed data in RSS URL:   %s" % rss_obj.rss_url)
                     rss_error = {
                         'Either RSS is empty or RSS is broken. Click here to go back to Story Listing page'
                     }
                     return render_to_response('fetch_story.html', {'rss_error': rss_error, 'user': request.user})
                 # Use newspaper library to download the article
                 article = Article(story_url)
-                article.download()
+
+                try:
+                    article.download()
+                except ArticleException:
+                    logger.debug("Article Download exception in : %s" % story_url)
 
                 # Try to Parse Article
                 try:
                     article.parse()
-                except Exception:
-                    logging.debug(print(Exception))
-                    logging.info("Exception in Article parse")
+                except ArticleException:
+                    logger.debug("Exception in article parse")
 
                 article_instance = article
                 if article_instance.publish_date is None:
@@ -228,16 +258,19 @@ def fetch_story(request):
         return HttpResponseRedirect('/sources_list/')
 
 
-@login_required
+@login_required()
 def stories_list(request):
     user_id = User.objects.get(id=request.user.id)
     if user_id.is_staff or user_id.is_superuser:
         # Show all stories to StaffUser or Superuser
-        data = Stories.objects.all()
+        data = Stories.objects.values('id', 'title', 'pub_date', 'body_text', 'source_id',
+                                      'url', 'source_id__name', 'source_id__rss_url')
         return render(request, 'stories.html', {'data': data})
     else:
         # Get stories created by Logged-In user.
-        data = Stories.objects.filter(source_id__created_by_id=user_id)
+        data = Stories.objects.values('id', 'title', 'pub_date', 'body_text', 'source_id',
+                                      'url', 'source_id__name', 'source_id__rss_url').\
+                                    filter(source_id__created_by_id=user_id)
     return render(request, 'stories.html', {'data': data})
 
 
@@ -262,6 +295,7 @@ def search_stories(request):
 
 
 # Remove item from database and return to Sources page with rest list of Sources
+@login_required
 def remove_story(request):
     if request.method == 'GET':
         item_id = int(request.GET.get('item_id'))
@@ -287,6 +321,7 @@ def add_story(request):
                 url=form.cleaned_data['url']
             )
             story.save()
+            messages.success(request, 'Story added successfully!')
             return HttpResponseRedirect('/add_story/')
         else:
             return render(request, 'add_story.html', {'form': form})
@@ -295,10 +330,14 @@ def add_story(request):
     return render(request, 'add_story.html', {'form': form})
 
 
+@login_required
 @csrf_exempt
 def edit_story(request):
     if request.method == 'GET':
         if request.GET.get('item_id') is None:
+            # If edit item Id is not fetched.
+            return HttpResponseRedirect('/stories_list/')
+        elif request.GET.get('item_id') == '':
             # If edit item Id is not fetched.
             return HttpResponseRedirect('/stories_list/')
         else:

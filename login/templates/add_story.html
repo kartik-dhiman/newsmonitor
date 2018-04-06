@@ -8,54 +8,62 @@
         <div class="content">
             <div class="content" align="center">
                  <section class="container">
-                         <h2> <b>Add Story </b></h2>
-                         <form method="post" action=".">{% csrf_token %}
-                                <table class="table-separate">
-                                  <tr>
-                                        <td width="15%">
-                                            Title
-                                        </td>
-                                        <td>
-                                          {{ form.title }}
-                                        </td>
-                                  </tr>
-                                    <br>
-                                    <tr>
-                                        <td>
-                                            Body
-                                        </td>
-                                        <td >
-                                         {{ form.body }}
-                                        </td>
-                                  </tr>
-                                    <tr>
-                                        <td>
-                                            Publish Date
-                                        </td>
-                                        <td >
-                                         {{ form.pub_date }}
-                                        </td>
-                                  </tr>
-                                  <tr>
-                                        <td>
-                                            Source
-                                        </td>
-                                        <td >
-                                            {{ form.source }}
-                                        </td>
-                                  </tr>
-                                    <tr>
-                                        <td>
-                                            Url
-                                        </td>
-                                        <td >
-                                         {{ form.url }}
-                                        </td>
-                                  </tr>
-                                </table >
-                            <button type="submit" class="small">Add</button>
-                            <button type="reset" class="small">Reset</button>
-                         </form>
+                     <h2> <b>Add Story </b></h2>
+                     <!-- Show Messages -->
+                     {% if messages %}
+                            {% for message in messages %}
+                            <div>
+                                {{ message }}
+                            </div>
+                            {% endfor %}
+                     {% endif %}
+                     <form method="post" action=".">{% csrf_token %}
+                            <table class="table-separate">
+                              <tr>
+                                    <td width="15%">
+                                        Title
+                                    </td>
+                                    <td>
+                                      {{ form.title }}
+                                    </td>
+                              </tr>
+                                <br>
+                                <tr>
+                                    <td>
+                                        Body
+                                    </td>
+                                    <td >
+                                     {{ form.body }}
+                                    </td>
+                              </tr>
+                                <tr>
+                                    <td>
+                                        Publish Date
+                                    </td>
+                                    <td >
+                                     {{ form.pub_date }}
+                                    </td>
+                              </tr>
+                              <tr>
+                                    <td>
+                                        Source
+                                    </td>
+                                    <td >
+                                        {{ form.source }}
+                                    </td>
+                              </tr>
+                                <tr>
+                                    <td>
+                                        Url
+                                    </td>
+                                    <td >
+                                     {{ form.url }}
+                                    </td>
+                              </tr>
+                            </table >
+                        <button type="submit" class="small">Add</button>
+                        <button type="reset" class="small">Reset</button>
+                     </form>
                  </section>
                   {% if form.non_field_errors %}
                      {{ form.non_field_errors }}

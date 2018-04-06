@@ -1,3 +1,4 @@
+
 from django import forms
 from django.utils.translation import ugettext_lazy as _
 from login.models import *
@@ -62,7 +63,7 @@ class AddSource(forms.Form):
     def clean(self):
         try:
             Sourcing.objects.get(
-                rss_url__iexact=self.cleaned_data['rss_url'], created_by_id=self.user.id
+                rss_url__exact=self.cleaned_data['rss_url'], created_by_id=self.user.id
             )
 
         except Sourcing.DoesNotExist:

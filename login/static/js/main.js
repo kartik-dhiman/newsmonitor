@@ -114,4 +114,8 @@ $(document).ready(function() {
         format: "multitoggle"
     });
 });
+
+$(document).ready(function(){
+    $('.messages').fadeOut(3000);
+});
 })(jQuery);

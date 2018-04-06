@@ -19,10 +19,13 @@ class Sourcing(models.Model):
 
 class Stories(models.Model):
     title = models.TextField(max_length=500)
-    source = models.ForeignKey(Sourcing, null=True, blank=True, on_delete=models.CASCADE)
-    pub_date = models.DateTimeField(null=True, blank=True)
+    source = models.ForeignKey(Sourcing, null=False, blank=False, on_delete=models.CASCADE)
+    pub_date = models.DateTimeField(null=False, blank=False)
     body_text = models.TextField(blank=True)
     url = models.URLField(max_length=1000, null=True, blank=True)
 
+    class Meta:
+        unique_together = ('url', 'source')
+
     def __str__(self):
-        return u'{0}'.format(self.url)
+        return u'{0}'.format(self.title)

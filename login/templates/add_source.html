@@ -9,29 +9,37 @@
                  <section class="container">
                       <div class="content">
                           <h2> <b>Add Source </b></h2>
-                             <form method="post" action=".">{% csrf_token %}
-                                <table class="table-separate">
-                                  <tr>
-                                    <td>
-                                        Name
-                                    </td>
-                                    <td>
-                                     {{ form.name }}
-                                    </td>
-                                  </tr>
+                          <!-- Show Messages -->
+                         {% if messages %}
+                                {% for message in messages %}
+                                <div>
+                                    {{ message }}
+                                </div>
+                                {% endfor %}
+                         {% endif %}
+                         <form method="post" action=".">{% csrf_token %}
+                            <table class="table-separate">
+                              <tr>
+                                <td>
+                                    Name
+                                </td>
+                                <td>
+                                 {{ form.name }}
+                                </td>
+                              </tr>
 
-                                  <tr>
-                                        <td>
-                                            Url
-                                        </td>
-                                        <td >
-                                             {{ form.rss_url }}
-                                        </td>
-                                  </tr>
-                                </table >
-                                <button type="submit" class="small">Add</button>
-                                 <button type="reset" class="small">Reset</button>
-                             </form>
+                              <tr>
+                                    <td>
+                                        Url
+                                    </td>
+                                    <td >
+                                         {{ form.rss_url }}
+                                    </td>
+                              </tr>
+                            </table >
+                            <button type="submit" class="small">Add</button>
+                             <button type="reset" class="small">Reset</button>
+                         </form>
                       </div>
                  </section>
 

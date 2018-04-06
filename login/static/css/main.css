@@ -2484,11 +2484,14 @@ body {
     padding-top: 44px; }
 
   #header {
-    height: 44px;
+    height: 50px;
     line-height: 44px; } }
 @media screen and (max-width: 480px) {
   #header {
-    min-width: 320px; } }
+    min-width: 320px; }
+    #header > .logo {
+    font-size: medium;  }
+  }
 /* Heading */
 #heading {
   -ms-flex-align: center;
@@ -2513,7 +2516,7 @@ body {
   background-size: cover;
   border-top: 0;
   display: -ms-flexbox;
-  height: 8rem !important;
+  height: 9rem !important;
   min-height: 5rem;
   overflow: hidden;
   position: relative;
@@ -2705,6 +2708,7 @@ body {
   content: ".";
   display: block;
   clear: both;
+  position: fixed;
   visibility: hidden;
   line-height: 0;
   height: 0;
@@ -2866,14 +2870,17 @@ body {
 }
 @media all and (max-width: 768px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
   #cssmenu {
-    width: 100%;
-      background: #111111;
-      height: max-content;
+    width: 40%;
+    background: #111111;
+    height: max-content;
+    display: block;
   }
 
   #cssmenu ul {
     width: 100%;
     display: none;
+    position: absolute;
+    background: #111111;
   }
 
   #cssmenu.align-center > ul {
@@ -2923,7 +2930,7 @@ body {
   #cssmenu.align-right ul ul {
     position: relative;
     left: 0;
-    width: 100%;
+    width: auto;
     margin: 0;
     text-align: left;
   }
@@ -2943,14 +2950,15 @@ body {
     font-size: 12px;
     text-transform: uppercase;
     font-weight: 700;
+    text-align: center;
   }
 
   #cssmenu #menu-button:after {
-    position: absolute;
+    position: fixed;
     top: 22px;
     right: 17px;
     display: block;
-    height: 4px;
+    height: inherit;
     width: 20px;
     border-top: 2px solid #dddddd;
     border-bottom: 2px solid #dddddd;
@@ -2972,7 +2980,7 @@ body {
     top: 23px;
     border: 0;
     height: 2px;
-    width: 15px;
+    width: 10px;
     background: #111111;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);

@@ -21,13 +21,13 @@
                      </div>
                      <br>
                      <!--Message-->
-                     {% if messages %}
-                            {% for message in messages %}
-                            <div>
-                                {{ message }}
-                            </div>
-                            {% endfor %}
-                     {% endif %}
+                     <div class="messages">
+                         {% if messages %}
+                                {% for message in messages %}
+                                    {{ message }}
+                                {% endfor %}
+                         {% endif %}
+                     </div>
 
                      <!--Show Data-->
                      {% if data %}
@@ -69,7 +69,7 @@
                                     </td>
 
                                      <td>
-                                            <a href="{{ value.source.rss_url }}" target="_blank" >{{ value.source.name }}</a>
+                                            <a href="{{ value.source_id__rss_url }}" target="_blank" >{{ value.source_id__name }}</a>
                                     </td>
 
                                     <td>
