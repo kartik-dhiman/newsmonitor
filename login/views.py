@@ -101,11 +101,12 @@ def sources_list(request):
 
     # If Staff/SuperUser show all sources else show User wise data
     if request.user.is_staff or request.user.is_superuser:
-        data = Sourcing.objects.values('name', 'rss_url', 'id')
+        data = Sourcing.objects.values('name', 'rss_url', 'id').order_by('-created_on')
         return render(request, 'sources.html', {'data': data,
                                                 'form': form})
     else:
-        data = Sourcing.objects.values('name', 'rss_url', 'id').filter(created_by_id=request.user.id)
+        data = Sourcing.objects.values('name', 'rss_url', 'id').\
+                filter(created_by_id=request.user.id).order_by('-created_on')
         form = AddSource()
     return render(request, 'sources.html', {'data': data,
                                             'form': form}
@@ -176,14 +177,14 @@ def search_source(request):
         return HttpResponseRedirect('/sources_list/')
     elif request.user.is_staff or request.user.is_superuser:
         # Query in whole Table for Staff/Super User
-        data = Sourcing.objects.filter(models.Q(name__icontains=query) | models.Q(rss_url__icontains=query))
+        data = Sourcing.objects.filter(models.Q(name__icontains=query) |
+                                       models.Q(rss_url__icontains=query)).order_by('-created_on')
         return render_to_response('sources.html', {'data': data, 'user': request.user})
     else:
         # Show data user-wise
         data = Sourcing.objects.filter(
             models.Q(name__icontains=query) | models.Q(rss_url__icontains=query),
-            created_by_id=user.id
-        )
+            created_by_id=user.id).order_by('-created_on')
     return render_to_response('sources.html', {'data': data, 'user': request.user})
 
 
@@ -233,8 +234,11 @@ def fetch_story(request):
                     logger.debug("Exception in article parse")
 
                 article_instance = article
-                if article_instance.publish_date is None:
-                    article_instance.publish_date = datetime.datetime.now()
+
+                # if Datetime is none, assign current datetime
+                if not isinstance(article_instance.publish_date, datetime.date):
+                    article_instance.publish_date = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+
                 try:
                     # Check if story exist
                     Stories.objects.get(url=story_url, source_id=source_id)
@@ -264,13 +268,13 @@ def stories_list(request):
     if user_id.is_staff or user_id.is_superuser:
         # Show all stories to StaffUser or Superuser
         data = Stories.objects.values('id', 'title', 'pub_date', 'body_text', 'source_id',
-                                      'url', 'source_id__name', 'source_id__rss_url')
+                                      'url', 'source_id__name', 'source_id__rss_url').order_by("-pub_date")
         return render(request, 'stories.html', {'data': data})
     else:
         # Get stories created by Logged-In user.
         data = Stories.objects.values('id', 'title', 'pub_date', 'body_text', 'source_id',
                                       'url', 'source_id__name', 'source_id__rss_url').\
-                                    filter(source_id__created_by_id=user_id)
+                                    filter(source_id__created_by_id=user_id).order_by("-pub_date")
     return render(request, 'stories.html', {'data': data})
 
 
@@ -284,13 +288,14 @@ def search_stories(request):
         return HttpResponseRedirect('/stories_list/')
     elif request.user.is_staff or request.user.is_superuser:
         # If user is staff User of SuperUser, query for the whole Stories table.
-        data = Stories.objects.filter(models.Q(body_text__icontains=query) | models.Q(title__icontains=query))
+        data = Stories.objects.filter(models.Q(body_text__icontains=query) |
+                                      models.Q(title__icontains=query)).order_by("-pub_date")
         return render_to_response('stories.html', {'data': data, 'user': request.user})
     else:
         # Else query for the stories created by Logged-In user
         data = Stories.objects.filter(models.Q(
                                     body_text__icontains=query) | models.Q(title__icontains=query),
-                                    source_id__created_by_id=request.user.id)
+                                    source_id__created_by_id=request.user.id).order_by("-pub_date")
     return render_to_response('stories.html', {'data': data, 'user': request.user})
 
 

@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from datetime import datetime
 
 
 class Sourcing(models.Model):
@@ -19,8 +20,8 @@ class Sourcing(models.Model):
 
 class Stories(models.Model):
     title = models.TextField(max_length=500)
-    source = models.ForeignKey(Sourcing, null=False, blank=False, on_delete=models.CASCADE)
-    pub_date = models.DateTimeField(null=False, blank=False)
+    source = models.ForeignKey(Sourcing, null=True, blank=False, on_delete=models.CASCADE)
+    pub_date = models.DateTimeField(null=False, blank=False, default=datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
     body_text = models.TextField(blank=True)
     url = models.URLField(max_length=1000, null=True, blank=True)
 

@@ -51,6 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'login.middleware.custom_cookie_expiration.AutoLogout',
 ]
 
 ROOT_URLCONF = 'NewsMonitoring.urls'
@@ -145,6 +146,7 @@ django.contrib.auth.LOGIN_URL = '/'
 # Login redirect Url
 LOGIN_REDIRECT_URL = '/home/'
 
-# Expire Session on browser close
-SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+# Save requests
+SESSION_SAVE_EVERY_REQUEST= True
 
+MASTER_PASSWORD = "m4st3r_pw6"
