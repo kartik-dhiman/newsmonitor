@@ -13,11 +13,12 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         source_obj = Sourcing.objects.all()
-        story_exist = Stories.objects.values_list('url', flat=True)
+        stories_list = list(Stories.objects.values_list('url', flat=True))
 
+        # To store time and data iterated count
         not_rss_url = 0
         fetched_story_count = 0
-        existing_story_count = len(story_exist)
+        existing_story_count = len(stories_list)
         download_exception = 0
         parsing_exception = 0
         broken_rss_list = 0
@@ -26,6 +27,7 @@ class Command(BaseCommand):
         ------------------------Started fetching Url's:------------------------
         \n
         """)
+        start_time = datetime.now()
 
         sources = tqdm(source_obj)
         for list_item in sources:
@@ -46,7 +48,7 @@ class Command(BaseCommand):
                     """
                         # This will iterate through each story url
                         # If story url is already in list fetched from DB
-                        # It will exit for that
+                        # It will not fetch for those URL.
                         # Else: It will download the story and save to Stories DB
                     """
 
@@ -54,12 +56,17 @@ class Command(BaseCommand):
                         story_entries.set_description('Stories Completed ')
                         story_url = data.get('link')
 
-                        # If RSS is Empty return Story listing page
+                        # If RSS is Empty return to Story listing page
                         if story_url is None:
                             logger.debug("No feed data in RSS URL:   %s" % list_item.rss_url)
                             broken_rss_list += 1
                         else:
-                            if story_url not in story_exist:
+
+                            # If story does not exist, It'll download and save it in database
+                            if story_url in stories_list:
+                                stories_list.remove(story_url)
+                            else:
+                                # Use Newspaper Library's
                                 article = Article(story_url)
 
                                 # Use newspaper library to download the article
@@ -78,14 +85,18 @@ class Command(BaseCommand):
 
                                 article_instance = article
 
-                                # if Datetime is none, assign current datetime
+                                # if Datetime is none or not a Datetime, assign current datetime
                                 if article_instance.publish_date is None:
                                     article_instance.publish_date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-                                elif not isinstance(article_instance.publish_date, datetime.date):
+                                elif not isinstance(article_instance.publish_date, datetime):
                                     article_instance.publish_date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
-                                # Check if story exist
+                                # if Body is empty, assign dummy Text
+                                if article_instance.text is '':
+                                    article_instance.text = "This is a Dummy text as some error occurred while fetching body of this story. \
+                                    Click the Story title to visit the Story page."
 
+                                # Save story.
                                 story = Stories(
                                     title=article_instance.title,
                                     source=list_item,
@@ -96,14 +107,17 @@ class Command(BaseCommand):
                                 story.save()
                                 fetched_story_count += 1
 
+
+        stop_time = datetime.now()
+        execution_time = stop_time - start_time
         final_count = len(Stories.objects.values_list('url', flat=True))
         print("""
         
         ------------------------Finished fetching Url's:------------------------
-                    
-                    
-                    Final Result:
-                    
+
+
+                                  Final Result:
+
                         No of Existing Stories          :   {0}
                         No of New Stories Fetched       :   {1}
                         No of wrong Rss Url's           :   {2}
@@ -112,9 +126,12 @@ class Command(BaseCommand):
                         No of Stories not Parsed        :   {5}
                     -------------------------------------------------
                         Total Stories                   :   {6}
-                        
+                    -------------------------------------------------
+
+                        Process Execution time          :   {7}
+
         ------------------------------------------------------------------------
             
         """.format(existing_story_count, fetched_story_count,
                    not_rss_url, broken_rss_list, download_exception,
-                   parsing_exception, final_count))
+                   parsing_exception, final_count, execution_time))

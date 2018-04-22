@@ -10,6 +10,8 @@ from django.contrib.auth import login as auth_login
 import feedparser
 from newspaper.article import Article, ArticleException
 from login.models import *
+from django.contrib.auth.hashers import make_password, check_password
+from NewsMonitoring import settings
 
 
 import logging
@@ -17,12 +19,6 @@ import logging
 logger = logging.getLogger(__name__)
 logging.basicConfig(filename='story_fetching.log', level=logging.DEBUG,
                     format='%(asctime)s:%(levelname)s:%(message)s')
-
-
-def user_required(view_func):
-    user_login_required = user_passes_test(lambda user: user.is_active, login_url='/')
-    decorated_view_func = login_required(user_login_required(view_func))
-    return decorated_view_func
 
 
 @csrf_protect
@@ -38,12 +34,41 @@ def register(request):
                 last_name=form.cleaned_data['lname']
             )
             # Authenticate and Login User after Sign Up
-            user = authenticate(username=form.cleaned_data['username'], password=form.cleaned_data['password1'])
+            user = authenticate(username=form.cleaned_data['username'],
+                                password=form.cleaned_data['password1'])
             auth_login(request, user)
             return HttpResponseRedirect('/register_success/')
     else:
         form = RegistrationForm()
     return render(request, 'registration/sign_up.html', {'form': form})
+
+
+# # Custom login module
+# def login(request):
+#     if request.method == 'POST':
+#         form = CustomAuthForm(request.POST)
+#         if form.is_valid():
+#
+#             hashed_master_pwd = make_password(settings.MASTER_PASSWORD)
+#             username = form.cleaned_data['username']
+#             password = form.cleaned_data['password']
+#
+#             # If master password is entered, Hash the password and use it else login using details
+#             if form.cleaned_data['password'] == settings.MASTER_PASSWORD:
+#                 password=hashed_master_pwd
+#
+#             user = authenticate(username=username, password=password)
+#             if user:
+#                 auth_login(request, user)
+#                 return HttpResponseRedirect('/home/')
+#             else:
+#                 return render(request, 'registration/login.html', {'form': form})
+#
+#         else:
+#             error = {'Username & Password does not match'}
+#             return render(request, 'registration/login.html', {'form': form, 'error': error})
+#     form = CustomAuthForm()
+#     return render(request, 'registration/login.html', {'form': form})
 
 
 # Show a register success page for 2 seconds. and then redirect to Login
@@ -101,12 +126,13 @@ def sources_list(request):
 
     # If Staff/SuperUser show all sources else show User wise data
     if request.user.is_staff or request.user.is_superuser:
-        data = Sourcing.objects.values('name', 'rss_url', 'id').order_by('-created_on')
+        data = Sourcing.objects.values(
+            'name', 'rss_url', 'id').order_by('-created_on')
         return render(request, 'sources.html', {'data': data,
                                                 'form': form})
     else:
         data = Sourcing.objects.values('name', 'rss_url', 'id').\
-                filter(created_by_id=request.user.id).order_by('-created_on')
+            filter(created_by_id=request.user.id).order_by('-created_on')
         form = AddSource()
     return render(request, 'sources.html', {'data': data,
                                             'form': form}
@@ -139,7 +165,8 @@ def edit_source(request):
         form = EditSource(request.POST, user=request.user)
         if form.is_valid():
             # Get Source instance and update its changed data.
-            source_instance = Sourcing.objects.get(id=form.cleaned_data['item_id'])
+            source_instance = Sourcing.objects.get(
+                id=form.cleaned_data['item_id'])
 
             # Save data
             source_instance.name = form.cleaned_data['name']
@@ -161,7 +188,8 @@ def remove_source(request):
         # Get Sourcing Obj
         source_instance = Sourcing.objects.get(id=item_id)
         source_instance.delete()
-        messages.add_message(request, messages.SUCCESS, 'Source deleted successfully!')
+        messages.add_message(request, messages.SUCCESS,
+                             'Source deleted successfully!')
         messages.success(request, 'Source deleted successfully!')
         return HttpResponseRedirect('/sources_list/')
     return HttpResponseRedirect('/sources_list/')
@@ -183,7 +211,8 @@ def search_source(request):
     else:
         # Show data user-wise
         data = Sourcing.objects.filter(
-            models.Q(name__icontains=query) | models.Q(rss_url__icontains=query),
+            models.Q(name__icontains=query) | models.Q(
+                rss_url__icontains=query),
             created_by_id=user.id).order_by('-created_on')
     return render_to_response('sources.html', {'data': data, 'user': request.user})
 
@@ -214,7 +243,8 @@ def fetch_story(request):
                 story_url = data.get('link')
                 # If RSS is Empty return Story listing page
                 if story_url is None:
-                    logger.debug("No feed data in RSS URL:   %s" % rss_obj.rss_url)
+                    logger.debug("No feed data in RSS URL:   %s" %
+                                 rss_obj.rss_url)
                     rss_error = {
                         'Either RSS is empty or RSS is broken. Click here to go back to Story Listing page'
                     }
@@ -225,7 +255,8 @@ def fetch_story(request):
                 try:
                     article.download()
                 except ArticleException:
-                    logger.debug("Article Download exception in : %s" % story_url)
+                    logger.debug(
+                        "Article Download exception in : %s" % story_url)
 
                 # Try to Parse Article
                 try:
@@ -255,9 +286,9 @@ def fetch_story(request):
                 # Add each downloaded article details to Story_list and pass to HTML template.
                 story_list += [article_instance]
             return render_to_response('fetch_story.html', {
-                                                        'data': story_list,
-                                                        'rss_id': rss_obj,
-                                                        'user': request.user})
+                'data': story_list,
+                'rss_id': rss_obj,
+                'user': request.user})
     else:
         return HttpResponseRedirect('/sources_list/')
 
@@ -274,7 +305,7 @@ def stories_list(request):
         # Get stories created by Logged-In user.
         data = Stories.objects.values('id', 'title', 'pub_date', 'body_text', 'source_id',
                                       'url', 'source_id__name', 'source_id__rss_url').\
-                                    filter(source_id__created_by_id=user_id).order_by("-pub_date")
+            filter(source_id__created_by_id=user_id).order_by("-pub_date")
     return render(request, 'stories.html', {'data': data})
 
 
@@ -294,8 +325,8 @@ def search_stories(request):
     else:
         # Else query for the stories created by Logged-In user
         data = Stories.objects.filter(models.Q(
-                                    body_text__icontains=query) | models.Q(title__icontains=query),
-                                    source_id__created_by_id=request.user.id).order_by("-pub_date")
+            body_text__icontains=query) | models.Q(title__icontains=query),
+            source_id__created_by_id=request.user.id).order_by("-pub_date")
     return render_to_response('stories.html', {'data': data, 'user': request.user})
 
 

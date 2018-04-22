@@ -1,5 +1,5 @@
 from login.forms import CustomAuthForm
-from django.contrib.auth.views import login
+from django.contrib.auth.views import login as auth_login
 from django.urls import path
 from login import views
 from django.conf import settings
@@ -7,9 +7,9 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
-    path('', login, name='login', kwargs={"authentication_form": CustomAuthForm}),
+    path('', auth_login, name='login', kwargs ={'authentication_form': CustomAuthForm}),
     path('logout/', views.logout_page),
-    path('accounts/login/', login),
+    path('accounts/login/', auth_login, name='login', kwargs ={'authentication_form': CustomAuthForm}),
     path('sign_up/', views.register),
     path('register_success/', views.register_success),
     path('home/', views.home),

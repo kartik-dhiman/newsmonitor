@@ -22,16 +22,16 @@
                                         <br>
                                         <table>
                                             <tr>
-                                               <input type="text" name="username" placeholder="Username"/>
+                                               <input type="text" name="username" placeholder="Username*" required/>
                                             </tr>
                                             <tr>
-                                                 <input type="password" name="password" placeholder="Password"/>
+                                                 <input type="password" name="password" placeholder="Password*" required/>
                                             </tr>
 
                                         </table>
                                         <div>
-                                            {% if form.username.errors %}
-                                                  Username must contain only letters, numbers and underscores.
+                                            {% if error %}
+                                                 Username & Password does not match
                                             {% endif %}
 
                                             {% if form.non_field_errors %}
@@ -44,7 +44,7 @@
 
                                     <br>
                                     Not a User??<br>
-                                    <a href="sign_up/"> <button type="submit" class="small">Sign Up Instead</button></a>
+                                    <a href="/sign_up/"> <button type="submit" class="small">Sign Up Instead</button></a>
                                 </section>
                             </div>
                         </div>

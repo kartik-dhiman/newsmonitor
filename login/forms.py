@@ -130,14 +130,11 @@ class CustomAuthForm(AuthenticationForm):
                                     required=True,
                                     max_length=30,
                                     placeholder="Username")),
-                                error_messages={
-                                    'invalid': _("Username must contain only letters, numbers and underscores.")
-                                }
                                 )
 
     password = forms.CharField(
-        widget=PasswordInput(attrs={'placeholder': 'Password'})
-    )
+        widget=PasswordInput(attrs=dict(required=True, placeholder='Password')))
+
 
 
 class EditStory(forms.Form):
