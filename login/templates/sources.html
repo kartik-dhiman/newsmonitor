@@ -22,14 +22,14 @@
                            Sources Count : {{ data|length }} <br>
                      </div>
                      <br>
-                     <!--Message-->
-                     {% if messages %}
-                            {% for message in messages %}
-                            <div>
-                                {{ message }}
-                            </div>
-                            {% endfor %}
-                     {% endif %}
+                      <!--Message-->
+                     <div class="messages">
+                         {% if messages %}
+                                {% for message in messages %}
+                                    {{ message }}
+                                {% endfor %}
+                         {% endif %}
+                     </div>
 
                      <!--Show Data-->
                      {% if data %}
@@ -84,6 +84,7 @@
                                 {% endfor %}
                             </table>
                      {% else %}
+                      <br><br><br>
                                 <p> There are no Sources.</p>
                      {% endif %}
                  </div>

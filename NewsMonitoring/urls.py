@@ -7,9 +7,10 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
-    path('', auth_login, name='login', kwargs ={'authentication_form': CustomAuthForm}),
+    # path('', auth_login, name='login', kwargs ={'authentication_form': CustomAuthForm}),
+    path('', views.login),
     path('logout/', views.logout_page),
-    path('accounts/login/', auth_login, name='login', kwargs ={'authentication_form': CustomAuthForm}),
+    path('accounts/login/',views.login),
     path('sign_up/', views.register),
     path('register_success/', views.register_success),
     path('home/', views.home),

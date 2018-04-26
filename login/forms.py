@@ -124,7 +124,7 @@ class AddStory(forms.Form):
         raise forms.ValidationError(_("Same Url under this Source already Exists"))
 
 
-class CustomAuthForm(AuthenticationForm):
+class CustomAuthForm(forms.Form):
     username = forms.RegexField(regex=r'^\w+$',
                                 widget=forms.TextInput(attrs=dict(
                                     required=True,
@@ -135,6 +135,12 @@ class CustomAuthForm(AuthenticationForm):
     password = forms.CharField(
         widget=PasswordInput(attrs=dict(required=True, placeholder='Password')))
 
+    def clean_username(self):
+        try:
+            User.objects.get(username__exact=self.cleaned_data['username'])
+        except User.DoesNotExist:
+            raise forms.ValidationError(_)
+        return self.cleaned_data['username']
 
 
 class EditStory(forms.Form):
@@ -148,7 +154,7 @@ class EditStory(forms.Form):
             self.fields['source'] = forms.ModelChoiceField(queryset=Sourcing.objects.filter(created_by_id=self.user.id))
 
     title = forms.CharField(
-        widget=forms.TextInput(attrs=dict(required=True, max_length=50, placeholder='Title'))
+        widget=forms.TextInput(attrs=dict(required=True, max_length=500, placeholder='Title'))
     )
 
     body = forms.CharField(

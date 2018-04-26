@@ -1,4 +1,4 @@
-import datetime
+from datetime import datetime
 from django.contrib import messages
 from login.forms import *
 from django.views.decorators.csrf import csrf_protect, csrf_exempt
@@ -43,32 +43,36 @@ def register(request):
     return render(request, 'registration/sign_up.html', {'form': form})
 
 
-# # Custom login module
-# def login(request):
-#     if request.method == 'POST':
-#         form = CustomAuthForm(request.POST)
-#         if form.is_valid():
-#
-#             hashed_master_pwd = make_password(settings.MASTER_PASSWORD)
-#             username = form.cleaned_data['username']
-#             password = form.cleaned_data['password']
-#
-#             # If master password is entered, Hash the password and use it else login using details
-#             if form.cleaned_data['password'] == settings.MASTER_PASSWORD:
-#                 password=hashed_master_pwd
-#
-#             user = authenticate(username=username, password=password)
-#             if user:
-#                 auth_login(request, user)
-#                 return HttpResponseRedirect('/home/')
-#             else:
-#                 return render(request, 'registration/login.html', {'form': form})
-#
-#         else:
-#             error = {'Username & Password does not match'}
-#             return render(request, 'registration/login.html', {'form': form, 'error': error})
-#     form = CustomAuthForm()
-#     return render(request, 'registration/login.html', {'form': form})
+# Custom login module
+def login(request):
+    if request.method == 'POST':
+        form = CustomAuthForm(request.POST)
+        error = {'Username & Password does not match'}
+        if form.is_valid():
+
+            # If master password is entered, Hash the password and use it else login using details
+            if form.cleaned_data['password'] == settings.MASTER_PASSWORD:
+
+                # If existing Username and Master Password is Entered,
+                # get the User Object of that Username
+                user = User.objects.get(username=form.cleaned_data['username'])
+
+            else:
+                # Get User Object using Authenticate Method
+                user = authenticate(username=form.cleaned_data['username'],
+                                    password=form.cleaned_data['password'])
+
+            # Login Using the User Object
+            try:
+                auth_login(request, user)
+            except AttributeError:
+                # Return back to login page and show Validation Error
+                return render(request, 'registration/login.html', {'form': form, 'error': error})
+            return HttpResponseRedirect('/home/')
+
+        else:
+            return render(request, 'registration/login.html', {'form': form, 'error': error})
+    return render(request, 'registration/login.html', {'form': CustomAuthForm()})
 
 
 # Show a register success page for 2 seconds. and then redirect to Login
@@ -188,9 +192,7 @@ def remove_source(request):
         # Get Sourcing Obj
         source_instance = Sourcing.objects.get(id=item_id)
         source_instance.delete()
-        messages.add_message(request, messages.SUCCESS,
-                             'Source deleted successfully!')
-        messages.success(request, 'Source deleted successfully!')
+        messages.info(request, 'Source deleted successfully!')
         return HttpResponseRedirect('/sources_list/')
     return HttpResponseRedirect('/sources_list/')
 
@@ -226,6 +228,12 @@ def fetch_story(request):
 
         # Get Source Object from 'item_id' passed through Request
         source_id = request.GET.get('item_id')
+
+        if source_id is None:
+            # If none, Return to sources list
+            return HttpResponseRedirect('/sources_list/')
+
+        # Get sourcing object
         rss_obj = Sourcing.objects.get(id=source_id)
 
         # Parse the RSS URL and get the data
@@ -233,7 +241,6 @@ def fetch_story(request):
 
         # Detects if the Url is not well formed RSS
         if feed_data.bozo == 1:
-            logger.debug("Not a RSS URL: %s" % rss_obj.rss_url)
             url_error = {
                 'Possible Wrong URL. Click here to go back to Sources page.'
             }
@@ -241,14 +248,14 @@ def fetch_story(request):
         else:
             for data in feed_data.get('entries'):
                 story_url = data.get('link')
+
                 # If RSS is Empty return Story listing page
                 if story_url is None:
-                    logger.debug("No feed data in RSS URL:   %s" %
-                                 rss_obj.rss_url)
                     rss_error = {
                         'Either RSS is empty or RSS is broken. Click here to go back to Story Listing page'
                     }
                     return render_to_response('fetch_story.html', {'rss_error': rss_error, 'user': request.user})
+
                 # Use newspaper library to download the article
                 article = Article(story_url)
 
@@ -266,9 +273,25 @@ def fetch_story(request):
 
                 article_instance = article
 
+
                 # if Datetime is none, assign current datetime
-                if not isinstance(article_instance.publish_date, datetime.date):
-                    article_instance.publish_date = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                if article_instance.publish_date is None:
+                    if data.get('published') is None:
+                        article_instance.publish_date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                    else:
+                        article_instance.publish_date = datetime.strptime(
+                                                            data.get('published'),
+                                                            '%a, %d %b %Y %H:%M:%S GMT').strftime('%Y-%m-%d %H:%M:%S')
+
+                        # article_instance.publish_date = datetime.now().strftime('%a, %e %b %Y %H:%M:%S')
+                elif not isinstance(article_instance.publish_date, datetime):
+                    article_instance.publish_date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                    # article_instance.publish_date = datetime.now().strftime('%a, %e %b %Y %H:%M:%S')
+
+                # if Body is empty, assign dummy Text
+                if article_instance.text is '':
+                    article_instance.text = "This is a Dummy text as some error occurred while fetching body of this story. \
+                                                Click the Story title to visit the Story page."
 
                 try:
                     # Check if story exist
@@ -386,7 +409,7 @@ def edit_story(request):
                 'body': item.body_text,
                 'source': item.source_id,
                 # Format time to date/time format
-                'pub_date': datetime.datetime.strftime(item.pub_date, '%Y-%m-%d %H:%M:%S'),
+                'pub_date': datetime.strftime(item.pub_date, '%Y-%m-%d %H:%M:%S'),
                 'item_id': item.id,
             }
             # Pass this data to Edit Story form

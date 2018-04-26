@@ -9,14 +9,16 @@
             <div class="content" align="center">
                  <section class="container">
                      <h2> <b>Add Story </b></h2>
-                     <!-- Show Messages -->
-                     {% if messages %}
-                            {% for message in messages %}
-                            <div>
-                                {{ message }}
-                            </div>
-                            {% endfor %}
-                     {% endif %}
+                      <!-- Show Messages -->
+                          <div class="messages">
+                             {% if messages %}
+                                    {% for message in messages %}
+                                        {{ message }}
+                                    {% endfor %}
+                              {% endif %}
+                          </div>
+
+                          <!--Show Form-->
                      <form method="post" action=".">{% csrf_token %}
                             <table class="table-separate">
                               <tr>

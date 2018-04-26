@@ -72,14 +72,14 @@ class Command(BaseCommand):
                                 # Use newspaper library to download the article
                                 try:
                                     article.download()
-                                except ArticleException as e:
+                                except ArticleException:
                                     logger.debug("Article Download exception in : %s" % story_url)
                                     download_exception += 1
 
                                 # Parse Article
                                 try:
                                     article.parse()
-                                except ArticleException as e:
+                                except ArticleException:
                                     logger.debug("Article parse exception in : %s" % story_url)
                                     parsing_exception += 1
 
@@ -87,7 +87,13 @@ class Command(BaseCommand):
 
                                 # if Datetime is none or not a Datetime, assign current datetime
                                 if article_instance.publish_date is None:
-                                    article_instance.publish_date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                                    if data.get('published') is None:
+                                        article_instance.publish_date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                                    else:
+                                        article_instance.publish_date = datetime.strptime(
+                                                                data.get('published'), '%a, %d %b %Y %H:%M:%S GMT'
+                                                                ).strftime('%Y-%m-%d %H:%M:%S')
+
                                 elif not isinstance(article_instance.publish_date, datetime):
                                     article_instance.publish_date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
@@ -106,7 +112,6 @@ class Command(BaseCommand):
                                 )
                                 story.save()
                                 fetched_story_count += 1
-
 
         stop_time = datetime.now()
         execution_time = stop_time - start_time
@@ -135,3 +140,4 @@ class Command(BaseCommand):
         """.format(existing_story_count, fetched_story_count,
                    not_rss_url, broken_rss_list, download_exception,
                    parsing_exception, final_count, execution_time))
+s

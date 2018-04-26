@@ -13,6 +13,7 @@ class Sourcing(models.Model):
 
     class Meta:
         unique_together = ('rss_url', 'created_by')
+        ordering = ['-updated_on']
 
     def __str__(self):
         return u'{0}'.format(self.name)
@@ -27,6 +28,7 @@ class Stories(models.Model):
 
     class Meta:
         unique_together = ('url', 'source')
+        ordering = ['-pub_date']
 
     def __str__(self):
         return u'{0}'.format(self.title)
