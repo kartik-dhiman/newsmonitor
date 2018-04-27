@@ -140,4 +140,3 @@ class Command(BaseCommand):
         """.format(existing_story_count, fetched_story_count,
                    not_rss_url, broken_rss_list, download_exception,
                    parsing_exception, final_count, execution_time))
-s

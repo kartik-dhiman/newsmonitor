@@ -2165,3 +2165,898 @@ ValueError: unconverted data remains:  GMT
 2018-04-25 10:31:24,709:DEBUG:Starting new HTTP connection (1): www.kmworld.com
 2018-04-25 10:31:29,301:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Adobe-Unveils-New-Capabilities-Spanning-Adobe-Experience-Cloud-and-Adobe-Cloud-Platform-124086.aspx HTTP/1.1" 200 15673
 2018-04-25 10:49:20,068:ERROR:The pathname '/home/ghostman/Desktop/Project/NewsMon/login/views.py' of this watch <Watch wd=449 path=/home/ghostman/Desktop/Project/NewsMon/login/views.py mask=4038 proc_fun=None auto_add=False exclude_filter=<function WatchManager.<lambda> at 0x7f1c7c8ebb70> dir=False > has probably changed and couldn't be updated, so it cannot be trusted anymore. To fix this error move directories/files only between watched parents directories, in this case e.g. put a watch on '/home/ghostman/Desktop/Project/NewsMon/login'.
+2018-04-26 14:42:17,490:WARNING:Not Found: /favicon.ico
+2018-04-26 14:42:17,579:WARNING:Not Found: /favicon.ico
+2018-04-26 14:42:45,327:DEBUG:Starting new HTTPS connection (1): yourstory.com
+2018-04-26 14:42:49,319:DEBUG:https://yourstory.com:443 "GET /mystory/978e8d9212-how-do-video-games-con HTTP/1.1" 200 None
+2018-04-26 14:42:49,898:DEBUG:Starting new HTTPS connection (1): yourstory.com
+2018-04-26 14:42:54,270:DEBUG:https://yourstory.com:443 "GET /mystory/0cfeaf6b07-from-a-writer-s-desk- HTTP/1.1" 200 None
+2018-04-26 14:42:54,518:DEBUG:Starting new HTTPS connection (1): yourstory.com
+2018-04-26 14:42:58,255:DEBUG:https://yourstory.com:443 "GET /mystory/03d187dae1-5-must-have-apps-for-w HTTP/1.1" 200 None
+2018-04-26 14:42:58,564:DEBUG:Starting new HTTPS connection (1): yourstory.com
+2018-04-26 14:43:06,304:DEBUG:https://yourstory.com:443 "GET /mystory/aed0acfa09-emotional-intelligence HTTP/1.1" 200 None
+2018-04-26 14:43:06,575:DEBUG:Starting new HTTPS connection (1): yourstory.com
+2018-04-26 14:43:10,274:DEBUG:https://yourstory.com:443 "GET /mystory/b018054611-boost-her-mission-expl HTTP/1.1" 200 None
+2018-04-26 14:43:10,622:DEBUG:Starting new HTTPS connection (1): yourstory.com
+2018-04-26 14:43:16,388:DEBUG:https://yourstory.com:443 "GET /mystory/6ae714e8c4-risky-business-3-thin HTTP/1.1" 200 None
+2018-04-26 14:43:16,633:DEBUG:Starting new HTTPS connection (1): yourstory.com
+2018-04-26 14:43:24,448:DEBUG:https://yourstory.com:443 "GET /mystory/d776ab694c-how-to-measure-entrepr HTTP/1.1" 200 None
+2018-04-26 14:43:24,825:DEBUG:Starting new HTTPS connection (1): yourstory.com
+2018-04-26 14:43:31,881:DEBUG:https://yourstory.com:443 "GET /mystory/de7b578f53-5-things-you-should-kn HTTP/1.1" 200 None
+2018-04-26 14:45:48,180:DEBUG:Starting new HTTPS connection (1): yourstory.com
+2018-04-26 14:45:54,041:DEBUG:https://yourstory.com:443 "GET /mystory/978e8d9212-how-do-video-games-con HTTP/1.1" 200 None
+2018-04-26 14:45:54,253:DEBUG:Starting new HTTPS connection (1): yourstory.com
+2018-04-26 14:46:00,032:DEBUG:https://yourstory.com:443 "GET /mystory/0cfeaf6b07-from-a-writer-s-desk- HTTP/1.1" 200 None
+2018-04-26 14:46:00,233:DEBUG:Starting new HTTPS connection (1): yourstory.com
+2018-04-26 14:46:04,121:DEBUG:https://yourstory.com:443 "GET /mystory/03d187dae1-5-must-have-apps-for-w HTTP/1.1" 200 None
+2018-04-26 14:46:04,416:DEBUG:Starting new HTTPS connection (1): yourstory.com
+2018-04-26 14:46:08,135:DEBUG:https://yourstory.com:443 "GET /mystory/aed0acfa09-emotional-intelligence HTTP/1.1" 200 None
+2018-04-26 14:46:08,443:DEBUG:Starting new HTTPS connection (1): yourstory.com
+2018-04-26 14:46:12,134:DEBUG:https://yourstory.com:443 "GET /mystory/b018054611-boost-her-mission-expl HTTP/1.1" 200 None
+2018-04-26 14:46:12,444:DEBUG:Starting new HTTPS connection (1): yourstory.com
+2018-04-26 14:46:16,113:DEBUG:https://yourstory.com:443 "GET /mystory/6ae714e8c4-risky-business-3-thin HTTP/1.1" 200 None
+2018-04-26 14:46:16,320:DEBUG:Starting new HTTPS connection (1): yourstory.com
+2018-04-26 14:46:20,157:DEBUG:https://yourstory.com:443 "GET /mystory/d776ab694c-how-to-measure-entrepr HTTP/1.1" 200 None
+2018-04-26 14:46:20,467:DEBUG:Starting new HTTPS connection (1): yourstory.com
+2018-04-26 14:46:24,112:DEBUG:https://yourstory.com:443 "GET /mystory/de7b578f53-5-things-you-should-kn HTTP/1.1" 200 None
+2018-04-26 14:46:46,172:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:46:54,766:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Yext-Knowledge-Assistant-Gets-Smarter-124638.aspx HTTP/1.1" 200 14631
+2018-04-26 14:46:56,396:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:47:06,094:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Square-9-Announces-New-Release-of-GlobalSearch-C2-Cloud-Hosted-Enterprise-Content-Management-124637.aspx HTTP/1.1" 200 14554
+2018-04-26 14:47:06,888:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:47:11,189:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Xillio-Offers-Free-File-Share-Analysis-Software-to-Ease-Content-Migration-Projects-124636.aspx HTTP/1.1" 200 14670
+2018-04-26 14:47:11,872:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:47:16,189:DEBUG:http://www.kmworld.com:80 "GET /Articles/Editorial/ViewPoints/Good-to-Great-Your-Digital-Document-Experience-124565.aspx HTTP/1.1" 200 16286
+2018-04-26 14:47:16,822:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:47:22,697:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Melissa-Extends-Informatics-Capabilities-124474.aspx HTTP/1.1" 200 14560
+2018-04-26 14:47:23,290:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:47:30,125:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Mavenlink-Pushes-Real-Time-Updates-for-Business-Projects-124443.aspx HTTP/1.1" 200 14302
+2018-04-26 14:47:34,273:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:47:38,850:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Innovit-Introduces-Product-Information-Management-System-124418.aspx HTTP/1.1" 200 13961
+2018-04-26 14:47:39,454:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:47:43,085:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Verint-Adds-New-Intelligence-Capabilities-to-Help-Organizations-Anticipate-Identify-and-Mitigate-Risk-124390.aspx HTTP/1.1" 200 15033
+2018-04-26 14:47:43,689:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:47:48,145:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Oracle-AI-Advances-Customer-Experience-Management-124370.aspx HTTP/1.1" 200 14774
+2018-04-26 14:47:48,749:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:47:53,235:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Gainsight-Enhances-Platform-and-Framework-for-Customer-Success-124368.aspx HTTP/1.1" 200 14357
+2018-04-26 14:47:53,847:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:47:59,505:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Konica-Minolta-Debuts-Marketing-Planning-and-Analytics-Platform-124333.aspx HTTP/1.1" 200 14291
+2018-04-26 14:48:00,117:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:48:04,052:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/FileCloud-Adds-GDPR-Support-Across-AWS-and-Microsoft-Azure-124330.aspx HTTP/1.1" 200 14198
+2018-04-26 14:48:04,631:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:48:09,061:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Kintone-Expands-Reach-of-Low-Code-Application-Development-Platform-124231.aspx HTTP/1.1" 200 14301
+2018-04-26 14:48:09,653:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:48:14,044:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/IntelliChief-ECM-Introduces-Mobile-Workflow-on-the-Go-124208.aspx HTTP/1.1" 200 14723
+2018-04-26 14:48:14,671:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:48:19,169:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Nuance-OmniPage-Server-2-Delivers-More-Comprehensive-and-Powerful-Document-Conversion-124206.aspx HTTP/1.1" 200 14950
+2018-04-26 14:48:19,777:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:48:25,431:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Conga-to-Acquire-Counselytics-to-Bolster-Intelligent-Document-Automation-Capabilities-124193.aspx HTTP/1.1" 200 14165
+2018-04-26 14:48:26,018:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:48:31,150:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/KM-In-Practice/Finland-advances-toward-personalized-medicine-124161.aspx HTTP/1.1" 200 14634
+2018-04-26 14:48:31,750:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:48:36,028:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Machine-Learning-Challenges-will-be-Explored-in-Data-Summit-2018-Keynote-124158.aspx HTTP/1.1" 200 15074
+2018-04-26 14:48:36,610:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:48:41,025:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Calabrio-Enhances-its-Platform-for-Customer-Engagement-and-Analytics-124152.aspx HTTP/1.1" 200 14274
+2018-04-26 14:48:41,627:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:48:46,063:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/ASG-Technologies-Unveils-Mobius-8.0-124147.aspx HTTP/1.1" 200 15428
+2018-04-26 14:56:47,526:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:56:52,260:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Yext-Knowledge-Assistant-Gets-Smarter-124638.aspx HTTP/1.1" 200 14631
+2018-04-26 14:56:52,893:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:56:56,514:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Square-9-Announces-New-Release-of-GlobalSearch-C2-Cloud-Hosted-Enterprise-Content-Management-124637.aspx HTTP/1.1" 200 14554
+2018-04-26 14:56:57,146:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:57:03,213:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Xillio-Offers-Free-File-Share-Analysis-Software-to-Ease-Content-Migration-Projects-124636.aspx HTTP/1.1" 200 14670
+2018-04-26 14:57:03,793:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:57:07,493:DEBUG:http://www.kmworld.com:80 "GET /Articles/Editorial/ViewPoints/Good-to-Great-Your-Digital-Document-Experience-124565.aspx HTTP/1.1" 200 16286
+2018-04-26 14:57:08,084:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:57:12,689:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Melissa-Extends-Informatics-Capabilities-124474.aspx HTTP/1.1" 200 14560
+2018-04-26 14:57:13,280:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:57:17,665:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Mavenlink-Pushes-Real-Time-Updates-for-Business-Projects-124443.aspx HTTP/1.1" 200 14302
+2018-04-26 14:57:18,254:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:57:24,897:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Innovit-Introduces-Product-Information-Management-System-124418.aspx HTTP/1.1" 200 13961
+2018-04-26 14:57:25,496:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:57:29,707:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Verint-Adds-New-Intelligence-Capabilities-to-Help-Organizations-Anticipate-Identify-and-Mitigate-Risk-124390.aspx HTTP/1.1" 200 15033
+2018-04-26 14:57:30,284:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:57:35,609:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Oracle-AI-Advances-Customer-Experience-Management-124370.aspx HTTP/1.1" 200 14774
+2018-04-26 14:57:36,227:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:57:40,731:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Gainsight-Enhances-Platform-and-Framework-for-Customer-Success-124368.aspx HTTP/1.1" 200 14357
+2018-04-26 14:57:41,329:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:57:45,661:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Konica-Minolta-Debuts-Marketing-Planning-and-Analytics-Platform-124333.aspx HTTP/1.1" 200 14291
+2018-04-26 14:57:46,320:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:57:51,692:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/FileCloud-Adds-GDPR-Support-Across-AWS-and-Microsoft-Azure-124330.aspx HTTP/1.1" 200 14198
+2018-04-26 14:57:52,295:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:57:56,785:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Kintone-Expands-Reach-of-Low-Code-Application-Development-Platform-124231.aspx HTTP/1.1" 200 14301
+2018-04-26 14:57:57,372:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:58:01,633:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/IntelliChief-ECM-Introduces-Mobile-Workflow-on-the-Go-124208.aspx HTTP/1.1" 200 14723
+2018-04-26 14:58:02,237:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:58:06,724:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Nuance-OmniPage-Server-2-Delivers-More-Comprehensive-and-Powerful-Document-Conversion-124206.aspx HTTP/1.1" 200 14950
+2018-04-26 14:58:07,376:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:58:11,590:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Conga-to-Acquire-Counselytics-to-Bolster-Intelligent-Document-Automation-Capabilities-124193.aspx HTTP/1.1" 200 14165
+2018-04-26 14:58:12,184:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:58:16,592:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/KM-In-Practice/Finland-advances-toward-personalized-medicine-124161.aspx HTTP/1.1" 200 14634
+2018-04-26 14:58:17,196:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:58:23,148:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Machine-Learning-Challenges-will-be-Explored-in-Data-Summit-2018-Keynote-124158.aspx HTTP/1.1" 200 15074
+2018-04-26 14:58:23,808:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:58:29,113:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Calabrio-Enhances-its-Platform-for-Customer-Engagement-and-Analytics-124152.aspx HTTP/1.1" 200 14274
+2018-04-26 14:58:29,755:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:58:33,552:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/ASG-Technologies-Unveils-Mobius-8.0-124147.aspx HTTP/1.1" 200 15428
+2018-04-26 14:59:18,501:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:59:26,719:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Yext-Knowledge-Assistant-Gets-Smarter-124638.aspx HTTP/1.1" 200 14631
+2018-04-26 14:59:27,338:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:59:33,090:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Square-9-Announces-New-Release-of-GlobalSearch-C2-Cloud-Hosted-Enterprise-Content-Management-124637.aspx HTTP/1.1" 200 14554
+2018-04-26 14:59:33,709:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:59:37,512:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:59:37,570:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Xillio-Offers-Free-File-Share-Analysis-Software-to-Ease-Content-Migration-Projects-124636.aspx HTTP/1.1" 200 14670
+2018-04-26 14:59:38,188:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:59:42,609:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Yext-Knowledge-Assistant-Gets-Smarter-124638.aspx HTTP/1.1" 200 14631
+2018-04-26 14:59:43,201:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:59:43,887:DEBUG:http://www.kmworld.com:80 "GET /Articles/Editorial/ViewPoints/Good-to-Great-Your-Digital-Document-Experience-124565.aspx HTTP/1.1" 200 16286
+2018-04-26 14:59:44,485:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:59:47,672:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Square-9-Announces-New-Release-of-GlobalSearch-C2-Cloud-Hosted-Enterprise-Content-Management-124637.aspx HTTP/1.1" 200 14554
+2018-04-26 14:59:48,273:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:59:48,581:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Melissa-Extends-Informatics-Capabilities-124474.aspx HTTP/1.1" 200 14560
+2018-04-26 14:59:49,235:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:59:49,546:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 14:59:52,535:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Xillio-Offers-Free-File-Share-Analysis-Software-to-Ease-Content-Migration-Projects-124636.aspx HTTP/1.1" 200 14670
+2018-04-26 14:59:53,144:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:59:54,254:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Mavenlink-Pushes-Real-Time-Updates-for-Business-Projects-124443.aspx HTTP/1.1" 200 14302
+2018-04-26 14:59:54,878:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:59:55,020:DEBUG:http://www.workaci.com:80 "GET /content/how-choose-right-ct-your-application HTTP/1.1" 200 None
+2018-04-26 14:59:55,867:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 14:59:57,516:DEBUG:http://www.kmworld.com:80 "GET /Articles/Editorial/ViewPoints/Good-to-Great-Your-Digital-Document-Experience-124565.aspx HTTP/1.1" 200 16286
+2018-04-26 14:59:58,115:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 14:59:58,539:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Innovit-Introduces-Product-Information-Management-System-124418.aspx HTTP/1.1" 200 13961
+2018-04-26 14:59:59,143:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 15:00:01,507:DEBUG:http://www.workaci.com:80 "GET /content/how-dcv-improves-your-iaq-co2-sensor HTTP/1.1" 200 None
+2018-04-26 15:00:02,354:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:00:02,576:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Melissa-Extends-Informatics-Capabilities-124474.aspx HTTP/1.1" 200 14560
+2018-04-26 15:00:03,171:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 15:00:03,493:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Verint-Adds-New-Intelligence-Capabilities-to-Help-Organizations-Anticipate-Identify-and-Mitigate-Risk-124390.aspx HTTP/1.1" 200 15033
+2018-04-26 15:00:04,072:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 15:00:07,619:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Mavenlink-Pushes-Real-Time-Updates-for-Business-Projects-124443.aspx HTTP/1.1" 200 14302
+2018-04-26 15:00:08,235:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 15:00:08,491:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Oracle-AI-Advances-Customer-Experience-Management-124370.aspx HTTP/1.1" 200 14774
+2018-04-26 15:00:08,856:DEBUG:http://www.workaci.com:80 "GET /content/how-can-3d-printer-change-your-manufacturing-company HTTP/1.1" 200 None
+2018-04-26 15:00:09,085:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 15:00:12,500:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Innovit-Introduces-Product-Information-Management-System-124418.aspx HTTP/1.1" 200 13961
+2018-04-26 15:00:13,127:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 15:00:13,589:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Gainsight-Enhances-Platform-and-Framework-for-Customer-Success-124368.aspx HTTP/1.1" 200 14357
+2018-04-26 15:00:14,210:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 15:00:17,530:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Verint-Adds-New-Intelligence-Capabilities-to-Help-Organizations-Anticipate-Identify-and-Mitigate-Risk-124390.aspx HTTP/1.1" 200 15033
+2018-04-26 15:00:18,118:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 15:00:18,494:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Konica-Minolta-Debuts-Marketing-Planning-and-Analytics-Platform-124333.aspx HTTP/1.1" 200 14291
+2018-04-26 15:00:19,106:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 15:00:24,681:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Oracle-AI-Advances-Customer-Experience-Management-124370.aspx HTTP/1.1" 200 14774
+2018-04-26 15:00:25,296:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 15:00:26,654:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/FileCloud-Adds-GDPR-Support-Across-AWS-and-Microsoft-Azure-124330.aspx HTTP/1.1" 200 14198
+2018-04-26 15:00:27,266:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 15:00:31,129:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Gainsight-Enhances-Platform-and-Framework-for-Customer-Success-124368.aspx HTTP/1.1" 200 14357
+2018-04-26 15:00:31,712:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 15:00:36,362:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Kintone-Expands-Reach-of-Low-Code-Application-Development-Platform-124231.aspx HTTP/1.1" 200 14301
+2018-04-26 15:00:37,003:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 15:00:38,833:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Konica-Minolta-Debuts-Marketing-Planning-and-Analytics-Platform-124333.aspx HTTP/1.1" 200 14291
+2018-04-26 15:00:39,430:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 15:00:40,942:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/IntelliChief-ECM-Introduces-Mobile-Workflow-on-the-Go-124208.aspx HTTP/1.1" 200 14723
+2018-04-26 15:00:41,589:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 15:00:44,040:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/FileCloud-Adds-GDPR-Support-Across-AWS-and-Microsoft-Azure-124330.aspx HTTP/1.1" 200 14198
+2018-04-26 15:00:44,669:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 15:00:48,659:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Kintone-Expands-Reach-of-Low-Code-Application-Development-Platform-124231.aspx HTTP/1.1" 200 14301
+2018-04-26 15:00:49,329:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 15:00:50,727:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Nuance-OmniPage-Server-2-Delivers-More-Comprehensive-and-Powerful-Document-Conversion-124206.aspx HTTP/1.1" 200 14950
+2018-04-26 15:00:51,388:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 15:00:53,789:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/IntelliChief-ECM-Introduces-Mobile-Workflow-on-the-Go-124208.aspx HTTP/1.1" 200 14723
+2018-04-26 15:00:54,432:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 15:00:55,818:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Conga-to-Acquire-Counselytics-to-Bolster-Intelligent-Document-Automation-Capabilities-124193.aspx HTTP/1.1" 200 14165
+2018-04-26 15:00:56,434:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 15:00:58,712:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Nuance-OmniPage-Server-2-Delivers-More-Comprehensive-and-Powerful-Document-Conversion-124206.aspx HTTP/1.1" 200 14950
+2018-04-26 15:00:59,336:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 15:01:00,673:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/KM-In-Practice/Finland-advances-toward-personalized-medicine-124161.aspx HTTP/1.1" 200 14634
+2018-04-26 15:01:01,286:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 15:01:03,757:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Conga-to-Acquire-Counselytics-to-Bolster-Intelligent-Document-Automation-Capabilities-124193.aspx HTTP/1.1" 200 14165
+2018-04-26 15:01:04,441:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 15:01:06,215:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Machine-Learning-Challenges-will-be-Explored-in-Data-Summit-2018-Keynote-124158.aspx HTTP/1.1" 200 15074
+2018-04-26 15:01:06,830:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 15:01:08,634:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/KM-In-Practice/Finland-advances-toward-personalized-medicine-124161.aspx HTTP/1.1" 200 14634
+2018-04-26 15:01:09,223:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 15:01:10,620:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Calabrio-Enhances-its-Platform-for-Customer-Engagement-and-Analytics-124152.aspx HTTP/1.1" 200 14274
+2018-04-26 15:01:11,256:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 15:01:13,622:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Machine-Learning-Challenges-will-be-Explored-in-Data-Summit-2018-Keynote-124158.aspx HTTP/1.1" 200 15074
+2018-04-26 15:01:14,259:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 15:01:15,588:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/ASG-Technologies-Unveils-Mobius-8.0-124147.aspx HTTP/1.1" 200 15428
+2018-04-26 15:01:18,733:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/Calabrio-Enhances-its-Platform-for-Customer-Engagement-and-Analytics-124152.aspx HTTP/1.1" 200 14274
+2018-04-26 15:01:19,351:DEBUG:Starting new HTTP connection (1): www.kmworld.com
+2018-04-26 15:01:26,435:DEBUG:http://www.kmworld.com:80 "GET /Articles/News/News/ASG-Technologies-Unveils-Mobius-8.0-124147.aspx HTTP/1.1" 200 15428
+2018-04-26 15:02:04,693:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:02:08,728:DEBUG:http://www.workaci.com:80 "GET /content/how-choose-right-ct-your-application HTTP/1.1" 200 None
+2018-04-26 15:02:09,770:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:02:14,001:DEBUG:http://www.workaci.com:80 "GET /content/how-dcv-improves-your-iaq-co2-sensor HTTP/1.1" 200 None
+2018-04-26 15:02:14,848:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:02:19,012:DEBUG:http://www.workaci.com:80 "GET /content/how-can-3d-printer-change-your-manufacturing-company HTTP/1.1" 200 None
+2018-04-26 15:03:03,033:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:03:07,082:DEBUG:http://www.workaci.com:80 "GET /content/how-choose-right-ct-your-application HTTP/1.1" 200 None
+2018-04-26 15:03:07,983:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:03:12,148:DEBUG:http://www.workaci.com:80 "GET /content/how-dcv-improves-your-iaq-co2-sensor HTTP/1.1" 200 None
+2018-04-26 15:03:13,113:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:03:17,070:DEBUG:http://www.workaci.com:80 "GET /content/how-can-3d-printer-change-your-manufacturing-company HTTP/1.1" 200 None
+2018-04-26 15:03:18,015:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:03:22,064:DEBUG:http://www.workaci.com:80 "GET /content/how-choose-right-ct-your-application HTTP/1.1" 200 None
+2018-04-26 15:03:22,926:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:03:27,054:DEBUG:http://www.workaci.com:80 "GET /content/how-dcv-improves-your-iaq-co2-sensor HTTP/1.1" 200 None
+2018-04-26 15:03:27,900:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:03:32,035:DEBUG:http://www.workaci.com:80 "GET /content/how-can-3d-printer-change-your-manufacturing-company HTTP/1.1" 200 None
+2018-04-26 15:05:22,817:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:05:26,952:DEBUG:http://www.workaci.com:80 "GET /content/how-choose-right-ct-your-application HTTP/1.1" 200 None
+2018-04-26 15:05:27,809:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:05:31,880:DEBUG:http://www.workaci.com:80 "GET /content/how-dcv-improves-your-iaq-co2-sensor HTTP/1.1" 200 None
+2018-04-26 15:05:32,747:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:05:36,859:DEBUG:http://www.workaci.com:80 "GET /content/how-can-3d-printer-change-your-manufacturing-company HTTP/1.1" 200 None
+2018-04-26 15:06:38,730:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:06:42,761:DEBUG:http://www.workaci.com:80 "GET /content/how-choose-right-ct-your-application HTTP/1.1" 200 None
+2018-04-26 15:06:43,844:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:06:47,763:DEBUG:http://www.workaci.com:80 "GET /content/how-dcv-improves-your-iaq-co2-sensor HTTP/1.1" 200 None
+2018-04-26 15:06:48,646:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:06:52,787:DEBUG:http://www.workaci.com:80 "GET /content/how-can-3d-printer-change-your-manufacturing-company HTTP/1.1" 200 None
+2018-04-26 15:07:07,728:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:07:11,749:DEBUG:http://www.workaci.com:80 "GET /content/how-choose-right-ct-your-application HTTP/1.1" 200 None
+2018-04-26 15:07:12,695:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:07:16,756:DEBUG:http://www.workaci.com:80 "GET /content/how-dcv-improves-your-iaq-co2-sensor HTTP/1.1" 200 None
+2018-04-26 15:07:17,733:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:07:21,738:DEBUG:http://www.workaci.com:80 "GET /content/how-can-3d-printer-change-your-manufacturing-company HTTP/1.1" 200 None
+2018-04-26 15:19:17,116:ERROR:The pathname '/home/ghostman/Desktop/Project/NewsMon/login/views.py' of this watch <Watch wd=1296 path=/home/ghostman/Desktop/Project/NewsMon/login/views.py mask=4038 proc_fun=None auto_add=False exclude_filter=<function WatchManager.<lambda> at 0x7fe8f5e85b70> dir=False > has probably changed and couldn't be updated, so it cannot be trusted anymore. To fix this error move directories/files only between watched parents directories, in this case e.g. put a watch on '/home/ghostman/Desktop/Project/NewsMon/login'.
+2018-04-26 15:19:29,937:ERROR:Internal Server Error: /fetch_story/
+Traceback (most recent call last):
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1683, in add_fields
+    join_info = self.setup_joins(name.split(LOOKUP_SEP), opts, alias, allow_many=allow_m2m)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1448, in setup_joins
+    names, opts, allow_many, fail_on_missing=True)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1379, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'url' into field. Choices are: created_by, created_by_id, created_on, id, name, rss_url, stories, updated_by, updated_by_id, updated_on
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/ghostman/Desktop/Project/NewsMon/login/views.py", line 240, in fetch_story
+    existed_stories = Sourcing.objects.values_list('url', flat=True).filter(source_id=source_id)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/db/models/query.py", line 769, in values_list
+    clone = self._values(*_fields, **expressions)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/db/models/query.py", line 737, in _values
+    clone.query.set_values(fields)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1935, in set_values
+    self.add_fields(field_names, True)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1706, in add_fields
+    "Choices are: %s" % (name, ", ".join(names)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'url' into field. Choices are: created_by, created_by_id, created_on, id, name, rss_url, stories, updated_by, updated_by_id, updated_on
+2018-04-26 15:19:57,918:ERROR:The pathname '/home/ghostman/Desktop/Project/NewsMon/login/views.py' of this watch <Watch wd=1272 path=/home/ghostman/Desktop/Project/NewsMon/login/views.py mask=4038 proc_fun=None auto_add=False exclude_filter=<function WatchManager.<lambda> at 0x7fb4b8104b70> dir=False > has probably changed and couldn't be updated, so it cannot be trusted anymore. To fix this error move directories/files only between watched parents directories, in this case e.g. put a watch on '/home/ghostman/Desktop/Project/NewsMon/login'.
+2018-04-26 15:20:07,693:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:20:13,239:DEBUG:http://www.workaci.com:80 "GET /content/how-choose-right-ct-your-application HTTP/1.1" 200 None
+2018-04-26 15:20:14,258:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:20:20,893:DEBUG:http://www.workaci.com:80 "GET /content/how-dcv-improves-your-iaq-co2-sensor HTTP/1.1" 200 None
+2018-04-26 15:20:21,779:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:20:27,729:DEBUG:http://www.workaci.com:80 "GET /content/how-can-3d-printer-change-your-manufacturing-company HTTP/1.1" 200 None
+2018-04-26 15:23:00,443:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:23:04,459:DEBUG:http://www.workaci.com:80 "GET /content/how-choose-right-ct-your-application HTTP/1.1" 200 None
+2018-04-26 15:23:05,350:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:23:09,433:DEBUG:http://www.workaci.com:80 "GET /content/how-dcv-improves-your-iaq-co2-sensor HTTP/1.1" 200 None
+2018-04-26 15:23:10,277:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:23:14,528:DEBUG:http://www.workaci.com:80 "GET /content/how-can-3d-printer-change-your-manufacturing-company HTTP/1.1" 200 None
+2018-04-26 15:23:15,421:ERROR:Internal Server Error: /fetch_story/
+Traceback (most recent call last):
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/ghostman/Desktop/Project/NewsMon/login/views.py", line 327, in fetch_story
+    'user': request.user})
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/shortcuts.py", line 27, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/engine.py", line 144, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/engine.py", line 126, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/loaders/base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 160, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 198, in compile_nodelist
+    return parser.parse()
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/loader_tags.py", line 290, in do_extends
+    nodelist = parser.parse()
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/loader_tags.py", line 233, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/defaulttags.py", line 956, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/defaulttags.py", line 815, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/defaulttags.py", line 956, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 454, in parse
+    raise self.error(token, e)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 452, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 568, in compile_filter
+    return FilterExpression(token, self)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 668, in __init__
+    "from '%s'" % (token[upto:], token))
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '|'%a, %d %b %Y %H:%M:%S'' from 'st.publish_date|'%a, %d %b %Y %H:%M:%S''
+2018-04-26 15:25:20,252:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:25:24,308:DEBUG:http://www.workaci.com:80 "GET /content/how-choose-right-ct-your-application HTTP/1.1" 200 None
+2018-04-26 15:25:25,185:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:25:29,291:DEBUG:http://www.workaci.com:80 "GET /content/how-dcv-improves-your-iaq-co2-sensor HTTP/1.1" 200 None
+2018-04-26 15:25:30,148:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:25:34,301:DEBUG:http://www.workaci.com:80 "GET /content/how-can-3d-printer-change-your-manufacturing-company HTTP/1.1" 200 None
+2018-04-26 15:25:35,173:ERROR:Internal Server Error: /fetch_story/
+Traceback (most recent call last):
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/ghostman/Desktop/Project/NewsMon/login/views.py", line 327, in fetch_story
+    'user': request.user})
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/shortcuts.py", line 27, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/engine.py", line 144, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/engine.py", line 126, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/loaders/base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 160, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 198, in compile_nodelist
+    return parser.parse()
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/loader_tags.py", line 290, in do_extends
+    nodelist = parser.parse()
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/loader_tags.py", line 233, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/defaulttags.py", line 956, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/defaulttags.py", line 815, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/defaulttags.py", line 956, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 454, in parse
+    raise self.error(token, e)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 452, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 568, in compile_filter
+    return FilterExpression(token, self)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 668, in __init__
+    "from '%s'" % (token[upto:], token))
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '|' %a, %d %M %Y %H:%i:%s '' from 'st.publish_date|' %a, %d %M %Y %H:%i:%s ''
+2018-04-26 15:26:13,209:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:26:17,205:DEBUG:http://www.workaci.com:80 "GET /content/how-choose-right-ct-your-application HTTP/1.1" 200 None
+2018-04-26 15:26:18,137:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:26:22,231:DEBUG:http://www.workaci.com:80 "GET /content/how-dcv-improves-your-iaq-co2-sensor HTTP/1.1" 200 None
+2018-04-26 15:26:23,092:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:26:27,235:DEBUG:http://www.workaci.com:80 "GET /content/how-can-3d-printer-change-your-manufacturing-company HTTP/1.1" 200 None
+2018-04-26 15:26:28,109:ERROR:Internal Server Error: /fetch_story/
+Traceback (most recent call last):
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/ghostman/Desktop/Project/NewsMon/login/views.py", line 327, in fetch_story
+    'user': request.user})
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/shortcuts.py", line 27, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/engine.py", line 144, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/engine.py", line 126, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/loaders/base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 160, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 198, in compile_nodelist
+    return parser.parse()
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/loader_tags.py", line 290, in do_extends
+    nodelist = parser.parse()
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/loader_tags.py", line 233, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/defaulttags.py", line 956, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/defaulttags.py", line 815, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/defaulttags.py", line 956, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 454, in parse
+    raise self.error(token, e)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 452, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 568, in compile_filter
+    return FilterExpression(token, self)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 668, in __init__
+    "from '%s'" % (token[upto:], token))
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '|' d M Y H:i:s '' from 'st.publish_date|' d M Y H:i:s ''
+2018-04-26 15:27:49,128:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:27:53,135:DEBUG:http://www.workaci.com:80 "GET /content/how-choose-right-ct-your-application HTTP/1.1" 200 None
+2018-04-26 15:27:54,030:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:27:58,140:DEBUG:http://www.workaci.com:80 "GET /content/how-dcv-improves-your-iaq-co2-sensor HTTP/1.1" 200 None
+2018-04-26 15:27:58,996:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:28:03,215:DEBUG:http://www.workaci.com:80 "GET /content/how-can-3d-printer-change-your-manufacturing-company HTTP/1.1" 200 None
+2018-04-26 15:28:04,093:ERROR:Internal Server Error: /fetch_story/
+Traceback (most recent call last):
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/ghostman/Desktop/Project/NewsMon/login/views.py", line 327, in fetch_story
+    'user': request.user})
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/shortcuts.py", line 27, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/engine.py", line 144, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/engine.py", line 126, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/loaders/base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 160, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 198, in compile_nodelist
+    return parser.parse()
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/loader_tags.py", line 290, in do_extends
+    nodelist = parser.parse()
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/loader_tags.py", line 233, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/defaulttags.py", line 956, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/defaulttags.py", line 815, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/defaulttags.py", line 956, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 454, in parse
+    raise self.error(token, e)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 452, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 568, in compile_filter
+    return FilterExpression(token, self)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 668, in __init__
+    "from '%s'" % (token[upto:], token))
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '|" d M Y H:i:s "' from 'st.publish_date|" d M Y H:i:s "'
+2018-04-26 15:28:40,120:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:28:44,143:DEBUG:http://www.workaci.com:80 "GET /content/how-choose-right-ct-your-application HTTP/1.1" 200 None
+2018-04-26 15:28:45,043:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:28:49,149:DEBUG:http://www.workaci.com:80 "GET /content/how-dcv-improves-your-iaq-co2-sensor HTTP/1.1" 200 None
+2018-04-26 15:28:50,012:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:28:54,119:DEBUG:http://www.workaci.com:80 "GET /content/how-can-3d-printer-change-your-manufacturing-company HTTP/1.1" 200 None
+2018-04-26 15:28:54,987:ERROR:Internal Server Error: /fetch_story/
+Traceback (most recent call last):
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/ghostman/Desktop/Project/NewsMon/login/views.py", line 327, in fetch_story
+    'user': request.user})
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/shortcuts.py", line 27, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/engine.py", line 144, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/engine.py", line 126, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/loaders/base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 160, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 198, in compile_nodelist
+    return parser.parse()
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/loader_tags.py", line 290, in do_extends
+    nodelist = parser.parse()
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/loader_tags.py", line 233, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/defaulttags.py", line 956, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/defaulttags.py", line 815, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/defaulttags.py", line 956, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 454, in parse
+    raise self.error(token, e)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 452, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 568, in compile_filter
+    return FilterExpression(token, self)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 668, in __init__
+    "from '%s'" % (token[upto:], token))
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '|" d M Y H:i "' from 'st.publish_date|" d M Y H:i "'
+2018-04-26 15:29:38,936:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:29:43,097:DEBUG:http://www.workaci.com:80 "GET /content/how-choose-right-ct-your-application HTTP/1.1" 200 None
+2018-04-26 15:29:44,002:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:29:48,089:DEBUG:http://www.workaci.com:80 "GET /content/how-dcv-improves-your-iaq-co2-sensor HTTP/1.1" 200 None
+2018-04-26 15:29:48,945:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:29:53,061:DEBUG:http://www.workaci.com:80 "GET /content/how-can-3d-printer-change-your-manufacturing-company HTTP/1.1" 200 None
+2018-04-26 15:29:53,924:ERROR:Internal Server Error: /fetch_story/
+Traceback (most recent call last):
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/ghostman/Desktop/Project/NewsMon/login/views.py", line 327, in fetch_story
+    'user': request.user})
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/shortcuts.py", line 27, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/engine.py", line 144, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/engine.py", line 126, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/loaders/base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 160, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 198, in compile_nodelist
+    return parser.parse()
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/loader_tags.py", line 290, in do_extends
+    nodelist = parser.parse()
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/loader_tags.py", line 233, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/defaulttags.py", line 956, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/defaulttags.py", line 815, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/defaulttags.py", line 956, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 454, in parse
+    raise self.error(token, e)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 452, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 568, in compile_filter
+    return FilterExpression(token, self)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 668, in __init__
+    "from '%s'" % (token[upto:], token))
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '|"D d M Y - H:i"' from 'st.publish_date|"D d M Y - H:i"'
+2018-04-26 15:30:48,945:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:30:52,995:DEBUG:http://www.workaci.com:80 "GET /content/how-choose-right-ct-your-application HTTP/1.1" 200 None
+2018-04-26 15:30:53,875:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:30:58,079:DEBUG:http://www.workaci.com:80 "GET /content/how-dcv-improves-your-iaq-co2-sensor HTTP/1.1" 200 None
+2018-04-26 15:30:58,953:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:31:02,946:DEBUG:http://www.workaci.com:80 "GET /content/how-can-3d-printer-change-your-manufacturing-company HTTP/1.1" 200 None
+2018-04-26 15:31:55,872:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:31:59,939:DEBUG:http://www.workaci.com:80 "GET /content/how-choose-right-ct-your-application HTTP/1.1" 200 None
+2018-04-26 15:32:00,825:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:32:04,878:DEBUG:http://www.workaci.com:80 "GET /content/how-dcv-improves-your-iaq-co2-sensor HTTP/1.1" 200 None
+2018-04-26 15:32:05,743:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:32:09,912:DEBUG:http://www.workaci.com:80 "GET /content/how-can-3d-printer-change-your-manufacturing-company HTTP/1.1" 200 None
+2018-04-26 15:32:10,779:ERROR:Internal Server Error: /fetch_story/
+Traceback (most recent call last):
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/ghostman/Desktop/Project/NewsMon/login/views.py", line 327, in fetch_story
+    'user': request.user})
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/shortcuts.py", line 27, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/engine.py", line 144, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/engine.py", line 126, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/loaders/base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 160, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 198, in compile_nodelist
+    return parser.parse()
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/loader_tags.py", line 290, in do_extends
+    nodelist = parser.parse()
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/loader_tags.py", line 233, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/defaulttags.py", line 956, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/defaulttags.py", line 815, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/defaulttags.py", line 956, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 454, in parse
+    raise self.error(token, e)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 452, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 568, in compile_filter
+    return FilterExpression(token, self)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/template/base.py", line 668, in __init__
+    "from '%s'" % (token[upto:], token))
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '"' from 'st.publish_date|time:" - H:i""'
+2018-04-26 15:32:42,820:DEBUG:Starting new HTTPS connection (1): yourstory.com
+2018-04-26 15:32:44,817:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:32:46,814:DEBUG:https://yourstory.com:443 "GET /mystory/978e8d9212-how-do-video-games-con HTTP/1.1" 404 None
+2018-04-26 15:32:46,907:DEBUG:Download failed on URL https://yourstory.com/mystory/978e8d9212-how-do-video-games-con because of 404 Client Error: Not Found for url: https://yourstory.com/mystory/978e8d9212-how-do-video-games-con
+2018-04-26 15:32:46,907:DEBUG:Exception in article parse
+2018-04-26 15:32:46,913:DEBUG:Starting new HTTPS connection (1): yourstory.com
+2018-04-26 15:32:48,854:DEBUG:http://www.workaci.com:80 "GET /content/how-choose-right-ct-your-application HTTP/1.1" 200 None
+2018-04-26 15:32:49,724:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:32:50,743:DEBUG:https://yourstory.com:443 "GET /mystory/0cfeaf6b07-from-a-writer-s-desk- HTTP/1.1" 200 None
+2018-04-26 15:32:51,042:DEBUG:Starting new HTTPS connection (1): yourstory.com
+2018-04-26 15:32:53,835:DEBUG:http://www.workaci.com:80 "GET /content/how-dcv-improves-your-iaq-co2-sensor HTTP/1.1" 200 None
+2018-04-26 15:32:54,695:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:32:58,811:DEBUG:http://www.workaci.com:80 "GET /content/how-can-3d-printer-change-your-manufacturing-company HTTP/1.1" 200 None
+2018-04-26 15:32:59,460:DEBUG:https://yourstory.com:443 "GET /mystory/03d187dae1-5-must-have-apps-for-w HTTP/1.1" 200 None
+2018-04-26 15:32:59,844:DEBUG:Starting new HTTPS connection (1): yourstory.com
+2018-04-26 15:33:03,717:DEBUG:https://yourstory.com:443 "GET /mystory/aed0acfa09-emotional-intelligence HTTP/1.1" 200 None
+2018-04-26 15:33:03,959:DEBUG:Starting new HTTPS connection (1): yourstory.com
+2018-04-26 15:33:07,802:DEBUG:https://yourstory.com:443 "GET /mystory/b018054611-boost-her-mission-expl HTTP/1.1" 200 None
+2018-04-26 15:33:08,096:DEBUG:Starting new HTTPS connection (1): yourstory.com
+2018-04-26 15:33:15,434:DEBUG:https://yourstory.com:443 "GET /mystory/6ae714e8c4-risky-business-3-thin HTTP/1.1" 200 None
+2018-04-26 15:33:15,634:DEBUG:Starting new HTTPS connection (1): yourstory.com
+2018-04-26 15:33:21,664:DEBUG:https://yourstory.com:443 "GET /mystory/d776ab694c-how-to-measure-entrepr HTTP/1.1" 200 None
+2018-04-26 15:33:21,966:DEBUG:Starting new HTTPS connection (1): yourstory.com
+2018-04-26 15:33:25,713:DEBUG:https://yourstory.com:443 "GET /mystory/de7b578f53-5-things-you-should-kn HTTP/1.1" 200 None
+2018-04-26 15:35:22,629:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:35:26,656:DEBUG:http://www.workaci.com:80 "GET /content/how-choose-right-ct-your-application HTTP/1.1" 200 None
+2018-04-26 15:35:27,532:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:35:31,618:DEBUG:http://www.workaci.com:80 "GET /content/how-dcv-improves-your-iaq-co2-sensor HTTP/1.1" 200 None
+2018-04-26 15:35:32,468:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:35:36,671:DEBUG:http://www.workaci.com:80 "GET /content/how-can-3d-printer-change-your-manufacturing-company HTTP/1.1" 200 None
+2018-04-26 15:35:52,579:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:35:56,608:DEBUG:http://www.workaci.com:80 "GET /content/how-choose-right-ct-your-application HTTP/1.1" 200 None
+2018-04-26 15:35:57,487:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:36:01,587:DEBUG:http://www.workaci.com:80 "GET /content/how-dcv-improves-your-iaq-co2-sensor HTTP/1.1" 200 None
+2018-04-26 15:36:02,477:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:36:06,604:DEBUG:http://www.workaci.com:80 "GET /content/how-can-3d-printer-change-your-manufacturing-company HTTP/1.1" 200 None
+2018-04-26 15:46:56,289:ERROR:The pathname '/home/ghostman/Desktop/Project/NewsMon/login/views.py' of this watch <Watch wd=475 path=/home/ghostman/Desktop/Project/NewsMon/login/views.py mask=4038 proc_fun=None auto_add=False exclude_filter=<function WatchManager.<lambda> at 0x7f5a62eacb70> dir=False > has probably changed and couldn't be updated, so it cannot be trusted anymore. To fix this error move directories/files only between watched parents directories, in this case e.g. put a watch on '/home/ghostman/Desktop/Project/NewsMon/login'.
+2018-04-26 15:47:04,630:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:47:08,684:DEBUG:http://www.workaci.com:80 "GET /content/how-choose-right-ct-your-application HTTP/1.1" 200 None
+2018-04-26 15:47:09,926:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:47:13,614:DEBUG:http://www.workaci.com:80 "GET /content/how-dcv-improves-your-iaq-co2-sensor HTTP/1.1" 200 None
+2018-04-26 15:47:14,461:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:47:18,642:DEBUG:http://www.workaci.com:80 "GET /content/how-can-3d-printer-change-your-manufacturing-company HTTP/1.1" 200 None
+2018-04-26 15:47:49,561:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:47:53,831:DEBUG:http://www.workaci.com:80 "GET /content/how-choose-right-ct-your-application HTTP/1.1" 200 None
+2018-04-26 15:47:54,692:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:47:58,596:DEBUG:http://www.workaci.com:80 "GET /content/how-dcv-improves-your-iaq-co2-sensor HTTP/1.1" 200 None
+2018-04-26 15:47:59,480:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:48:03,736:DEBUG:http://www.workaci.com:80 "GET /content/how-can-3d-printer-change-your-manufacturing-company HTTP/1.1" 200 None
+2018-04-26 15:48:42,465:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:48:46,492:DEBUG:http://www.workaci.com:80 "GET /content/how-choose-right-ct-your-application HTTP/1.1" 200 None
+2018-04-26 15:48:47,360:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:48:51,472:DEBUG:http://www.workaci.com:80 "GET /content/how-dcv-improves-your-iaq-co2-sensor HTTP/1.1" 200 None
+2018-04-26 15:48:52,426:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:48:56,539:DEBUG:http://www.workaci.com:80 "GET /content/how-can-3d-printer-change-your-manufacturing-company HTTP/1.1" 200 None
+2018-04-26 15:49:12,405:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:49:16,469:DEBUG:http://www.workaci.com:80 "GET /content/how-choose-right-ct-your-application HTTP/1.1" 200 None
+2018-04-26 15:49:17,331:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:49:21,453:DEBUG:http://www.workaci.com:80 "GET /content/how-dcv-improves-your-iaq-co2-sensor HTTP/1.1" 200 None
+2018-04-26 15:49:22,352:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:49:26,494:DEBUG:http://www.workaci.com:80 "GET /content/how-can-3d-printer-change-your-manufacturing-company HTTP/1.1" 200 None
+2018-04-26 15:50:26,613:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:50:51,630:DEBUG:get_html_2XX_only() error. HTTPConnectionPool(host='www.workaci.com', port=80): Max retries exceeded with url: /content/how-choose-right-ct-your-application (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd01c0e4518>: Failed to establish a new connection: [Errno -2] Name or service not known',)) on URL: http://www.workaci.com/content/how-choose-right-ct-your-application
+2018-04-26 15:50:51,631:DEBUG:Exception in article parse
+2018-04-26 15:50:51,642:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:50:56,113:DEBUG:http://www.workaci.com:80 "GET /content/how-dcv-improves-your-iaq-co2-sensor HTTP/1.1" 200 None
+2018-04-26 15:50:57,012:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:51:01,166:DEBUG:http://www.workaci.com:80 "GET /content/how-can-3d-printer-change-your-manufacturing-company HTTP/1.1" 200 None
+2018-04-26 15:51:15,067:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:51:19,142:DEBUG:http://www.workaci.com:80 "GET /content/how-choose-right-ct-your-application HTTP/1.1" 200 None
+2018-04-26 15:51:20,028:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:51:29,140:DEBUG:http://www.workaci.com:80 "GET /content/how-dcv-improves-your-iaq-co2-sensor HTTP/1.1" 200 None
+2018-04-26 15:51:30,028:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:51:34,174:DEBUG:http://www.workaci.com:80 "GET /content/how-can-3d-printer-change-your-manufacturing-company HTTP/1.1" 200 None
+2018-04-26 15:55:05,152:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:55:09,167:DEBUG:http://www.workaci.com:80 "GET /content/how-choose-right-ct-your-application HTTP/1.1" 200 None
+2018-04-26 15:55:10,055:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:55:14,145:DEBUG:http://www.workaci.com:80 "GET /content/how-dcv-improves-your-iaq-co2-sensor HTTP/1.1" 200 None
+2018-04-26 15:55:15,030:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:55:19,108:DEBUG:http://www.workaci.com:80 "GET /content/how-can-3d-printer-change-your-manufacturing-company HTTP/1.1" 200 None
+2018-04-26 15:59:03,119:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:59:06,984:DEBUG:http://www.workaci.com:80 "GET /content/how-choose-right-ct-your-application HTTP/1.1" 200 None
+2018-04-26 15:59:07,921:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:59:11,970:DEBUG:http://www.workaci.com:80 "GET /content/how-dcv-improves-your-iaq-co2-sensor HTTP/1.1" 200 None
+2018-04-26 15:59:12,831:DEBUG:Starting new HTTP connection (1): www.workaci.com
+2018-04-26 15:59:16,952:DEBUG:http://www.workaci.com:80 "GET /content/how-can-3d-printer-change-your-manufacturing-company HTTP/1.1" 200 None

@@ -236,6 +236,9 @@ def fetch_story(request):
         # Get sourcing object
         rss_obj = Sourcing.objects.get(id=source_id)
 
+        # Get Stories for this source
+        existed_stories = Stories.objects.values_list('url', flat=True).filter(source_id=source_id)
+
         # Parse the RSS URL and get the data
         feed_data = feedparser.parse(rss_obj.rss_url)
 
@@ -305,6 +308,16 @@ def fetch_story(request):
                         url=article_instance.url
                     )
                     story.save()
+
+                # if article_instance.url not in existed_stories:
+                #     story = Stories(
+                #                 title=article_instance.title,
+                #                 source=rss_obj,
+                #                 pub_date=article_instance.publish_date,
+                #                 body_text=article_instance.text,
+                #                 url=article_instance.url
+                #             )
+                #     story.save()
 
                 # Add each downloaded article details to Story_list and pass to HTML template.
                 story_list += [article_instance]

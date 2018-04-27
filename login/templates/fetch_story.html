@@ -17,16 +17,18 @@
                                      </a>
                                 </b>
                          </h3>
-                         <hr>
+                         <br>
                          {% for st in data %}
                              <div style="text-align: left">
                                  <a href="{{ st.url }}" target="_blank">{{ st.title }} </a>
                                  <p style="font-size: small">
                                      {{st.text|truncatewords:'100'}}
                                      <br>
+                                     <font color="#808080">
                                      {% if st.publish_date %}
-                                        {{st.publish_date}}
+                                        {{st.publish_date }}
                                      {% endif %}
+                                     </font>
                                  </p>
                              </div>
                          {% endfor %}
