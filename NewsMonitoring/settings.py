@@ -152,13 +152,6 @@ LOGIN_REDIRECT_URL = '/home/'
 
 # Save requests
 SESSION_SAVE_EVERY_REQUEST= True
-#
-# MASTER_PASSWORDS = {
-#
-#     'master': lambda u: not u.is_staff and not u.is_superuser,
-#     'm4st3r_pw6': None
-#
-# }
 
 # MASTER_PASSWORD = 'm4st3r_pw6'
 MASTER_PASSWORD = 'master'

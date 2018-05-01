@@ -63,21 +63,21 @@
                                 </td>
                               </tr>
                             </table>
-                            <button type="submit" class="small">Add</button>
+                            <button type="submit" class="small">Save</button>
                         </form>
                      </div>
-                 </section></div>
+                 </section>
+                </div>
 
-                 {% if form.non_field_errors %}
-                     {{ form.non_field_errors }}
-                 {% endif %}
+             {% if form.non_field_errors %}
+                 {{ form.non_field_errors }}
+             {% endif %}
 
-                 {% if form.errors %}
-                     {{ form.errors }}
-                 {% endif %}
+             {% if form.errors %}
+                 {{ form.errors }}
+             {% endif %}
             </div>
         </div>
-    </div>
 </section>
 
 {% endblock %}

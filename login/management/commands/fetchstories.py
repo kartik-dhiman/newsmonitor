@@ -1,4 +1,4 @@
-from django.core.management.base import BaseCommand, CommandError
+from django.core.management.base import BaseCommand
 from tqdm import tqdm
 from login.models import *
 from newspaper.article import Article, ArticleException
@@ -42,7 +42,7 @@ class Command(BaseCommand):
                     logger.debug("Not a RSS url :    %s" % list_item.rss_url)
                     not_rss_url += 1
                 else:
-                    # Stories progess bar
+                    # Stories progess bar using tqdm
                     story_entries = tqdm(feed_data.get('entries'))
 
                     """
@@ -53,7 +53,10 @@ class Command(BaseCommand):
                     """
 
                     for data in story_entries:
+                        # Stories Progress bar Title
                         story_entries.set_description('Stories Completed ')
+
+                        # Get story Url from story_entries list
                         story_url = data.get('link')
 
                         # If RSS is Empty return to Story listing page

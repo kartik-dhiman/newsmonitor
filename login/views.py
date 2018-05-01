@@ -81,6 +81,7 @@ def register_success(request):
     return render(request, 'registration/success.html',)
 
 
+# Logout view
 def logout_page(request):
     logout(request)
     return HttpResponseRedirect('/')
@@ -126,37 +127,43 @@ def add_source(request):
 @login_required
 @csrf_protect
 def sources_list(request):
-    form = AddSource(request)
-
     # If Staff/SuperUser show all sources else show User wise data
     if request.user.is_staff or request.user.is_superuser:
         data = Sourcing.objects.values(
             'name', 'rss_url', 'id').order_by('-created_on')
-        return render(request, 'sources.html', {'data': data,
-                                                'form': form})
+        return render(request, 'sources.html', {'data': data,})
     else:
         data = Sourcing.objects.values('name', 'rss_url', 'id').\
             filter(created_by_id=request.user.id).order_by('-created_on')
-        form = AddSource()
-    return render(request, 'sources.html', {'data': data,
-                                            'form': form}
-                  )
+    return render(request, 'sources.html', {'data': data,})
 
 
 @login_required
 @csrf_exempt
 def edit_source(request):
     if request.method == 'GET':
-        if request.GET.get('item_id') is None:
-            return HttpResponseRedirect('/sources_list/')
-        elif request.GET.get('item_id') == '':
+        if request.GET.get('item_id') == '' or request.GET.get('item_id') is None:
+
+            # Return Sources List
             return HttpResponseRedirect('/sources_list/')
         else:
+
             # Get id of the Source URL
-            item_id = int(request.GET.get('item_id'))
+            # If user alter the item_id in URL which is not Integer
+            # Redirect to stories page and show message.
+            try:
+                item_id = int(request.GET.get('item_id'))
+            except ValueError:
+                messages.info(request, 'Source id must be Integer')
+                return HttpResponseRedirect('/sources_list/')
 
             # Get Sourcing obj for this id.
-            source_obj = Sourcing.objects.get(id=item_id)
+            try:
+                source_obj = Sourcing.objects.get(id=item_id)
+            except Sourcing.DoesNotExist:
+                messages.info(request, 'Source does not exist')
+                return HttpResponseRedirect('/sources_list/')
+
             form = {
                 'name': source_obj.name,
                 'rss_url': source_obj.rss_url,
@@ -168,11 +175,9 @@ def edit_source(request):
     if request.method == 'POST':
         form = EditSource(request.POST, user=request.user)
         if form.is_valid():
-            # Get Source instance and update its changed data.
-            source_instance = Sourcing.objects.get(
-                id=form.cleaned_data['item_id'])
 
-            # Save data
+            # Get Source instance and update its changed data.
+            source_instance = Sourcing.objects.get(id=form.cleaned_data['item_id'])
             source_instance.name = form.cleaned_data['name']
             source_instance.rss_url = form.cleaned_data['rss_url']
             source_instance.updated_by_id = request.user.id
@@ -232,9 +237,13 @@ def fetch_story(request):
         if source_id is None:
             # If none, Return to sources list
             return HttpResponseRedirect('/sources_list/')
-
+        
         # Get sourcing object
-        rss_obj = Sourcing.objects.get(id=source_id)
+        try:
+            rss_obj = Sourcing.objects.get(id=source_id)
+        except Sourcing.DoesNotExist:
+            messages.info(request, 'Source Does Not Exist, Please try another one.')
+            return HttpResponseRedirect('/sources_list/')
 
         # Parse the RSS URL and get the data
         feed_data = feedparser.parse(rss_obj.rss_url)
@@ -273,7 +282,6 @@ def fetch_story(request):
 
                 article_instance = article
 
-
                 # if Datetime is none, assign current datetime
                 if article_instance.publish_date is None:
                     if data.get('published') is None:
@@ -306,7 +314,6 @@ def fetch_story(request):
                     )
                     story.save()
 
-
                 # Add each downloaded article details to Story_list and pass to HTML template.
                 story_list += [article_instance]
             return render_to_response('fetch_story.html', {
@@ -319,8 +326,8 @@ def fetch_story(request):
 
 @login_required()
 def stories_list(request):
-    user_id = User.objects.get(id=request.user.id)
-    if user_id.is_staff or user_id.is_superuser:
+
+    if request.user.is_staff or request.user.is_superuser:
         # Show all stories to StaffUser or Superuser
         data = Stories.objects.values('id', 'title', 'pub_date', 'body_text', 'source_id',
                                       'url', 'source_id__name', 'source_id__rss_url').order_by("-pub_date")
@@ -329,7 +336,7 @@ def stories_list(request):
         # Get stories created by Logged-In user.
         data = Stories.objects.values('id', 'title', 'pub_date', 'body_text', 'source_id',
                                       'url', 'source_id__name', 'source_id__rss_url').\
-            filter(source_id__created_by_id=user_id).order_by("-pub_date")
+            filter(source_id__created_by_id=request.user.id).order_by("-pub_date")
     return render(request, 'stories.html', {'data': data})
 
 
@@ -394,17 +401,30 @@ def add_story(request):
 @csrf_exempt
 def edit_story(request):
     if request.method == 'GET':
-        if request.GET.get('item_id') is None:
+        if request.GET.get('item_id') == '' or request.GET.get('item_id') is None:
+
             # If edit item Id is not fetched.
-            return HttpResponseRedirect('/stories_list/')
-        elif request.GET.get('item_id') == '':
-            # If edit item Id is not fetched.
+            messages.info(request, 'Story Does Not Exist.')
             return HttpResponseRedirect('/stories_list/')
         else:
+
+            # Typecast to Int
+            # If user alter the item_id in URL which is not Integer
+            # Redirect to stories page and show message.
+            try:
+                item_id = int(request.GET.get('item_id'))
+            except ValueError:
+                messages.info(request, 'Story id must be Integer')
+                return HttpResponseRedirect('/stories_list/')
+
             # Get Sourcing Instance of that item
-            item_id = int(request.GET.get('item_id'))
-            item = Stories.objects.get(id=item_id)
-            form = {
+            try:
+                item = Stories.objects.get(id=item_id)
+            except Stories.DoesNotExist:
+                messages.info(request, 'Story Does Not Exist.')
+                return HttpResponseRedirect('/stories_list/')
+
+            form_data = {
                 'title': item.title,
                 'url': item.url,
                 'body': item.body_text,
@@ -413,20 +433,24 @@ def edit_story(request):
                 'pub_date': datetime.strftime(item.pub_date, '%Y-%m-%d %H:%M:%S'),
                 'item_id': item.id,
             }
-            # Pass this data to Edit Story form
-            form = EditStory(form, user=request.user)
+
+            # Pass this form_data to Edit Story form
+            form = EditStory(form_data, user=request.user)
             return render_to_response('edit_story.html', {'form': form, 'user': request.user})
+
     if request.method == 'POST':
         form = EditStory(request.POST, user=request.user)
         if form.is_valid():
+
             # If form is valid,  Get Story instance and update the Stories data.
-            instance = Stories.objects.get(id=form.cleaned_data['item_id'])
-            instance.title = form.cleaned_data['title']
-            instance.url = form.cleaned_data['url']
-            instance.pub_date = form.cleaned_data['pub_date']
-            instance.body_text = form.cleaned_data['body']
-            instance.source_id = form.cleaned_data['source'].id
-            instance.save()
+            story_instance = Stories.objects.get(id=form.cleaned_data['item_id'])
+            story_instance.title = form.cleaned_data['title']
+            story_instance.url = form.cleaned_data['url']
+            story_instance.pub_date = form.cleaned_data['pub_date']
+            story_instance.body_text = form.cleaned_data['body']
+            story_instance.source_id = form.cleaned_data['source'].id
+            story_instance.save()
+            messages.info(request, 'Saved Successfully.')
             return HttpResponseRedirect('/stories_list/')
         else:
             return render(request, 'edit_story.html', {'form': form})
