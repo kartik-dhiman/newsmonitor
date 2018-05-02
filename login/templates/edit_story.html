@@ -63,19 +63,17 @@
                                 </td>
                               </tr>
                             </table>
+                            <p>
+                                {% if form.non_field_errors %}
+                                {{ form.non_field_errors }}
+                                {% endif %}
+                            </p>
                             <button type="submit" class="small">Save</button>
                         </form>
                      </div>
                  </section>
                 </div>
 
-             {% if form.non_field_errors %}
-                 {{ form.non_field_errors }}
-             {% endif %}
-
-             {% if form.errors %}
-                 {{ form.errors }}
-             {% endif %}
             </div>
         </div>
 </section>

@@ -116,6 +116,16 @@ $(document).ready(function() {
 });
 
 $(document).ready(function(){
-    $('.messages').fadeOut(3000);
+    $('.messages').fadeOut(5000);
+});
+
+
+$(document).ready(function()
+{
+    $('#clear-form').on('click', function()
+    {
+        $('#my-form').find('input, select, textarea').val('');
+        $('#my-form').find('input:radio, input:checkbox').prop('checked', false);
+    });
 });
 })(jQuery);

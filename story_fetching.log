@@ -1,6 +1,362 @@
-2018-05-01 11:33:02,369:WARNING:Not Found: /favicon.ico
-2018-05-01 11:33:02,371:WARNING:Not Found: /favicon.ico
-2018-05-01 11:33:32,349:ERROR:Internal Server Error: /edit_story/
+2018-05-01 12:38:43,314:  DEBUG:  Starting new HTTP connection (1): www.workaci.com
+2018-05-01 12:38:47,136:  DEBUG:  http://www.workaci.com:80 "GET /content/how-choose-right-ct-your-application HTTP/1.1" 200 None
+2018-05-01 12:38:48,223:  DEBUG:  Starting new HTTP connection (1): www.workaci.com
+2018-05-01 12:38:52,102:  DEBUG:  http://www.workaci.com:80 "GET /content/how-dcv-improves-your-iaq-co2-sensor HTTP/1.1" 200 None
+2018-05-01 12:38:52,933:  DEBUG:  Starting new HTTP connection (1): www.workaci.com
+2018-05-01 12:38:57,113:  DEBUG:  http://www.workaci.com:80 "GET /content/how-can-3d-printer-change-your-manufacturing-company HTTP/1.1" 200 None
+2018-05-01 12:56:05,097:  ERROR:  The pathname '/home/ghostman/Desktop/Project/NewsMon/login/views.py' of this watch <Watch wd=1223 path=/home/ghostman/Desktop/Project/NewsMon/login/views.py mask=4038 proc_fun=None auto_add=False exclude_filter=<function WatchManager.<lambda> at 0x7f53955f2b70> dir=False > has probably changed and couldn't be updated, so it cannot be trusted anymore. To fix this error move directories/files only between watched parents directories, in this case e.g. put a watch on '/home/ghostman/Desktop/Project/NewsMon/login'.
+2018-05-01 12:56:46,155:  ERROR:  The pathname '/home/ghostman/Desktop/Project/NewsMon/login/views.py' of this watch <Watch wd=1284 path=/home/ghostman/Desktop/Project/NewsMon/login/views.py mask=4038 proc_fun=None auto_add=False exclude_filter=<function WatchManager.<lambda> at 0x7f0995312b70> dir=False > has probably changed and couldn't be updated, so it cannot be trusted anymore. To fix this error move directories/files only between watched parents directories, in this case e.g. put a watch on '/home/ghostman/Desktop/Project/NewsMon/login'.
+2018-05-01 12:57:29,798:  ERROR:  The pathname '/home/ghostman/Desktop/Project/NewsMon/login/views.py' of this watch <Watch wd=531 path=/home/ghostman/Desktop/Project/NewsMon/login/views.py mask=4038 proc_fun=None auto_add=False exclude_filter=<function WatchManager.<lambda> at 0x7f672f016b70> dir=False > has probably changed and couldn't be updated, so it cannot be trusted anymore. To fix this error move directories/files only between watched parents directories, in this case e.g. put a watch on '/home/ghostman/Desktop/Project/NewsMon/login'.
+2018-05-01 14:35:08,356:  ERROR:  The pathname '/home/ghostman/Desktop/Project/NewsMon/login/forms.py' of this watch <Watch wd=1255 path=/home/ghostman/Desktop/Project/NewsMon/login/forms.py mask=4038 proc_fun=None auto_add=False exclude_filter=<function WatchManager.<lambda> at 0x7fc960e61b70> dir=False > has probably changed and couldn't be updated, so it cannot be trusted anymore. To fix this error move directories/files only between watched parents directories, in this case e.g. put a watch on '/home/ghostman/Desktop/Project/NewsMon/login'.
+2018-05-01 14:38:52,021:  ERROR:  The pathname '/home/ghostman/Desktop/Project/NewsMon/login/views.py' of this watch <Watch wd=222 path=/home/ghostman/Desktop/Project/NewsMon/login/views.py mask=4038 proc_fun=None auto_add=False exclude_filter=<function WatchManager.<lambda> at 0x7fda2badab70> dir=False > has probably changed and couldn't be updated, so it cannot be trusted anymore. To fix this error move directories/files only between watched parents directories, in this case e.g. put a watch on '/home/ghostman/Desktop/Project/NewsMon/login'.
+2018-05-01 14:39:02,236:  WARNING:  Not Found: /favicon.ico
+2018-05-01 14:39:02,246:  WARNING:  Not Found: /favicon.ico
+2018-05-01 14:52:02,835:  ERROR:  The pathname '/home/ghostman/Desktop/Project/NewsMon/login/views.py' of this watch <Watch wd=227 path=/home/ghostman/Desktop/Project/NewsMon/login/views.py mask=4038 proc_fun=None auto_add=False exclude_filter=<function WatchManager.<lambda> at 0x7facc8f9ab70> dir=False > has probably changed and couldn't be updated, so it cannot be trusted anymore. To fix this error move directories/files only between watched parents directories, in this case e.g. put a watch on '/home/ghostman/Desktop/Project/NewsMon/login'.
+2018-05-01 15:46:26,933:  ERROR:  The pathname '/home/ghostman/Desktop/Project/NewsMon/login/forms.py' of this watch <Watch wd=503 path=/home/ghostman/Desktop/Project/NewsMon/login/forms.py mask=4038 proc_fun=None auto_add=False exclude_filter=<function WatchManager.<lambda> at 0x7fb54d32cb70> dir=False > has probably changed and couldn't be updated, so it cannot be trusted anymore. To fix this error move directories/files only between watched parents directories, in this case e.g. put a watch on '/home/ghostman/Desktop/Project/NewsMon/login'.
+2018-05-01 15:48:32,361:  ERROR:  The pathname '/home/ghostman/Desktop/Project/NewsMon/login/forms.py' of this watch <Watch wd=1421 path=/home/ghostman/Desktop/Project/NewsMon/login/forms.py mask=4038 proc_fun=None auto_add=False exclude_filter=<function WatchManager.<lambda> at 0x7efc6661db70> dir=False > has probably changed and couldn't be updated, so it cannot be trusted anymore. To fix this error move directories/files only between watched parents directories, in this case e.g. put a watch on '/home/ghostman/Desktop/Project/NewsMon/login'.
+2018-05-01 15:50:36,389:  ERROR:  The pathname '/home/ghostman/Desktop/Project/NewsMon/login/forms.py' of this watch <Watch wd=1445 path=/home/ghostman/Desktop/Project/NewsMon/login/forms.py mask=4038 proc_fun=None auto_add=False exclude_filter=<function WatchManager.<lambda> at 0x7f05d896eb70> dir=False > has probably changed and couldn't be updated, so it cannot be trusted anymore. To fix this error move directories/files only between watched parents directories, in this case e.g. put a watch on '/home/ghostman/Desktop/Project/NewsMon/login'.
+2018-05-01 15:51:02,506:  ERROR:  The pathname '/home/ghostman/Desktop/Project/NewsMon/login/forms.py' of this watch <Watch wd=1208 path=/home/ghostman/Desktop/Project/NewsMon/login/forms.py mask=4038 proc_fun=None auto_add=False exclude_filter=<function WatchManager.<lambda> at 0x7fe176020b70> dir=False > has probably changed and couldn't be updated, so it cannot be trusted anymore. To fix this error move directories/files only between watched parents directories, in this case e.g. put a watch on '/home/ghostman/Desktop/Project/NewsMon/login'.
+2018-05-01 15:59:32,451:  DEBUG:  Not a RSS url :    http://www.contify.com
+2018-05-01 15:59:42,528:  DEBUG:  Starting new HTTP connection (1): www.workaci.com
+2018-05-01 15:59:51,976:  DEBUG:  http://www.workaci.com:80 "GET /content/how-choose-right-ct-your-application HTTP/1.1" 200 None
+2018-05-01 15:59:53,019:  DEBUG:  Starting new HTTP connection (1): www.workaci.com
+2018-05-01 16:00:01,689:  DEBUG:  http://www.workaci.com:80 "GET /content/how-dcv-improves-your-iaq-co2-sensor HTTP/1.1" 200 None
+2018-05-01 16:00:02,486:  DEBUG:  Starting new HTTP connection (1): www.workaci.com
+2018-05-01 16:00:09,721:  DEBUG:  http://www.workaci.com:80 "GET /content/how-can-3d-printer-change-your-manufacturing-company HTTP/1.1" 200 None
+2018-05-01 16:00:15,384:  DEBUG:  Starting new HTTPS connection (1): www.sprinklr.com
+2018-05-01 16:00:21,226:  DEBUG:  https://www.sprinklr.com:443 "GET /pr/sprinklr-unveils-intuition-ai-help-brands-scale-one-one-customer-relationships-across-25-social-channels HTTP/1.1" 301 0
+2018-05-01 16:00:22,806:  DEBUG:  https://www.sprinklr.com:443 "GET /pr/sprinklr-unveils-intuition-ai-help-brands-scale-one-one-customer-relationships-across-25-social-channels/ HTTP/1.1" 200 None
+2018-05-01 16:00:22,994:  DEBUG:  Starting new HTTPS connection (1): www.sprinklr.com
+2018-05-01 16:00:28,135:  DEBUG:  https://www.sprinklr.com:443 "GET /pr/allstate-selects-sprinklr-drive-social-recruiting-attract-next-generation-talent HTTP/1.1" 301 0
+2018-05-01 16:00:29,709:  DEBUG:  https://www.sprinklr.com:443 "GET /pr/allstate-selects-sprinklr-drive-social-recruiting-attract-next-generation-talent/ HTTP/1.1" 200 None
+2018-05-01 16:00:29,866:  DEBUG:  Starting new HTTPS connection (1): www.sprinklr.com
+2018-05-01 16:02:05,442:  DEBUG:  Not a RSS url :    http://www.contify.com
+2018-05-01 16:02:26,905:  DEBUG:  Starting new HTTP connection (1): www.kmworld.com
+2018-05-01 16:02:31,710:  DEBUG:  http://www.kmworld.com:80 "GET /Articles/News/News/Utilizing-Intelligent-Search-in-Modern-Enterprises-124777.aspx HTTP/1.1" 200 14512
+2018-05-01 16:02:32,429:  DEBUG:  Starting new HTTP connection (1): www.kmworld.com
+2018-05-01 16:02:38,010:  DEBUG:  http://www.kmworld.com:80 "GET /Articles/News/News/SpringCM-Smooths-Path-to-GDPR-Compliance-124684.aspx HTTP/1.1" 200 14215
+2018-05-01 16:02:38,675:  DEBUG:  Starting new HTTP connection (1): www.kmworld.com
+2018-05-01 16:02:43,835:  DEBUG:  http://www.kmworld.com:80 "GET /Articles/News/News/Powering-Your-Organization-with-Flexible-Smart-Collaboration-124681.aspx HTTP/1.1" 200 15498
+2018-05-01 16:02:44,530:  DEBUG:  Starting new HTTP connection (1): www.kmworld.com
+2018-05-01 16:02:50,265:  DEBUG:  http://www.kmworld.com:80 "GET /Articles/News/News/ASG-Technologies-Enables-Modern-Data-Governance-with-Data-Intelligence-9.5-124675.aspx HTTP/1.1" 200 14483
+2018-05-01 16:02:55,128:  DEBUG:  Not a RSS url :    http://www.kk.com
+2018-05-01 16:03:10,971:  DEBUG:  No feed data in RSS URL:   http://contify.feed43.com/sportzpower-2-april.xml
+2018-05-01 16:03:17,032:  DEBUG:  Not a RSS url :    http://www.facebook.com
+2018-05-01 16:03:20,788:  DEBUG:  Starting new HTTPS connection (1): yourstory.com
+2018-05-01 16:03:29,855:  DEBUG:  https://yourstory.com:443 "GET /mystory/bcc0996780-3-ways-for-android-app HTTP/1.1" 200 None
+2018-05-01 16:03:30,323:  DEBUG:  Starting new HTTPS connection (1): yourstory.com
+2018-05-01 16:03:39,711:  DEBUG:  https://yourstory.com:443 "GET /mystory/33bcaef309-a-brief-guide-to-today HTTP/1.1" 200 None
+2018-05-02 10:53:32,678:  WARNING:  Not Found: /favicon.ico
+2018-05-02 10:53:33,138:  WARNING:  Not Found: /favicon.ico
+2018-05-02 10:54:32,574:  DEBUG:  Starting new HTTP connection (1): www.workaci.com
+2018-05-02 10:54:35,481:  DEBUG:  http://www.workaci.com:80 "GET /content/how-choose-right-ct-your-application HTTP/1.1" 200 None
+2018-05-02 10:54:36,537:  ERROR:  Internal Server Error: /fetch_story/
+Traceback (most recent call last):
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/ghostman/Desktop/Project/NewsMon/login/views.py", line 303, in fetch_story
+    Stories.objects.select_related('source_id').get(url=story_url)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/db/models/query.py", line 397, in get
+    num = len(clone)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/db/models/query.py", line 254, in __len__
+    self._fetch_all()
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/db/models/query.py", line 1179, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/db/models/query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1054, in execute_sql
+    sql, params = self.as_sql()
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 447, in as_sql
+    extra_select, order_by, group_by = self.pre_sql_setup()
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 50, in pre_sql_setup
+    self.setup_query()
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 41, in setup_query
+    self.select, self.klass_info, self.annotation_col_map = self.get_select()
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 231, in get_select
+    related_klass_infos = self.get_related_selections(select)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 906, in get_related_selections
+    ', '.join(_get_field_choices()) or '(none)',
+django.core.exceptions.FieldError: Invalid field name(s) given in select_related: 'source_id'. Choices are: source
+2018-05-02 10:54:59,900:  DEBUG:  Starting new HTTP connection (1): www.workaci.com
+2018-05-02 10:55:00,530:  DEBUG:  http://www.workaci.com:80 "GET /content/how-choose-right-ct-your-application HTTP/1.1" 200 None
+2018-05-02 10:55:01,465:  DEBUG:  Starting new HTTP connection (1): www.workaci.com
+2018-05-02 10:55:03,526:  DEBUG:  http://www.workaci.com:80 "GET /content/how-dcv-improves-your-iaq-co2-sensor HTTP/1.1" 200 None
+2018-05-02 10:55:04,367:  DEBUG:  Starting new HTTP connection (1): www.workaci.com
+2018-05-02 10:55:06,678:  DEBUG:  http://www.workaci.com:80 "GET /content/how-can-3d-printer-change-your-manufacturing-company HTTP/1.1" 200 None
+2018-05-02 10:55:17,570:  DEBUG:  Starting new HTTPS connection (1): www.visioncritical.com
+2018-05-02 10:55:19,221:  DEBUG:  https://www.visioncritical.com:443 "GET /news-events/new-research-vision-critical-reveals-two-thirds-consumers-comfortably-share-personal-information-brands-open-use/ HTTP/1.1" 200 None
+2018-05-02 10:55:19,326:  DEBUG:  Starting new HTTPS connection (1): www.visioncritical.com
+2018-05-02 10:55:20,993:  DEBUG:  https://www.visioncritical.com:443 "GET /news-events/vision-critical-bolsters-artificial-intelligence-capabilities-with-aida/ HTTP/1.1" 200 None
+2018-05-02 10:55:21,102:  DEBUG:  Starting new HTTPS connection (1): www.visioncritical.com
+2018-05-02 10:55:22,685:  DEBUG:  https://www.visioncritical.com:443 "GET /news-events/independent-study-highlights-roi-of-vision-critical-customer-intelligence/ HTTP/1.1" 200 None
+2018-05-02 10:55:22,799:  DEBUG:  Starting new HTTPS connection (1): www.visioncritical.com
+2018-05-02 10:55:24,315:  DEBUG:  https://www.visioncritical.com:443 "GET /news-events/former-electronic-arts-exec-alan-price-joins-vision-critical-as-cto/ HTTP/1.1" 200 None
+2018-05-02 10:55:24,412:  DEBUG:  Starting new HTTPS connection (1): www.visioncritical.com
+2018-05-02 10:55:26,075:  DEBUG:  https://www.visioncritical.com:443 "GET /news-events/vision-critical-sparq-3-customer-intelligence-platform-wins-2018-big-innovation-award/ HTTP/1.1" 200 None
+2018-05-02 10:55:26,170:  DEBUG:  Starting new HTTPS connection (1): www.visioncritical.com
+2018-05-02 10:55:27,509:  DEBUG:  https://www.visioncritical.com:443 "GET /news-events/kelly-hall-joins-vision-critical-chief-customer-officer/ HTTP/1.1" 200 None
+2018-05-02 10:55:27,840:  DEBUG:  Starting new HTTPS connection (1): www.visioncritical.com
+2018-05-02 10:55:29,185:  DEBUG:  https://www.visioncritical.com:443 "GET /news-events/vision-critical-puts-relationships-center-customer-intelligence-expanded-vision-sparq-3-platform/ HTTP/1.1" 200 18958
+2018-05-02 10:55:29,304:  DEBUG:  Starting new HTTPS connection (1): www.visioncritical.com
+2018-05-02 10:55:30,848:  DEBUG:  https://www.visioncritical.com:443 "GET /news-events/vision-critical-expands-insight-sharing-capabilities-acquisition-pressly/ HTTP/1.1" 200 None
+2018-05-02 10:55:30,944:  DEBUG:  Starting new HTTPS connection (1): www.visioncritical.com
+2018-05-02 10:55:32,615:  DEBUG:  https://www.visioncritical.com:443 "GET /news-events/former-marketo-salesforce-finance-executive-vinod-hariharan-joins-vision-critical-chief-financial-officer/ HTTP/1.1" 200 None
+2018-05-02 10:55:44,125:  DEBUG:  Starting new HTTPS connection (1): www.sprinklr.com
+2018-05-02 10:55:46,370:  DEBUG:  https://www.sprinklr.com:443 "GET /pr/sprinklr-unveils-intuition-ai-help-brands-scale-one-one-customer-relationships-across-25-social-channels HTTP/1.1" 301 0
+2018-05-02 10:55:48,318:  DEBUG:  https://www.sprinklr.com:443 "GET /pr/sprinklr-unveils-intuition-ai-help-brands-scale-one-one-customer-relationships-across-25-social-channels/ HTTP/1.1" 200 None
+2018-05-02 10:55:48,580:  DEBUG:  Starting new HTTPS connection (1): www.sprinklr.com
+2018-05-02 10:55:50,677:  DEBUG:  https://www.sprinklr.com:443 "GET /pr/sprinklr-hires-former-microsoft-u-s-cmo-grad-conn-chief-experience-marketing-officer HTTP/1.1" 301 0
+2018-05-02 10:55:51,207:  DEBUG:  https://www.sprinklr.com:443 "GET /pr/sprinklr-hires-former-microsoft-u-s-cmo-grad-conn-chief-experience-marketing-officer/ HTTP/1.1" 200 None
+2018-05-02 10:55:51,373:  DEBUG:  Starting new HTTPS connection (1): www.sprinklr.com
+2018-05-02 10:55:52,854:  DEBUG:  https://www.sprinklr.com:443 "GET /pr/sprinklr-hires-former-microsoft-u-s-cmo-grad-conn-chief-experience-marketing-officer/ HTTP/1.1" 200 None
+2018-05-02 10:55:53,078:  DEBUG:  Starting new HTTPS connection (1): www.sprinklr.com
+2018-05-02 10:55:55,267:  DEBUG:  https://www.sprinklr.com:443 "GET /pr/sap-selects-sprinklr-foundation-data-driven-social-media-strategies HTTP/1.1" 301 0
+2018-05-02 10:55:57,183:  DEBUG:  https://www.sprinklr.com:443 "GET /pr/sap-selects-sprinklr-foundation-data-driven-social-media-strategies/ HTTP/1.1" 200 None
+2018-05-02 10:55:57,337:  DEBUG:  Starting new HTTPS connection (1): www.sprinklr.com
+2018-05-02 10:55:59,461:  DEBUG:  https://www.sprinklr.com:443 "GET /pr/sprinklr-expands-executive-leadership-team-chief-culture-talent-officer HTTP/1.1" 301 0
+2018-05-02 10:56:01,466:  DEBUG:  https://www.sprinklr.com:443 "GET /pr/sprinklr-expands-executive-leadership-team-chief-culture-talent-officer/ HTTP/1.1" 200 None
+2018-05-02 10:56:01,646:  DEBUG:  Starting new HTTPS connection (1): www.sprinklr.com
+2018-05-02 10:56:03,823:  DEBUG:  https://www.sprinklr.com:443 "GET /pr/sprinklr-becomes-first-enterprise-social-platform-integrate-viber HTTP/1.1" 301 0
+2018-05-02 10:56:05,767:  DEBUG:  https://www.sprinklr.com:443 "GET /pr/sprinklr-becomes-first-enterprise-social-platform-integrate-viber/ HTTP/1.1" 200 None
+2018-05-02 10:56:05,931:  DEBUG:  Starting new HTTPS connection (1): www.sprinklr.com
+2018-05-02 10:56:08,183:  DEBUG:  https://www.sprinklr.com:443 "GET /pr/sprinklr-launches-gallery-transforming-social-content-shoppable-posts HTTP/1.1" 301 0
+2018-05-02 10:56:10,112:  DEBUG:  https://www.sprinklr.com:443 "GET /pr/sprinklr-launches-gallery-transforming-social-content-shoppable-posts/ HTTP/1.1" 200 None
+2018-05-02 10:56:10,279:  DEBUG:  Starting new HTTPS connection (1): www.sprinklr.com
+2018-05-02 10:56:12,461:  DEBUG:  https://www.sprinklr.com:443 "GET /pr/sprinklr-introduces-new-solutions-maximize-impact-social-advertising HTTP/1.1" 301 0
+2018-05-02 10:56:13,015:  DEBUG:  https://www.sprinklr.com:443 "GET /pr/sprinklr-introduces-new-solutions-maximize-impact-social-advertising/ HTTP/1.1" 200 None
+2018-05-02 10:56:13,182:  DEBUG:  Starting new HTTPS connection (1): www.sprinklr.com
+2018-05-02 10:56:15,338:  DEBUG:  https://www.sprinklr.com:443 "GET /pr/shell-chooses-sprinklr-customer-centric-marketing-advertising HTTP/1.1" 301 0
+2018-05-02 10:56:17,442:  DEBUG:  https://www.sprinklr.com:443 "GET /pr/shell-chooses-sprinklr-customer-centric-marketing-advertising/ HTTP/1.1" 200 None
+2018-05-02 10:56:17,594:  DEBUG:  Starting new HTTPS connection (1): www.sprinklr.com
+2018-05-02 10:56:20,452:  DEBUG:  https://www.sprinklr.com:443 "GET /pr/sprinklr-announces-strategic-partnership-drive-customer-engagement-care-reddit/ HTTP/1.1" 200 None
+2018-05-02 10:56:20,605:  DEBUG:  Starting new HTTPS connection (1): www.sprinklr.com
+2018-05-02 10:56:23,422:  DEBUG:  https://www.sprinklr.com:443 "GET /pr/sprinklr-unveils-eight-new-products-simplified-ux/ HTTP/1.1" 200 None
+2018-05-02 10:56:23,601:  DEBUG:  Starting new HTTPS connection (1): blog.sprinklr.com
+2018-05-02 10:56:26,827:  DEBUG:  https://blog.sprinklr.com:443 "GET /sprinklr-supports-launch-promoted-video-autoplay-pinterest/ HTTP/1.1" 200 None
+2018-05-02 10:56:27,261:  DEBUG:  Starting new HTTPS connection (1): blog.sprinklr.com
+2018-05-02 10:56:28,741:  DEBUG:  https://blog.sprinklr.com:443 "GET /sprinklr-support-facebook-messenger-cxm/ HTTP/1.1" 200 None
+2018-05-02 10:56:29,193:  DEBUG:  Starting new HTTPS connection (1): blog.sprinklr.com
+2018-05-02 10:56:30,604:  DEBUG:  https://blog.sprinklr.com:443 "GET /sprinklr-launches-support-instagrams-new-api-features/ HTTP/1.1" 200 None
+2018-05-02 10:56:31,041:  DEBUG:  Starting new HTTPS connection (1): blog.sprinklr.com
+2018-05-02 10:56:33,049:  DEBUG:  https://blog.sprinklr.com:443 "GET /pr/sprinklr-named-second-annual-forbes-2017-cloud-100-list HTTP/1.1" 301 0
+2018-05-02 10:56:34,960:  DEBUG:  https://blog.sprinklr.com:443 "GET /pr/sprinklr-named-second-annual-forbes-2017-cloud-100-list/ HTTP/1.1" 200 None
+2018-05-02 10:56:35,320:  DEBUG:  Starting new HTTPS connection (1): blog.sprinklr.com
+2018-05-02 10:56:36,509:  DEBUG:  https://blog.sprinklr.com:443 "GET /pr/sprinklr-named-leader-independent-social-media-management-solutions-report HTTP/1.1" 301 0
+2018-05-02 10:56:37,054:  DEBUG:  https://blog.sprinklr.com:443 "GET /pr/sprinklr-named-leader-independent-social-media-management-solutions-report/ HTTP/1.1" 200 None
+2018-05-02 10:56:37,416:  DEBUG:  Starting new HTTPS connection (1): blog.sprinklr.com
+2018-05-02 10:56:39,421:  DEBUG:  https://blog.sprinklr.com:443 "GET /pr/sprinklr-provides-santander-uk-unified-social-platform-drive-meaningful-experiences-millions-customers HTTP/1.1" 301 0
+2018-05-02 10:56:41,404:  DEBUG:  https://blog.sprinklr.com:443 "GET /pr/sprinklr-provides-santander-uk-unified-social-platform-drive-meaningful-experiences-millions-customers/ HTTP/1.1" 200 None
+2018-05-02 10:56:41,768:  DEBUG:  Starting new HTTPS connection (1): blog.sprinklr.com
+2018-05-02 10:56:43,737:  DEBUG:  https://blog.sprinklr.com:443 "GET /pr/sprinklr-named-leader-independent-content-marketing-platforms-report HTTP/1.1" 301 0
+2018-05-02 10:56:45,914:  DEBUG:  https://blog.sprinklr.com:443 "GET /pr/sprinklr-named-leader-independent-content-marketing-platforms-report/ HTTP/1.1" 200 None
+2018-05-02 10:56:46,269:  DEBUG:  Starting new HTTPS connection (1): blog.sprinklr.com
+2018-05-02 10:56:48,257:  DEBUG:  https://blog.sprinklr.com:443 "GET /pr/sprinklr-expands-social-media-management-customer-experience-management HTTP/1.1" 301 0
+2018-05-02 10:56:48,798:  DEBUG:  https://blog.sprinklr.com:443 "GET /pr/sprinklr-expands-social-media-management-customer-experience-management/ HTTP/1.1" 200 None
+2018-05-02 10:56:49,167:  DEBUG:  Starting new HTTPS connection (1): blog.sprinklr.com
+2018-05-02 10:56:51,197:  DEBUG:  https://blog.sprinklr.com:443 "GET /sprinklr-business-index-how-brands-engage-customers-on-social HTTP/1.1" 301 0
+2018-05-02 10:56:53,513:  DEBUG:  https://blog.sprinklr.com:443 "GET /sprinklr-business-index-how-brands-engage-customers-on-social/ HTTP/1.1" 200 None
+2018-05-02 10:56:53,954:  DEBUG:  Starting new HTTPS connection (1): blog.sprinklr.com
+2018-05-02 10:56:55,976:  DEBUG:  https://blog.sprinklr.com:443 "GET /pr/sprinklr-receives-sap-hybris-2017-partner-year-award-isv-solution-partner HTTP/1.1" 301 0
+2018-05-02 10:56:57,848:  DEBUG:  https://blog.sprinklr.com:443 "GET /pr/sprinklr-receives-sap-hybris-2017-partner-year-award-isv-solution-partner/ HTTP/1.1" 200 None
+2018-05-02 10:56:58,204:  DEBUG:  Starting new HTTPS connection (1): blog.sprinklr.com
+2018-05-02 10:57:00,200:  DEBUG:  https://blog.sprinklr.com:443 "GET /pr/announcing-sprinklr-display-complete-solution-powering-digital-screens-retail-command-centers-events-outdoor-advertising HTTP/1.1" 301 0
+2018-05-02 10:57:02,241:  DEBUG:  https://blog.sprinklr.com:443 "GET /pr/announcing-sprinklr-display-complete-solution-powering-digital-screens-retail-command-centers-events-outdoor-advertising/ HTTP/1.1" 200 None
+2018-05-02 10:57:02,605:  DEBUG:  Starting new HTTPS connection (1): blog.sprinklr.com
+2018-05-02 10:57:04,600:  DEBUG:  https://blog.sprinklr.com:443 "GET /pr/fast-company-names-sprinklr-among-innovative-companies-2017 HTTP/1.1" 301 0
+2018-05-02 10:57:06,454:  DEBUG:  https://blog.sprinklr.com:443 "GET /pr/fast-company-names-sprinklr-among-innovative-companies-2017/ HTTP/1.1" 200 None
+2018-05-02 10:57:06,827:  DEBUG:  Starting new HTTPS connection (1): blog.sprinklr.com
+2018-05-02 10:57:08,298:  DEBUG:  https://blog.sprinklr.com:443 "GET /sprinklr-and-twitter-expand-partnership-to-drive-customer-care-innovation/ HTTP/1.1" 200 None
+2018-05-02 10:57:08,773:  DEBUG:  Starting new HTTPS connection (1): blog.sprinklr.com
+2018-05-02 10:57:09,943:  DEBUG:  https://blog.sprinklr.com:443 "GET /pr/sprinklr-acquires-influencer-identification-marketing-platform-little-bird HTTP/1.1" 301 0
+2018-05-02 10:57:10,477:  DEBUG:  https://blog.sprinklr.com:443 "GET /pr/sprinklr-acquires-influencer-identification-marketing-platform-little-bird/ HTTP/1.1" 200 None
+2018-05-02 10:57:10,887:  DEBUG:  Starting new HTTPS connection (1): blog.sprinklr.com
+2018-05-02 10:57:12,868:  DEBUG:  https://blog.sprinklr.com:443 "GET /pr/sprinklr-integrates-twitter-quick-replies-welcome-messages HTTP/1.1" 301 0
+2018-05-02 10:57:14,801:  DEBUG:  https://blog.sprinklr.com:443 "GET /pr/sprinklr-integrates-twitter-quick-replies-welcome-messages/ HTTP/1.1" 200 None
+2018-05-02 10:57:15,162:  DEBUG:  Starting new HTTPS connection (1): blog.sprinklr.com
+2018-05-02 10:57:17,130:  DEBUG:  https://blog.sprinklr.com:443 "GET /pr/sprinklr-launches-with-ibm-think-marketing HTTP/1.1" 301 0
+2018-05-02 10:57:17,683:  DEBUG:  https://blog.sprinklr.com:443 "GET /pr/sprinklr-launches-with-ibm-think-marketing/ HTTP/1.1" 200 None
+2018-05-02 10:57:18,046:  DEBUG:  Starting new HTTPS connection (1): blog.sprinklr.com
+2018-05-02 10:57:20,031:  DEBUG:  https://blog.sprinklr.com:443 "GET /pr/sprinklr-expands-executive-team-welcomes-new-strategic-advisors-board-member HTTP/1.1" 301 0
+2018-05-02 10:57:20,564:  DEBUG:  https://blog.sprinklr.com:443 "GET /pr/sprinklr-expands-executive-team-welcomes-new-strategic-advisors-board-member/ HTTP/1.1" 200 None
+2018-05-02 10:57:20,925:  DEBUG:  Starting new HTTPS connection (1): www.sprinklr.com
+2018-05-02 10:57:23,663:  DEBUG:  https://www.sprinklr.com:443 "GET /pr/sprinklr-named-first-ever-forbes-2016-worlds-best-100-cloud-companies-list/ HTTP/1.1" 200 None
+2018-05-02 10:57:23,832:  DEBUG:  Starting new HTTPS connection (1): blog.sprinklr.com
+2018-05-02 10:57:26,645:  DEBUG:  https://blog.sprinklr.com:443 "GET /pr/sprinklr-partners-twitter-republican-democratic-national-conventions/ HTTP/1.1" 200 None
+2018-05-02 10:57:27,079:  DEBUG:  Starting new HTTPS connection (1): blog.sprinklr.com
+2018-05-02 10:57:29,147:  DEBUG:  https://blog.sprinklr.com:443 "GET /pr/sprinklr-raises-105-million-1-8-billion-valuation HTTP/1.1" 301 0
+2018-05-02 10:57:31,033:  DEBUG:  https://blog.sprinklr.com:443 "GET /pr/sprinklr-raises-105-million-1-8-billion-valuation/ HTTP/1.1" 200 None
+2018-05-02 10:57:31,401:  DEBUG:  Starting new HTTPS connection (1): blog.sprinklr.com
+2018-05-02 10:57:34,223:  DEBUG:  https://blog.sprinklr.com:443 "GET /pr/sprinklr-opt-inc-collaboration-empower-brands-customer-experience/ HTTP/1.1" 200 None
+2018-05-02 10:57:34,581:  DEBUG:  Starting new HTTPS connection (1): blog.sprinklr.com
+2018-05-02 10:57:37,856:  DEBUG:  https://blog.sprinklr.com:443 "GET /sprinklr-hosts-the-way-to-customer-first-for-marketers/ HTTP/1.1" 200 None
+2018-05-02 10:57:38,305:  DEBUG:  Starting new HTTPS connection (1): www.sprinklr.com
+2018-05-02 10:57:40,869:  DEBUG:  https://www.sprinklr.com:443 "GET /pr/transcosmos-becomes-first-japan-implement-sprinklr-offered-sprinklr-inc-ads-agency-twitter-ads-distribution/ HTTP/1.1" 200 None
+2018-05-02 10:57:41,007:  DEBUG:  Starting new HTTP connection (1): www.businesswire.com
+2018-05-02 10:57:41,228:  DEBUG:  http://www.businesswire.com:80 "GET /news/home/20160303005891/en/Sprinklr-Named-Leader-Independent-Research-Report HTTP/1.1" 302 0
+2018-05-02 10:57:41,236:  DEBUG:  Starting new HTTPS connection (1): www.businesswire.com
+2018-05-02 10:57:44,349:  DEBUG:  https://www.businesswire.com:443 "GET /news/home/20160303005891/en/Sprinklr-Named-Leader-Independent-Research-Report HTTP/1.1" 200 16750
+2018-05-02 10:57:44,588:  DEBUG:  Starting new HTTP connection (1): www.businesswire.com
+2018-05-02 10:57:44,760:  DEBUG:  http://www.businesswire.com:80 "GET /news/home/20160218006533/en HTTP/1.1" 302 0
+2018-05-02 10:57:44,768:  DEBUG:  Starting new HTTPS connection (1): www.businesswire.com
+2018-05-02 10:57:45,833:  DEBUG:  https://www.businesswire.com:443 "GET /news/home/20160218006533/en HTTP/1.1" 200 17609
+2018-05-02 10:57:46,073:  DEBUG:  Starting new HTTP connection (1): www.prnewswire.com
+2018-05-02 10:57:46,491:  DEBUG:  http://www.prnewswire.com:80 "GET /news-releases/shutterstock-expands-successful-api-program-with-new-technology-partners-300207701.html HTTP/1.1" 301 0
+2018-05-02 10:57:46,499:  DEBUG:  Starting new HTTPS connection (1): www.prnewswire.com
+2018-05-02 10:57:49,445:  DEBUG:  https://www.prnewswire.com:443 "GET /news-releases/shutterstock-expands-successful-api-program-with-new-technology-partners-300207701.html HTTP/1.1" 200 None
+2018-05-02 10:57:50,238:  DEBUG:  Starting new HTTP connection (1): www.businesswire.com
+2018-05-02 10:57:50,465:  DEBUG:  http://www.businesswire.com:80 "GET /news/home/20151102006063/en HTTP/1.1" 302 0
+2018-05-02 10:57:50,475:  DEBUG:  Starting new HTTPS connection (1): www.businesswire.com
+2018-05-02 10:57:51,908:  DEBUG:  https://www.businesswire.com:443 "GET /news/home/20151102006063/en HTTP/1.1" 200 16946
+2018-05-02 10:57:52,170:  DEBUG:  Starting new HTTP connection (1): www.businesswire.com
+2018-05-02 10:57:52,353:  DEBUG:  http://www.businesswire.com:80 "GET /news/home/20151020006353/en HTTP/1.1" 302 0
+2018-05-02 10:57:52,359:  DEBUG:  Starting new HTTPS connection (1): www.businesswire.com
+2018-05-02 10:57:53,461:  DEBUG:  https://www.businesswire.com:443 "GET /news/home/20151020006353/en HTTP/1.1" 200 16728
+2018-05-02 10:57:53,701:  DEBUG:  Starting new HTTPS connection (1): advertising.yahoo.com
+2018-05-02 10:57:54,702:  DEBUG:  https://advertising.yahoo.com:443 "GET /Blog/NEW-YAHOO-GEMINI-FEATURES.html HTTP/1.1" 301 1457
+2018-05-02 10:57:54,707:  DEBUG:  Starting new HTTPS connection (1): www.oath.com
+2018-05-02 10:57:55,546:  DEBUG:  https://www.oath.com:443 "GET /advertising HTTP/1.1" 301 0
+2018-05-02 10:57:55,942:  DEBUG:  https://www.oath.com:443 "GET /advertising/ HTTP/1.1" 200 18593
+2018-05-02 10:57:56,240:  DEBUG:  Starting new HTTP connection (1): www.businesswire.com
+2018-05-02 10:57:56,460:  DEBUG:  http://www.businesswire.com:80 "GET /news/home/20150928005438/en/Yahoo-Unveils-Technology-Offerings-Advertising-Week HTTP/1.1" 302 0
+2018-05-02 10:57:56,470:  DEBUG:  Starting new HTTPS connection (1): www.businesswire.com
+2018-05-02 10:57:57,454:  DEBUG:  https://www.businesswire.com:443 "GET /news/home/20150928005438/en/Yahoo-Unveils-Technology-Offerings-Advertising-Week HTTP/1.1" 200 17157
+2018-05-02 10:57:57,695:  DEBUG:  Starting new HTTP connection (1): www.marketwired.com
+2018-05-02 10:57:58,629:  DEBUG:  http://www.marketwired.com:80 "GET /press-release/mongodb-scales-to-meet-the-next-generation-needs-of-sprinklr-2058428.htm HTTP/1.1" 200 11949
+2018-05-02 10:57:59,032:  DEBUG:  Starting new HTTP connection (1): www.prnewswire.com
+2018-05-02 10:57:59,417:  DEBUG:  http://www.prnewswire.com:80 "GET /news-releases/deloitte-digital-introduces-new-customer-service-transformation-offering-300141041.html HTTP/1.1" 301 0
+2018-05-02 10:57:59,423:  DEBUG:  Starting new HTTPS connection (1): www.prnewswire.com
+2018-05-02 10:58:01,482:  DEBUG:  https://www.prnewswire.com:443 "GET /news-releases/deloitte-digital-introduces-new-customer-service-transformation-offering-300141041.html HTTP/1.1" 200 None
+2018-05-02 10:58:02,005:  DEBUG:  Starting new HTTP connection (1): www.businesswire.com
+2018-05-02 10:58:02,175:  DEBUG:  http://www.businesswire.com:80 "GET /news/home/20150831005334/en HTTP/1.1" 302 0
+2018-05-02 10:58:02,185:  DEBUG:  Starting new HTTPS connection (1): www.businesswire.com
+2018-05-02 10:58:03,192:  DEBUG:  https://www.businesswire.com:443 "GET /news/home/20150831005334/en HTTP/1.1" 200 16946
+2018-05-02 10:58:03,436:  DEBUG:  Starting new HTTP connection (1): www.businesswire.com
+2018-05-02 10:58:03,621:  DEBUG:  http://www.businesswire.com:80 "GET /news/home/20150804006042/en/Deloitte-Digital-Sprinklr-Forge-Strategic-Alliance-Clients HTTP/1.1" 302 0
+2018-05-02 10:58:03,628:  DEBUG:  Starting new HTTPS connection (1): www.businesswire.com
+2018-05-02 10:58:04,097:  DEBUG:  https://www.businesswire.com:443 "GET /news/home/20150804006042/en/Deloitte-Digital-Sprinklr-Forge-Strategic-Alliance-Clients HTTP/1.1" 200 19014
+2018-05-02 10:58:04,178:  DEBUG:  Starting new HTTP connection (1): www.businesswire.com
+2018-05-02 10:58:04,352:  DEBUG:  http://www.businesswire.com:80 "GET /news/home/20150610005292/en/Sprinklr-Hires-Tom-Butta-Chief-Marketing-Officer HTTP/1.1" 302 0
+2018-05-02 10:58:04,360:  DEBUG:  Starting new HTTPS connection (1): www.businesswire.com
+2018-05-02 10:58:05,763:  DEBUG:  https://www.businesswire.com:443 "GET /news/home/20150610005292/en/Sprinklr-Hires-Tom-Butta-Chief-Marketing-Officer HTTP/1.1" 200 19486
+2018-05-02 10:58:06,029:  DEBUG:  Starting new HTTP connection (1): www.businesswire.com
+2018-05-02 10:58:06,261:  DEBUG:  http://www.businesswire.com:80 "GET /news/home/20150602005385/en/Sprinklr-Acquires-Leading-Location-Specific-Text-Analytics-Software HTTP/1.1" 302 0
+2018-05-02 10:58:06,270:  DEBUG:  Starting new HTTPS connection (1): www.businesswire.com
+2018-05-02 10:58:07,529:  DEBUG:  https://www.businesswire.com:443 "GET /news/home/20150602005385/en/Sprinklr-Acquires-Leading-Location-Specific-Text-Analytics-Software HTTP/1.1" 200 17656
+2018-05-02 10:58:07,774:  DEBUG:  Starting new HTTP connection (1): www.businesswire.com
+2018-05-02 10:58:07,947:  DEBUG:  http://www.businesswire.com:80 "GET /news/home/20150430005027/en/Sprinklr-Expands-South-America-Agreement-Acquire-Scup HTTP/1.1" 302 0
+2018-05-02 10:58:07,953:  DEBUG:  Starting new HTTPS connection (1): www.businesswire.com
+2018-05-02 10:58:09,149:  DEBUG:  https://www.businesswire.com:443 "GET /news/home/20150430005027/en/Sprinklr-Expands-South-America-Agreement-Acquire-Scup HTTP/1.1" 200 18940
+2018-05-02 10:58:09,438:  DEBUG:  Starting new HTTP connection (1): www.prweb.com
+2018-05-02 10:58:10,257:  DEBUG:  http://www.prweb.com:80 "GET /releases/sprinklr/pinterest/prweb12489135.htm HTTP/1.1" 200 None
+2018-05-02 10:58:10,793:  DEBUG:  Starting new HTTP connection (1): www.businesswire.com
+2018-05-02 10:58:10,976:  DEBUG:  http://www.businesswire.com:80 "GET /news/home/20150420006014/en/Sprinklr-Recognized-Social-Relationship-Platform-Leader-Receives HTTP/1.1" 302 0
+2018-05-02 10:58:10,985:  DEBUG:  Starting new HTTPS connection (1): www.businesswire.com
+2018-05-02 10:58:12,146:  DEBUG:  https://www.businesswire.com:443 "GET /news/home/20150420006014/en/Sprinklr-Recognized-Social-Relationship-Platform-Leader-Receives HTTP/1.1" 200 17786
+2018-05-02 10:58:12,393:  DEBUG:  Starting new HTTP connection (1): www.businesswire.com
+2018-05-02 10:58:12,638:  DEBUG:  http://www.businesswire.com:80 "GET /news/home/20150416005999/en/Sprinklr-Continues-Global-Expansion-Asia-Creation-Sprinklr HTTP/1.1" 302 0
+2018-05-02 10:58:12,643:  DEBUG:  Starting new HTTPS connection (1): www.businesswire.com
+2018-05-02 10:58:19,904:  DEBUG:  get_html_2XX_only() error. HTTPSConnectionPool(host='www.businesswire.com', port=443): Read timed out. (read timeout=7) on URL: http://www.businesswire.com/news/home/20150416005999/en/Sprinklr-Continues-Global-Expansion-Asia-Creation-Sprinklr
+2018-05-02 10:58:19,904:  DEBUG:  Exception in article parse
+2018-05-02 10:58:19,917:  DEBUG:  Starting new HTTP connection (1): www.businesswire.com
+2018-05-02 10:58:20,091:  DEBUG:  http://www.businesswire.com:80 "GET /news/home/20150408005267/en/Sprinklr-Acquires-Satisfaction-Extend-Experience-Cloud%E2%84%A2-Multi-Channel HTTP/1.1" 302 0
+2018-05-02 10:58:20,099:  DEBUG:  Starting new HTTPS connection (1): www.businesswire.com
+2018-05-02 10:58:21,399:  DEBUG:  https://www.businesswire.com:443 "GET /news/home/20150408005267/en/Sprinklr-Acquires-Satisfaction-Extend-Experience-Cloud%E2%84%A2-Multi-Channel HTTP/1.1" 200 18153
+2018-05-02 10:58:21,683:  DEBUG:  Starting new HTTP connection (1): www.businesswire.com
+2018-05-02 10:58:21,871:  DEBUG:  http://www.businesswire.com:80 "GET /news/home/20150331005754/en/Sprinklr-Raises-46-Million-Surpasses-1-Billion HTTP/1.1" 302 0
+2018-05-02 10:58:21,879:  DEBUG:  Starting new HTTPS connection (1): www.businesswire.com
+2018-05-02 10:58:23,023:  DEBUG:  https://www.businesswire.com:443 "GET /news/home/20150331005754/en/Sprinklr-Raises-46-Million-Surpasses-1-Billion HTTP/1.1" 200 17402
+2018-05-02 10:58:23,264:  DEBUG:  Starting new HTTP connection (1): www.prweb.com
+2018-05-02 10:58:23,885:  DEBUG:  http://www.prweb.com:80 "GET /releases/sprinklr/contentmanagement/prweb12554219.htm HTTP/1.1" 200 None
+2018-05-02 10:58:24,432:  DEBUG:  Starting new HTTP connection (1): www.prweb.com
+2018-05-02 10:58:25,002:  DEBUG:  http://www.prweb.com:80 "GET /releases/SprinklrAcquires/Pluck/prweb12544103.htm HTTP/1.1" 301 0
+2018-05-02 10:58:25,435:  DEBUG:  http://www.prweb.com:80 "GET /releases/sprinklracquires/pluck/prweb12544103.htm HTTP/1.1" 200 None
+2018-05-02 10:58:25,531:  DEBUG:  Starting new HTTP connection (1): www.prweb.com
+2018-05-02 10:58:26,101:  DEBUG:  http://www.prweb.com:80 "GET /releases/sprinklr/FacebookMarketingPartner/prweb12523247.htm HTTP/1.1" 301 0
+2018-05-02 10:58:26,481:  DEBUG:  http://www.prweb.com:80 "GET /releases/sprinklr/facebookmarketingpartner/prweb12523247.htm HTTP/1.1" 200 None
+2018-05-02 10:58:26,574:  DEBUG:  Starting new HTTP connection (1): www.prweb.com
+2018-05-02 10:58:27,141:  DEBUG:  http://www.prweb.com:80 "GET /releases/2015/02/prweb12510471.htm HTTP/1.1" 200 None
+2018-05-02 10:58:27,676:  DEBUG:  Starting new HTTP connection (1): www.prweb.com
+2018-05-02 10:58:28,243:  DEBUG:  http://www.prweb.com:80 "GET /releases/Sprinklr/customerexperiencejournal/prweb12506935.htm HTTP/1.1" 301 0
+2018-05-02 10:58:28,781:  DEBUG:  http://www.prweb.com:80 "GET /releases/sprinklr/customerexperiencejournal/prweb12506935.htm HTTP/1.1" 200 None
+2018-05-02 10:58:28,874:  DEBUG:  Starting new HTTP connection (1): www.prnewswire.com
+2018-05-02 10:58:29,262:  DEBUG:  http://www.prnewswire.com:80 "GET /news-releases/sprinklr-completes-soc-1-and-soc-2-certification-300032668.html HTTP/1.1" 301 0
+2018-05-02 10:58:29,272:  DEBUG:  Starting new HTTPS connection (1): www.prnewswire.com
+2018-05-02 10:58:31,730:  DEBUG:  https://www.prnewswire.com:443 "GET /news-releases/sprinklr-completes-soc-1-and-soc-2-certification-300032668.html HTTP/1.1" 200 None
+2018-05-02 10:58:32,214:  DEBUG:  Starting new HTTP connection (1): www.prweb.com
+2018-05-02 10:58:32,776:  DEBUG:  http://www.prweb.com:80 "GET /releases/sprinklr/carlosdominguez/prweb12492649.htm HTTP/1.1" 200 None
+2018-05-02 10:58:33,313:  DEBUG:  Starting new HTTP connection (1): www.marketwired.com
+2018-05-02 10:58:34,205:  DEBUG:  http://www.marketwired.com:80 "GET /press-release/Sprinklr-Buys-Top-Influencer-Advocacy-Company-BRANDERATI-1943594.htm HTTP/1.1" 200 13070
+2018-05-02 10:58:34,917:  DEBUG:  Starting new HTTP connection (1): www.prnewswire.co.uk
+2018-05-02 10:58:37,273:  DEBUG:  http://www.prnewswire.co.uk:80 "GET /news-releases/frost--sullivan-commends-sprinklr-for-integrated-enterprise-level-social-media-solution-272156081.html HTTP/1.1" 200 None
+2018-05-02 10:58:37,594:  DEBUG:  Starting new HTTP connection (1): www.marketwired.com
+2018-05-02 10:58:38,496:  DEBUG:  http://www.marketwired.com:80 "GET /press-release/Sprinklr-Acquires-Leading-Paid-Social-Company-TBG-Digital-Helps-Brands-Agencies-1938404.htm HTTP/1.1" 200 12776
+2018-05-02 10:58:38,921:  DEBUG:  Starting new HTTP connection (1): www.marketwired.com
+2018-05-02 10:58:39,640:  DEBUG:  http://www.marketwired.com:80 "GET /press-release/bp-pernod-ricard-rightmove-other-leading-european-brands-get-strategic-with-social-infrastructure-1931534.htm HTTP/1.1" 200 12086
+2018-05-02 10:58:40,059:  DEBUG:  Starting new HTTP connection (1): www.prnewswire.com
+2018-05-02 10:58:40,396:  DEBUG:  http://www.prnewswire.com:80 "GET /news-releases/sprinklr-emerges-from-field-of-24-only-social-infrastructure-included-in-srp-listening-and-risk-compliance-reports-of-leading-industry-analyst-258353501.html HTTP/1.1" 301 0
+2018-05-02 10:58:40,402:  DEBUG:  Starting new HTTPS connection (1): www.prnewswire.com
+2018-05-02 10:58:42,406:  DEBUG:  https://www.prnewswire.com:443 "GET /news-releases/sprinklr-emerges-from-field-of-24-only-social-infrastructure-included-in-srp-listening-and-risk-compliance-reports-of-leading-industry-analyst-258353501.html HTTP/1.1" 200 None
+2018-05-02 10:58:42,965:  DEBUG:  Starting new HTTP connection (1): www.prnewswire.com
+2018-05-02 10:58:43,345:  DEBUG:  http://www.prnewswire.com:80 "GET /news-releases/sprinklr-partners-with-thismoment-to-bring-brands-integrated-management-of-social-content-experiences-257494771.html HTTP/1.1" 301 0
+2018-05-02 10:58:43,349:  DEBUG:  Starting new HTTPS connection (1): www.prnewswire.com
+2018-05-02 10:58:46,889:  DEBUG:  https://www.prnewswire.com:443 "GET /news-releases/sprinklr-partners-with-thismoment-to-bring-brands-integrated-management-of-social-content-experiences-257494771.html HTTP/1.1" 200 None
+2018-05-02 10:58:47,385:  DEBUG:  Starting new HTTP connection (1): www.prnewswire.com
+2018-05-02 10:58:47,775:  DEBUG:  http://www.prnewswire.com:80 "GET /news-releases/sprinklr-launches-paid-media-solution-and-announces-40m-series-d-funding-led-by-iconiq-capital-257172111.html HTTP/1.1" 301 0
+2018-05-02 10:58:47,781:  DEBUG:  Starting new HTTPS connection (1): www.prnewswire.com
+2018-05-02 10:58:49,886:  DEBUG:  https://www.prnewswire.com:443 "GET /news-releases/sprinklr-launches-paid-media-solution-and-announces-40m-series-d-funding-led-by-iconiq-capital-257172111.html HTTP/1.1" 200 None
+2018-05-02 10:58:50,414:  DEBUG:  Starting new HTTP connection (1): globenewswire.com
+2018-05-02 10:58:51,247:  DEBUG:  http://globenewswire.com:80 "GET /news-release/2014/04/14/626932/10076564/en/Sprinklr-Completes-SOC-1-Type-II-and-SOC-2-Type-II-SSAE-16-Examination.html HTTP/1.1" 200 28176
+2018-05-02 10:58:51,352:  DEBUG:  Starting new HTTP connection (1): www.businesswire.com
+2018-05-02 10:58:51,594:  DEBUG:  http://www.businesswire.com:80 "GET /news/home/20140407006348/en/Trellist-Partners-Sprinklr-Enterprise-Social-Business HTTP/1.1" 302 0
+2018-05-02 10:58:51,604:  DEBUG:  Starting new HTTPS connection (1): www.businesswire.com
+2018-05-02 10:58:52,764:  DEBUG:  https://www.businesswire.com:443 "GET /news/home/20140407006348/en/Trellist-Partners-Sprinklr-Enterprise-Social-Business HTTP/1.1" 200 16788
+2018-05-02 10:58:53,071:  DEBUG:  Starting new HTTP connection (1): globenewswire.com
+2018-05-02 10:58:54,213:  DEBUG:  http://globenewswire.com:80 "GET /news-release/2014/04/02/623853/10075146/en/64-Brand-Leaders-Join-Together-to-Launch-Social-Experience-Management-eBook.html HTTP/1.1" 200 28729
+2018-05-02 10:58:54,603:  DEBUG:  Starting new HTTP connection (1): www.globenewswire.com
+2018-05-02 10:58:55,711:  DEBUG:  http://www.globenewswire.com:80 "GET /news-release/2014/03/18/619187/10073071/en/Wildfire-Sunsetting-Provides-Large-Brands-Opportunity-to-Turn-Sprinklr-On.html HTTP/1.1" 200 27540
+2018-05-02 10:58:55,798:  DEBUG:  Starting new HTTP connection (1): www.globenewswire.com
+2018-05-02 10:58:57,045:  DEBUG:  http://www.globenewswire.com:80 "GET /news-release/2014/02/19/611514/10068994/en/Sprinklr-Acquires-Dachis-Group.html HTTP/1.1" 200 29636
+2018-05-02 10:58:57,439:  DEBUG:  Starting new HTTP connection (1): globenewswire.com
+2018-05-02 10:58:58,338:  DEBUG:  http://globenewswire.com:80 "GET /news-release/2014/01/22/604058/10065068/en/Sprinklr-Named-a-Leader-in-Enterprise-Listening-Platforms-by-Independent-Research-Firm.html HTTP/1.1" 200 30633
+2018-05-02 10:58:58,731:  DEBUG:  Starting new HTTPS connection (1): blog.sprinklr.com
+2018-05-02 10:59:01,464:  DEBUG:  https://blog.sprinklr.com:443 "GET /pr/two-leading-retailers-team-up-with-sprinklr-to-be-socialscale/ HTTP/1.1" 200 None
+2018-05-02 10:59:01,821:  DEBUG:  Starting new HTTPS connection (1): www.sprinklr.com
+2018-05-02 10:59:04,550:  DEBUG:  https://www.sprinklr.com:443 "GET /pr/sprinklr-announces-general-availability-of-new-ebook/ HTTP/1.1" 200 None
+2018-05-02 10:59:04,860:  DEBUG:  Starting new HTTPS connection (1): blog.sprinklr.com
+2018-05-02 10:59:07,656:  DEBUG:  https://blog.sprinklr.com:443 "GET /pr/sprinklr-completes-soc-1-ssae-16-type-i-examination/ HTTP/1.1" 200 None
+2018-05-02 11:00:11,131:  DEBUG:  Starting new HTTPS connection (1): blog.paymentevolution.com
+2018-05-02 11:00:13,442:  DEBUG:  https://blog.paymentevolution.com:443 "GET /2016/06/16/paymentevolution-demo-training-calendar/ HTTP/1.1" 200 None
+2018-05-02 11:00:13,737:  DEBUG:  Starting new HTTPS connection (1): blog.paymentevolution.com
+2018-05-02 11:00:16,801:  DEBUG:  https://blog.paymentevolution.com:443 "GET /2018/04/25/5-ways-to-set-your-start-up-for-success/ HTTP/1.1" 200 None
+2018-05-02 11:00:17,088:  DEBUG:  Starting new HTTPS connection (1): blog.paymentevolution.com
+2018-05-02 11:00:20,145:  DEBUG:  https://blog.paymentevolution.com:443 "GET /2018/04/10/the-benefits-of-direct-deposit-for-your-business-and-employees/ HTTP/1.1" 200 None
+2018-05-02 11:00:20,416:  DEBUG:  Starting new HTTPS connection (1): blog.paymentevolution.com
+2018-05-02 11:00:26,254:  DEBUG:  https://blog.paymentevolution.com:443 "GET /2018/04/06/accommodating-change-new-parental-benefits/ HTTP/1.1" 200 None
+2018-05-02 11:00:26,441:  DEBUG:  Starting new HTTPS connection (1): blog.paymentevolution.com
+2018-05-02 11:00:28,036:  DEBUG:  https://blog.paymentevolution.com:443 "GET /2018/03/13/remittances-send-them-away-to-the-cra/ HTTP/1.1" 200 None
+2018-05-02 11:00:28,289:  DEBUG:  Starting new HTTPS connection (1): blog.paymentevolution.com
+2018-05-02 11:00:29,142:  DEBUG:  https://blog.paymentevolution.com:443 "GET /2018/03/01/how-benefits-can-help-you-obtain-and-retain-high-quality-employees/ HTTP/1.1" 200 None
+2018-05-02 11:00:29,341:  DEBUG:  Starting new HTTPS connection (1): blog.paymentevolution.com
+2018-05-02 11:00:30,130:  DEBUG:  https://blog.paymentevolution.com:443 "GET /2018/01/11/a-summary-of-ontarios-bill-148-and-what-it-means-for-your-business/ HTTP/1.1" 200 None
+2018-05-02 11:00:30,419:  DEBUG:  Starting new HTTPS connection (1): blog.paymentevolution.com
+2018-05-02 11:00:31,252:  DEBUG:  https://blog.paymentevolution.com:443 "GET /2018/01/03/5-ways-payroll-can-increase-your-companies-productivity-this-year/ HTTP/1.1" 200 None
+2018-05-02 11:00:31,461:  DEBUG:  Starting new HTTPS connection (1): blog.paymentevolution.com
+2018-05-02 11:00:32,269:  DEBUG:  https://blog.paymentevolution.com:443 "GET /2017/11/06/introducing-bullfrog-insurance/ HTTP/1.1" 200 None
+2018-05-02 11:00:32,562:  DEBUG:  Starting new HTTPS connection (1): blog.paymentevolution.com
+2018-05-02 11:00:33,392:  DEBUG:  https://blog.paymentevolution.com:443 "GET /2017/10/16/integration-with-tsheets/ HTTP/1.1" 200 None
+2018-05-02 11:00:33,687:  DEBUG:  Starting new HTTPS connection (1): blog.paymentevolution.com
+2018-05-02 11:00:34,515:  DEBUG:  https://blog.paymentevolution.com:443 "GET /2017/10/09/integration-with-sage-one-accounting-now-available/ HTTP/1.1" 200 None
+2018-05-02 11:00:34,702:  DEBUG:  Starting new HTTPS connection (1): blog.paymentevolution.com
+2018-05-02 11:00:35,499:  DEBUG:  https://blog.paymentevolution.com:443 "GET /2017/10/09/heres-a-roundup-of-enhancements-and-improvements-made-to-the-paymentevolution-service-for-october-2017/ HTTP/1.1" 200 None
+2018-05-02 11:00:35,682:  DEBUG:  Starting new HTTPS connection (1): blog.paymentevolution.com
+2018-05-02 11:00:36,485:  DEBUG:  https://blog.paymentevolution.com:443 "GET /2017/08/28/electronic-distribution-of-t4-statement-of-remuneration-paid-aka-t4-slips/ HTTP/1.1" 200 None
+2018-05-02 13:04:28,423:  ERROR:  Internal Server Error: /edit_story/
 Traceback (most recent call last):
   File "/home/ghostman/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
     response = get_response(request)
@@ -12,15 +368,50 @@ Traceback (most recent call last):
     return view_func(request, *args, **kwargs)
   File "/home/ghostman/.local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
     return view_func(*args, **kwargs)
-  File "/home/ghostman/Desktop/Project/NewsMon/login/views.py", line 405, in edit_story
+  File "/home/ghostman/Desktop/Project/NewsMon/login/views.py", line 417, in edit_story
     item = Stories.objects.get(id=item_id)
-  File "/home/ghostman/.local/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-  File "/home/ghostman/.local/lib/python3.6/site-packages/django/db/models/query.py", line 403, in get
-    self.model._meta.object_name
-login.models.DoesNotExist: Stories matching query does not exist.
-2018-05-01 11:35:05,983:ERROR:The pathname '/home/ghostman/Desktop/Project/NewsMon/login/views.py' of this watch <Watch wd=1382 path=/home/ghostman/Desktop/Project/NewsMon/login/views.py mask=4038 proc_fun=None auto_add=False exclude_filter=<function WatchManager.<lambda> at 0x7fbc30dccb70> dir=False > has probably changed and couldn't be updated, so it cannot be trusted anymore. To fix this error move directories/files only between watched parents directories, in this case e.g. put a watch on '/home/ghostman/Desktop/Project/NewsMon/login'.
-2018-05-01 11:35:27,675:ERROR:Internal Server Error: /edit_story/
+NameError: name 'item_id' is not defined
+2018-05-02 13:28:58,281:  DEBUG:  Starting new HTTP connection (1): www.kmworld.com
+2018-05-02 13:29:00,846:  DEBUG:  http://www.kmworld.com:80 "GET /Articles/News/News/How-Enterprises-can-Optimize-SharePoint-Strategies-124806.aspx HTTP/1.1" 200 14293
+2018-05-02 13:29:01,730:  DEBUG:  Starting new HTTP connection (1): www.kmworld.com
+2018-05-02 13:29:03,602:  DEBUG:  http://www.kmworld.com:80 "GET /Articles/News/News/OpenText-Extends-Security-Across-the-Intelligent-and-Connected-Enterprise-124799.aspx HTTP/1.1" 200 14425
+2018-05-02 13:29:04,289:  DEBUG:  Starting new HTTP connection (1): www.kmworld.com
+2018-05-02 13:29:04,908:  DEBUG:  http://www.kmworld.com:80 "GET /Articles/News/News/Melissa-Launches-Clinical-Data-Quality-Solution-Powered-by-Machine-Reasoning-124798.aspx HTTP/1.1" 200 15144
+2018-05-02 13:29:05,575:  DEBUG:  Starting new HTTP connection (1): www.kmworld.com
+2018-05-02 13:29:07,788:  DEBUG:  http://www.kmworld.com:80 "GET /Articles/News/News/Preservica-Helps-Meet-GDPR-Obligations-124797.aspx HTTP/1.1" 200 14475
+2018-05-02 13:29:08,395:  DEBUG:  Starting new HTTP connection (1): www.kmworld.com
+2018-05-02 13:29:10,089:  DEBUG:  http://www.kmworld.com:80 "GET /Articles/News/News/Utilizing-Intelligent-Search-in-Modern-Enterprises-124777.aspx HTTP/1.1" 200 14518
+2018-05-02 13:29:10,692:  DEBUG:  Starting new HTTP connection (1): www.kmworld.com
+2018-05-02 13:29:14,057:  DEBUG:  http://www.kmworld.com:80 "GET /Articles/News/News/SpringCM-Smooths-Path-to-GDPR-Compliance-124684.aspx HTTP/1.1" 200 14225
+2018-05-02 13:29:14,634:  DEBUG:  Starting new HTTP connection (1): www.kmworld.com
+2018-05-02 13:29:17,059:  DEBUG:  http://www.kmworld.com:80 "GET /Articles/News/News/Powering-Your-Organization-with-Flexible-Smart-Collaboration-124681.aspx HTTP/1.1" 200 15518
+2018-05-02 13:29:17,660:  DEBUG:  Starting new HTTP connection (1): www.kmworld.com
+2018-05-02 13:29:19,689:  DEBUG:  http://www.kmworld.com:80 "GET /Articles/News/News/ASG-Technologies-Enables-Modern-Data-Governance-with-Data-Intelligence-9.5-124675.aspx HTTP/1.1" 200 14499
+2018-05-02 13:29:20,294:  DEBUG:  Starting new HTTP connection (1): www.kmworld.com
+2018-05-02 13:29:20,926:  DEBUG:  http://www.kmworld.com:80 "GET /Articles/News/News/Yext-Knowledge-Assistant-Gets-Smarter-124638.aspx HTTP/1.1" 200 14676
+2018-05-02 13:29:21,560:  DEBUG:  Starting new HTTP connection (1): www.kmworld.com
+2018-05-02 13:29:23,174:  DEBUG:  http://www.kmworld.com:80 "GET /Articles/News/News/Square-9-Announces-New-Release-of-GlobalSearch-C2-Cloud-Hosted-Enterprise-Content-Management-124637.aspx HTTP/1.1" 200 14611
+2018-05-02 13:29:23,779:  DEBUG:  Starting new HTTP connection (1): www.kmworld.com
+2018-05-02 13:29:24,391:  DEBUG:  http://www.kmworld.com:80 "GET /Articles/News/News/Xillio-Offers-Free-File-Share-Analysis-Software-to-Ease-Content-Migration-Projects-124636.aspx HTTP/1.1" 200 14413
+2018-05-02 13:29:24,987:  DEBUG:  Starting new HTTP connection (1): www.kmworld.com
+2018-05-02 13:29:27,202:  DEBUG:  http://www.kmworld.com:80 "GET /Articles/Editorial/ViewPoints/Good-to-Great-Your-Digital-Document-Experience-124565.aspx HTTP/1.1" 200 16027
+2018-05-02 13:29:27,818:  DEBUG:  Starting new HTTP connection (1): www.kmworld.com
+2018-05-02 13:29:28,485:  DEBUG:  http://www.kmworld.com:80 "GET /Articles/News/News/Melissa-Extends-Informatics-Capabilities-124474.aspx HTTP/1.1" 200 14293
+2018-05-02 13:29:29,092:  DEBUG:  Starting new HTTP connection (1): www.kmworld.com
+2018-05-02 13:29:29,693:  DEBUG:  http://www.kmworld.com:80 "GET /Articles/News/News/Mavenlink-Pushes-Real-Time-Updates-for-Business-Projects-124443.aspx HTTP/1.1" 200 14025
+2018-05-02 13:29:30,293:  DEBUG:  Starting new HTTP connection (1): www.kmworld.com
+2018-05-02 13:29:30,993:  DEBUG:  http://www.kmworld.com:80 "GET /Articles/News/News/Innovit-Introduces-Product-Information-Management-System-124418.aspx HTTP/1.1" 200 13704
+2018-05-02 13:29:31,573:  DEBUG:  Starting new HTTP connection (1): www.kmworld.com
+2018-05-02 13:29:32,167:  DEBUG:  http://www.kmworld.com:80 "GET /Articles/News/News/Verint-Adds-New-Intelligence-Capabilities-to-Help-Organizations-Anticipate-Identify-and-Mitigate-Risk-124390.aspx HTTP/1.1" 200 14696
+2018-05-02 13:29:32,801:  DEBUG:  Starting new HTTP connection (1): www.kmworld.com
+2018-05-02 13:29:33,625:  DEBUG:  http://www.kmworld.com:80 "GET /Articles/News/News/Oracle-AI-Advances-Customer-Experience-Management-124370.aspx HTTP/1.1" 200 14525
+2018-05-02 13:29:34,256:  DEBUG:  Starting new HTTP connection (1): www.kmworld.com
+2018-05-02 13:29:34,865:  DEBUG:  http://www.kmworld.com:80 "GET /Articles/News/News/Gainsight-Enhances-Platform-and-Framework-for-Customer-Success-124368.aspx HTTP/1.1" 200 14149
+2018-05-02 13:29:35,487:  DEBUG:  Starting new HTTP connection (1): www.kmworld.com
+2018-05-02 13:29:36,271:  DEBUG:  http://www.kmworld.com:80 "GET /Articles/News/News/Konica-Minolta-Debuts-Marketing-Planning-and-Analytics-Platform-124333.aspx HTTP/1.1" 200 14090
+2018-05-02 13:29:36,866:  DEBUG:  Starting new HTTP connection (1): www.kmworld.com
+2018-05-02 13:29:37,520:  DEBUG:  http://www.kmworld.com:80 "GET /Articles/News/News/FileCloud-Adds-GDPR-Support-Across-AWS-and-Microsoft-Azure-124330.aspx HTTP/1.1" 200 13962
+2018-05-02 14:39:34,233:  ERROR:  Internal Server Error: /add_source/
 Traceback (most recent call last):
   File "/home/ghostman/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
     response = get_response(request)
@@ -30,13 +421,22 @@ Traceback (most recent call last):
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
   File "/home/ghostman/.local/lib/python3.6/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
     return view_func(request, *args, **kwargs)
-  File "/home/ghostman/.local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
-    return view_func(*args, **kwargs)
-  File "/home/ghostman/Desktop/Project/NewsMon/login/views.py", line 403, in edit_story
-    item_id = int(request.GET.get('item_id'))
-ValueError: invalid literal for int() with base 10: 'asd'
-2018-05-01 11:36:00,881:ERROR:The pathname '/home/ghostman/Desktop/Project/NewsMon/login/views.py' of this watch <Watch wd=1408 path=/home/ghostman/Desktop/Project/NewsMon/login/views.py mask=4038 proc_fun=None auto_add=False exclude_filter=<function WatchManager.<lambda> at 0x7f83caf9bb70> dir=False > has probably changed and couldn't be updated, so it cannot be trusted anymore. To fix this error move directories/files only between watched parents directories, in this case e.g. put a watch on '/home/ghostman/Desktop/Project/NewsMon/login'.
-2018-05-01 11:36:33,685:ERROR:Internal Server Error: /edit_story/
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ghostman/Desktop/Project/NewsMon/login/views.py", line 107, in add_source
+    if form.is_valid():
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/forms/forms.py", line 179, in is_valid
+    return self.is_bound and not self.errors
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/forms/forms.py", line 174, in errors
+    self.full_clean()
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/forms/forms.py", line 377, in full_clean
+    self._clean_form()
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/forms/forms.py", line 404, in _clean_form
+    cleaned_data = self.clean()
+  File "/home/ghostman/Desktop/Project/NewsMon/login/forms.py", line 65, in clean
+    rss_url__exact=self.cleaned_data['rss_url'], created_by_id=self.user.id
+KeyError: 'rss_url'
+2018-05-02 14:39:53,616:  ERROR:  Internal Server Error: /add_source/
 Traceback (most recent call last):
   File "/home/ghostman/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
     response = get_response(request)
@@ -46,79 +446,23 @@ Traceback (most recent call last):
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
   File "/home/ghostman/.local/lib/python3.6/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
     return view_func(request, *args, **kwargs)
-  File "/home/ghostman/.local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
-    return view_func(*args, **kwargs)
-  File "/home/ghostman/Desktop/Project/NewsMon/login/views.py", line 403, in edit_story
-    item_id = int(request.GET.get('item_id'))
-ValueError: invalid literal for int() with base 10: 'tyu'
-2018-05-01 11:42:15,647:ERROR:The pathname '/home/ghostman/Desktop/Project/NewsMon/login/views.py' of this watch <Watch wd=1140 path=/home/ghostman/Desktop/Project/NewsMon/login/views.py mask=4038 proc_fun=None auto_add=False exclude_filter=<function WatchManager.<lambda> at 0x7f1fc7649b70> dir=False > has probably changed and couldn't be updated, so it cannot be trusted anymore. To fix this error move directories/files only between watched parents directories, in this case e.g. put a watch on '/home/ghostman/Desktop/Project/NewsMon/login'.
-2018-05-01 11:49:12,244:DEBUG:Starting new HTTPS connection (1): www.sprinklr.com
-2018-05-01 11:49:17,541:DEBUG:https://www.sprinklr.com:443 "GET /pr/sprinklr-unveils-intuition-ai-help-brands-scale-one-one-customer-relationships-across-25-social-channels HTTP/1.1" 301 0
-2018-05-01 11:49:19,125:DEBUG:https://www.sprinklr.com:443 "GET /pr/sprinklr-unveils-intuition-ai-help-brands-scale-one-one-customer-relationships-across-25-social-channels/ HTTP/1.1" 200 None
-2018-05-01 11:49:19,523:DEBUG:Starting new HTTP connection (1): www.luxresearchinc.com
-2018-05-01 11:49:19,696:DEBUG:Starting new HTTPS connection (1): www.sprinklr.com
-2018-05-01 11:49:20,197:DEBUG:http://www.luxresearchinc.com:80 "GET /news-and-events/press-releases/read/lux-research-releases-depth-benchmark-study-sugar-replacement HTTP/1.1" 200 9433
-2018-05-01 11:49:20,299:DEBUG:Starting new HTTP connection (1): www.luxresearchinc.com
-2018-05-01 11:49:20,621:DEBUG:http://www.luxresearchinc.com:80 "GET /news-and-events/press-releases/read/lux-research-names-top-transformational-technologies-reshaping HTTP/1.1" 200 9988
-2018-05-01 11:49:25,330:DEBUG:https://www.sprinklr.com:443 "GET /pr/sprinklr-hires-former-microsoft-u-s-cmo-grad-conn-chief-experience-marketing-officer HTTP/1.1" 301 0
-2018-05-01 11:49:26,833:DEBUG:https://www.sprinklr.com:443 "GET /pr/sprinklr-hires-former-microsoft-u-s-cmo-grad-conn-chief-experience-marketing-officer/ HTTP/1.1" 200 None
-2018-05-01 11:49:27,011:DEBUG:Starting new HTTPS connection (1): www.sprinklr.com
-2018-05-01 11:49:28,609:DEBUG:Starting new HTTPS connection (1): blog.paymentevolution.com
-2018-05-01 11:49:30,372:DEBUG:https://blog.paymentevolution.com:443 "GET /2016/06/16/paymentevolution-demo-training-calendar/ HTTP/1.1" 200 None
-2018-05-01 11:49:30,626:DEBUG:Starting new HTTPS connection (1): blog.paymentevolution.com
-2018-05-01 11:49:31,332:DEBUG:https://blog.paymentevolution.com:443 "GET /2018/04/25/5-ways-to-set-your-start-up-for-success/ HTTP/1.1" 200 None
-2018-05-01 11:49:31,738:DEBUG:Starting new HTTPS connection (1): blog.paymentevolution.com
-2018-05-01 11:49:32,336:DEBUG:https://www.sprinklr.com:443 "GET /pr/allstate-selects-sprinklr-drive-social-recruiting-attract-next-generation-talent HTTP/1.1" 301 0
-2018-05-01 11:49:32,485:DEBUG:https://blog.paymentevolution.com:443 "GET /2018/04/10/the-benefits-of-direct-deposit-for-your-business-and-employees/ HTTP/1.1" 200 None
-2018-05-01 11:49:32,681:DEBUG:Starting new HTTPS connection (1): blog.paymentevolution.com
-2018-05-01 11:49:33,391:DEBUG:https://blog.paymentevolution.com:443 "GET /2018/04/06/accommodating-change-new-parental-benefits/ HTTP/1.1" 200 None
-2018-05-01 11:49:33,577:DEBUG:Starting new HTTPS connection (1): blog.paymentevolution.com
-2018-05-01 11:49:33,888:DEBUG:https://www.sprinklr.com:443 "GET /pr/allstate-selects-sprinklr-drive-social-recruiting-attract-next-generation-talent/ HTTP/1.1" 200 None
-2018-05-01 11:49:34,064:DEBUG:Starting new HTTPS connection (1): www.sprinklr.com
-2018-05-01 11:49:34,345:DEBUG:https://blog.paymentevolution.com:443 "GET /2018/03/13/remittances-send-them-away-to-the-cra/ HTTP/1.1" 200 None
-2018-05-01 11:49:34,538:DEBUG:Starting new HTTPS connection (1): blog.paymentevolution.com
-2018-05-01 11:49:35,246:DEBUG:https://blog.paymentevolution.com:443 "GET /2018/03/01/how-benefits-can-help-you-obtain-and-retain-high-quality-employees/ HTTP/1.1" 200 None
-2018-05-01 11:49:35,536:DEBUG:Starting new HTTPS connection (1): blog.paymentevolution.com
-2018-05-01 11:49:36,290:DEBUG:https://blog.paymentevolution.com:443 "GET /2018/01/11/a-summary-of-ontarios-bill-148-and-what-it-means-for-your-business/ HTTP/1.1" 200 None
-2018-05-01 11:49:36,481:DEBUG:Starting new HTTPS connection (1): blog.paymentevolution.com
-2018-05-01 11:49:37,204:DEBUG:https://blog.paymentevolution.com:443 "GET /2018/01/03/5-ways-payroll-can-increase-your-companies-productivity-this-year/ HTTP/1.1" 200 None
-2018-05-01 11:49:37,504:DEBUG:Starting new HTTPS connection (1): blog.paymentevolution.com
-2018-05-01 11:49:38,209:DEBUG:https://blog.paymentevolution.com:443 "GET /2017/11/06/introducing-bullfrog-insurance/ HTTP/1.1" 200 None
-2018-05-01 11:49:38,394:DEBUG:Starting new HTTPS connection (1): blog.paymentevolution.com
-2018-05-01 11:49:39,096:DEBUG:https://blog.paymentevolution.com:443 "GET /2017/10/16/integration-with-tsheets/ HTTP/1.1" 200 None
-2018-05-01 11:49:39,366:DEBUG:Starting new HTTPS connection (1): blog.paymentevolution.com
-2018-05-01 11:49:39,399:DEBUG:https://www.sprinklr.com:443 "GET /pr/sap-selects-sprinklr-foundation-data-driven-social-media-strategies HTTP/1.1" 301 0
-2018-05-01 11:49:40,075:DEBUG:https://blog.paymentevolution.com:443 "GET /2017/10/09/integration-with-sage-one-accounting-now-available/ HTTP/1.1" 200 None
-2018-05-01 11:49:40,247:DEBUG:Starting new HTTPS connection (1): blog.paymentevolution.com
-2018-05-01 11:49:40,900:DEBUG:https://www.sprinklr.com:443 "GET /pr/sap-selects-sprinklr-foundation-data-driven-social-media-strategies/ HTTP/1.1" 200 None
-2018-05-01 11:49:40,987:DEBUG:https://blog.paymentevolution.com:443 "GET /2017/10/09/heres-a-roundup-of-enhancements-and-improvements-made-to-the-paymentevolution-service-for-october-2017/ HTTP/1.1" 200 None
-2018-05-01 11:49:41,056:DEBUG:Starting new HTTPS connection (1): www.sprinklr.com
-2018-05-01 11:49:41,172:DEBUG:Starting new HTTPS connection (1): blog.paymentevolution.com
-2018-05-01 11:49:41,866:DEBUG:https://blog.paymentevolution.com:443 "GET /2017/08/28/electronic-distribution-of-t4-statement-of-remuneration-paid-aka-t4-slips/ HTTP/1.1" 200 None
-2018-05-01 11:49:45,926:DEBUG:Starting new HTTP connection (1): www.workaci.com
-2018-05-01 11:49:46,332:DEBUG:https://www.sprinklr.com:443 "GET /pr/sprinklr-expands-executive-leadership-team-chief-culture-talent-officer HTTP/1.1" 301 0
-2018-05-01 11:49:47,878:DEBUG:https://www.sprinklr.com:443 "GET /pr/sprinklr-expands-executive-leadership-team-chief-culture-talent-officer/ HTTP/1.1" 200 None
-2018-05-01 11:49:48,055:DEBUG:Starting new HTTPS connection (1): www.sprinklr.com
-2018-05-01 11:49:50,302:DEBUG:http://www.workaci.com:80 "GET /content/how-choose-right-ct-your-application HTTP/1.1" 200 None
-2018-05-01 11:49:51,339:DEBUG:Starting new HTTP connection (1): www.workaci.com
-2018-05-01 11:49:52,770:DEBUG:https://www.sprinklr.com:443 "GET /pr/sprinklr-becomes-first-enterprise-social-platform-integrate-viber HTTP/1.1" 301 0
-2018-05-01 11:49:53,335:DEBUG:https://www.sprinklr.com:443 "GET /pr/sprinklr-becomes-first-enterprise-social-platform-integrate-viber/ HTTP/1.1" 200 None
-2018-05-01 11:49:53,504:DEBUG:Starting new HTTPS connection (1): www.sprinklr.com
-2018-05-01 11:49:57,781:DEBUG:https://www.sprinklr.com:443 "GET /pr/sprinklr-launches-gallery-transforming-social-content-shoppable-posts HTTP/1.1" 301 0
-2018-05-01 11:49:58,134:DEBUG:http://www.workaci.com:80 "GET /content/how-dcv-improves-your-iaq-co2-sensor HTTP/1.1" 200 None
-2018-05-01 11:49:58,347:DEBUG:https://www.sprinklr.com:443 "GET /pr/sprinklr-launches-gallery-transforming-social-content-shoppable-posts/ HTTP/1.1" 200 None
-2018-05-01 11:49:58,540:DEBUG:Starting new HTTPS connection (1): www.sprinklr.com
-2018-05-01 11:49:59,044:DEBUG:Starting new HTTP connection (1): www.workaci.com
-2018-05-01 11:50:02,797:DEBUG:https://www.sprinklr.com:443 "GET /pr/sprinklr-introduces-new-solutions-maximize-impact-social-advertising HTTP/1.1" 301 0
-2018-05-01 11:50:03,387:DEBUG:https://www.sprinklr.com:443 "GET /pr/sprinklr-introduces-new-solutions-maximize-impact-social-advertising/ HTTP/1.1" 200 None
-2018-05-01 11:50:03,559:DEBUG:Starting new HTTPS connection (1): www.sprinklr.com
-2018-05-01 11:50:05,269:DEBUG:http://www.workaci.com:80 "GET /content/how-can-3d-printer-change-your-manufacturing-company HTTP/1.1" 200 None
-2018-05-01 11:50:07,771:DEBUG:https://www.sprinklr.com:443 "GET /pr/shell-chooses-sprinklr-customer-centric-marketing-advertising HTTP/1.1" 301 0
-2018-05-01 11:50:08,338:DEBUG:https://www.sprinklr.com:443 "GET /pr/shell-chooses-sprinklr-customer-centric-marketing-advertising/ HTTP/1.1" 200 None
-2018-05-01 11:50:08,492:DEBUG:Starting new HTTPS connection (1): www.sprinklr.com
-2018-05-01 11:50:13,002:DEBUG:https://www.sprinklr.com:443 "GET /pr/sprinklr-announces-strategic-partnership-drive-customer-engagement-care-reddit/ HTTP/1.1" 200 None
-2018-05-01 11:50:13,209:DEBUG:Starting new HTTPS connection (1): www.sprinklr.com
-2018-05-01 11:50:15,472:ERROR:Internal Server Error: /fetch_story/
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ghostman/Desktop/Project/NewsMon/login/views.py", line 107, in add_source
+    if form.is_valid():
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/forms/forms.py", line 179, in is_valid
+    return self.is_bound and not self.errors
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/forms/forms.py", line 174, in errors
+    self.full_clean()
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/forms/forms.py", line 377, in full_clean
+    self._clean_form()
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/forms/forms.py", line 404, in _clean_form
+    cleaned_data = self.clean()
+  File "/home/ghostman/Desktop/Project/NewsMon/login/forms.py", line 65, in clean
+    rss_url__exact=self.cleaned_data['rss_url'], created_by_id=self.user.id
+KeyError: 'rss_url'
+2018-05-02 14:43:33,609:  WARNING:  Not Found: /favicon.ico
+2018-05-02 14:47:22,727:  ERROR:  Internal Server Error: /add_source/
 Traceback (most recent call last):
   File "/home/ghostman/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
     response = get_response(request)
@@ -128,50 +472,22 @@ Traceback (most recent call last):
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
   File "/home/ghostman/.local/lib/python3.6/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
     return view_func(request, *args, **kwargs)
-  File "/home/ghostman/Desktop/Project/NewsMon/login/views.py", line 241, in fetch_story
-  File "/home/ghostman/.local/lib/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-  File "/home/ghostman/.local/lib/python3.6/site-packages/django/db/models/query.py", line 403, in get
-    self.model._meta.object_name
-login.models.DoesNotExist: Sourcing matching query does not exist.
-2018-05-01 11:50:19,041:DEBUG:https://www.sprinklr.com:443 "GET /pr/sprinklr-unveils-eight-new-products-simplified-ux/ HTTP/1.1" 200 None
-2018-05-01 11:50:19,222:DEBUG:Starting new HTTPS connection (1): blog.sprinklr.com
-2018-05-01 11:50:23,889:DEBUG:https://blog.sprinklr.com:443 "GET /sprinklr-supports-launch-promoted-video-autoplay-pinterest/ HTTP/1.1" 200 None
-2018-05-01 11:50:24,732:DEBUG:Starting new HTTPS connection (1): blog.sprinklr.com
-2018-05-01 11:50:28,442:DEBUG:https://blog.sprinklr.com:443 "GET /sprinklr-support-facebook-messenger-cxm/ HTTP/1.1" 200 None
-2018-05-01 11:50:29,189:DEBUG:Starting new HTTPS connection (1): blog.sprinklr.com
-2018-05-01 11:50:33,021:DEBUG:https://blog.sprinklr.com:443 "GET /sprinklr-launches-support-instagrams-new-api-features/ HTTP/1.1" 200 None
-2018-05-01 11:50:33,809:DEBUG:Starting new HTTPS connection (1): blog.sprinklr.com
-2018-05-01 11:50:36,250:DEBUG:https://blog.sprinklr.com:443 "GET /pr/sprinklr-named-second-annual-forbes-2017-cloud-100-list HTTP/1.1" 301 0
-2018-05-01 11:50:38,738:DEBUG:https://blog.sprinklr.com:443 "GET /pr/sprinklr-named-second-annual-forbes-2017-cloud-100-list/ HTTP/1.1" 200 None
-2018-05-01 11:50:39,113:DEBUG:Starting new HTTPS connection (1): blog.sprinklr.com
-2018-05-01 11:50:42,396:DEBUG:https://blog.sprinklr.com:443 "GET /pr/sprinklr-named-leader-independent-social-media-management-solutions-report HTTP/1.1" 301 0
-2018-05-01 11:50:44,778:DEBUG:https://blog.sprinklr.com:443 "GET /pr/sprinklr-named-leader-independent-social-media-management-solutions-report/ HTTP/1.1" 200 None
-2018-05-01 11:50:45,224:DEBUG:Starting new HTTPS connection (1): blog.sprinklr.com
-2018-05-01 11:50:47,670:DEBUG:https://blog.sprinklr.com:443 "GET /pr/sprinklr-provides-santander-uk-unified-social-platform-drive-meaningful-experiences-millions-customers HTTP/1.1" 301 0
-2018-05-01 11:50:50,166:DEBUG:https://blog.sprinklr.com:443 "GET /pr/sprinklr-provides-santander-uk-unified-social-platform-drive-meaningful-experiences-millions-customers/ HTTP/1.1" 200 None
-2018-05-01 11:50:50,567:DEBUG:Starting new HTTPS connection (1): blog.sprinklr.com
-2018-05-01 11:50:53,146:DEBUG:https://blog.sprinklr.com:443 "GET /pr/sprinklr-named-leader-independent-content-marketing-platforms-report HTTP/1.1" 301 0
-2018-05-01 11:50:55,605:DEBUG:https://blog.sprinklr.com:443 "GET /pr/sprinklr-named-leader-independent-content-marketing-platforms-report/ HTTP/1.1" 200 None
-2018-05-01 11:50:55,978:DEBUG:Starting new HTTPS connection (1): blog.sprinklr.com
-2018-05-01 11:50:58,514:DEBUG:https://blog.sprinklr.com:443 "GET /pr/sprinklr-expands-social-media-management-customer-experience-management HTTP/1.1" 301 0
-2018-05-01 11:51:00,941:DEBUG:https://blog.sprinklr.com:443 "GET /pr/sprinklr-expands-social-media-management-customer-experience-management/ HTTP/1.1" 200 None
-2018-05-01 11:51:01,346:DEBUG:Starting new HTTPS connection (1): blog.sprinklr.com
-2018-05-01 11:51:04,002:DEBUG:https://blog.sprinklr.com:443 "GET /sprinklr-business-index-how-brands-engage-customers-on-social HTTP/1.1" 301 0
-2018-05-01 11:51:04,569:DEBUG:https://blog.sprinklr.com:443 "GET /sprinklr-business-index-how-brands-engage-customers-on-social/ HTTP/1.1" 200 None
-2018-05-01 11:51:05,025:DEBUG:Starting new HTTPS connection (1): blog.sprinklr.com
-2018-05-01 11:51:07,417:DEBUG:https://blog.sprinklr.com:443 "GET /pr/sprinklr-receives-sap-hybris-2017-partner-year-award-isv-solution-partner HTTP/1.1" 301 0
-2018-05-01 11:51:09,884:DEBUG:https://blog.sprinklr.com:443 "GET /pr/sprinklr-receives-sap-hybris-2017-partner-year-award-isv-solution-partner/ HTTP/1.1" 200 None
-2018-05-01 11:51:10,250:DEBUG:Starting new HTTPS connection (1): blog.sprinklr.com
-2018-05-01 11:51:12,675:DEBUG:https://blog.sprinklr.com:443 "GET /pr/announcing-sprinklr-display-complete-solution-powering-digital-screens-retail-command-centers-events-outdoor-advertising HTTP/1.1" 301 0
-2018-05-01 11:51:15,154:DEBUG:https://blog.sprinklr.com:443 "GET /pr/announcing-sprinklr-display-complete-solution-powering-digital-screens-retail-command-centers-events-outdoor-advertising/ HTTP/1.1" 200 None
-2018-05-01 11:51:15,527:DEBUG:Starting new HTTPS connection (1): blog.sprinklr.com
-2018-05-01 11:51:18,056:DEBUG:https://blog.sprinklr.com:443 "GET /pr/fast-company-names-sprinklr-among-innovative-companies-2017 HTTP/1.1" 301 0
-2018-05-01 11:51:20,384:ERROR:The pathname '/home/ghostman/Desktop/Project/NewsMon/login/views.py' of this watch <Watch wd=1445 path=/home/ghostman/Desktop/Project/NewsMon/login/views.py mask=4038 proc_fun=None auto_add=False exclude_filter=<function WatchManager.<lambda> at 0x7f486c056b70> dir=False > has probably changed and couldn't be updated, so it cannot be trusted anymore. To fix this error move directories/files only between watched parents directories, in this case e.g. put a watch on '/home/ghostman/Desktop/Project/NewsMon/login'.
-2018-05-01 11:55:47,983:ERROR:The pathname '/home/ghostman/Desktop/Project/NewsMon/login/views.py' of this watch <Watch wd=1136 path=/home/ghostman/Desktop/Project/NewsMon/login/views.py mask=4038 proc_fun=None auto_add=False exclude_filter=<function WatchManager.<lambda> at 0x7f673340fb70> dir=False > has probably changed and couldn't be updated, so it cannot be trusted anymore. To fix this error move directories/files only between watched parents directories, in this case e.g. put a watch on '/home/ghostman/Desktop/Project/NewsMon/login'.
-2018-05-01 11:56:39,530:ERROR:The pathname '/home/ghostman/Desktop/Project/NewsMon/login/views.py' of this watch <Watch wd=1461 path=/home/ghostman/Desktop/Project/NewsMon/login/views.py mask=4038 proc_fun=None auto_add=False exclude_filter=<function WatchManager.<lambda> at 0x7f02572fcb70> dir=False > has probably changed and couldn't be updated, so it cannot be trusted anymore. To fix this error move directories/files only between watched parents directories, in this case e.g. put a watch on '/home/ghostman/Desktop/Project/NewsMon/login'.
-2018-05-01 11:57:45,080:ERROR:The pathname '/home/ghostman/Desktop/Project/NewsMon/login/views.py' of this watch <Watch wd=1346 path=/home/ghostman/Desktop/Project/NewsMon/login/views.py mask=4038 proc_fun=None auto_add=False exclude_filter=<function WatchManager.<lambda> at 0x7f76e2005b70> dir=False > has probably changed and couldn't be updated, so it cannot be trusted anymore. To fix this error move directories/files only between watched parents directories, in this case e.g. put a watch on '/home/ghostman/Desktop/Project/NewsMon/login'.
-2018-05-01 11:58:15,319:ERROR:Internal Server Error: /edit_story/
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ghostman/Desktop/Project/NewsMon/login/views.py", line 107, in add_source
+    if form.is_valid():
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/forms/forms.py", line 179, in is_valid
+    return self.is_bound and not self.errors
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/forms/forms.py", line 174, in errors
+    self.full_clean()
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/forms/forms.py", line 377, in full_clean
+    self._clean_form()
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/forms/forms.py", line 404, in _clean_form
+    cleaned_data = self.clean()
+  File "/home/ghostman/Desktop/Project/NewsMon/login/forms.py", line 65, in clean
+    rss_url__exact=self.cleaned_data['rss_url'], created_by_id=self.user.id
+KeyError: 'rss_url'
+2018-05-02 14:48:00,331:  ERROR:  Internal Server Error: /add_source/
 Traceback (most recent call last):
   File "/home/ghostman/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
     response = get_response(request)
@@ -181,33 +497,29 @@ Traceback (most recent call last):
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
   File "/home/ghostman/.local/lib/python3.6/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
     return view_func(request, *args, **kwargs)
-  File "/home/ghostman/.local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
-    return view_func(*args, **kwargs)
-  File "/home/ghostman/Desktop/Project/NewsMon/login/views.py", line 408, in edit_story
-    item_id = int(request.GET.get('item_id'))
-ValueError: invalid literal for int() with base 10: 'arf'
-2018-05-01 11:59:06,359:ERROR:The pathname '/home/ghostman/Desktop/Project/NewsMon/login/views.py' of this watch <Watch wd=1295 path=/home/ghostman/Desktop/Project/NewsMon/login/views.py mask=4038 proc_fun=None auto_add=False exclude_filter=<function WatchManager.<lambda> at 0x7fef02644b70> dir=False > has probably changed and couldn't be updated, so it cannot be trusted anymore. To fix this error move directories/files only between watched parents directories, in this case e.g. put a watch on '/home/ghostman/Desktop/Project/NewsMon/login'.
-2018-05-01 12:04:04,085:ERROR:The pathname '/home/ghostman/Desktop/Project/NewsMon/login/views.py' of this watch <Watch wd=1404 path=/home/ghostman/Desktop/Project/NewsMon/login/views.py mask=4038 proc_fun=None auto_add=False exclude_filter=<function WatchManager.<lambda> at 0x7fc3147b0b70> dir=False > has probably changed and couldn't be updated, so it cannot be trusted anymore. To fix this error move directories/files only between watched parents directories, in this case e.g. put a watch on '/home/ghostman/Desktop/Project/NewsMon/login'.
-2018-05-01 12:13:23,858:ERROR:The pathname '/home/ghostman/Desktop/Project/NewsMon/login/views.py' of this watch <Watch wd=1355 path=/home/ghostman/Desktop/Project/NewsMon/login/views.py mask=4038 proc_fun=None auto_add=False exclude_filter=<function WatchManager.<lambda> at 0x7f3e78f85b70> dir=False > has probably changed and couldn't be updated, so it cannot be trusted anymore. To fix this error move directories/files only between watched parents directories, in this case e.g. put a watch on '/home/ghostman/Desktop/Project/NewsMon/login'.
-2018-05-01 12:16:55,527:ERROR:The pathname '/home/ghostman/Desktop/Project/NewsMon/login/views.py' of this watch <Watch wd=1294 path=/home/ghostman/Desktop/Project/NewsMon/login/views.py mask=4038 proc_fun=None auto_add=False exclude_filter=<function WatchManager.<lambda> at 0x7f11c8c77b70> dir=False > has probably changed and couldn't be updated, so it cannot be trusted anymore. To fix this error move directories/files only between watched parents directories, in this case e.g. put a watch on '/home/ghostman/Desktop/Project/NewsMon/login'.
-2018-05-01 12:17:09,948:DEBUG:Starting new HTTPS connection (1): www.sprinklr.com
-2018-05-01 12:17:14,453:DEBUG:https://www.sprinklr.com:443 "GET /pr/sprinklr-unveils-intuition-ai-help-brands-scale-one-one-customer-relationships-across-25-social-channels HTTP/1.1" 301 0
-2018-05-01 12:17:15,017:DEBUG:https://www.sprinklr.com:443 "GET /pr/sprinklr-unveils-intuition-ai-help-brands-scale-one-one-customer-relationships-across-25-social-channels/ HTTP/1.1" 200 None
-2018-05-01 12:17:15,615:DEBUG:Starting new HTTPS connection (1): www.sprinklr.com
-2018-05-01 12:17:20,448:DEBUG:https://www.sprinklr.com:443 "GET /pr/sprinklr-hires-former-microsoft-u-s-cmo-grad-conn-chief-experience-marketing-officer HTTP/1.1" 301 0
-2018-05-01 12:17:21,016:DEBUG:https://www.sprinklr.com:443 "GET /pr/sprinklr-hires-former-microsoft-u-s-cmo-grad-conn-chief-experience-marketing-officer/ HTTP/1.1" 200 None
-2018-05-01 12:17:21,173:DEBUG:Starting new HTTPS connection (1): www.sprinklr.com
-2018-05-01 12:17:25,377:DEBUG:https://www.sprinklr.com:443 "GET /pr/allstate-selects-sprinklr-drive-social-recruiting-attract-next-generation-talent HTTP/1.1" 301 0
-2018-05-01 12:17:25,925:DEBUG:https://www.sprinklr.com:443 "GET /pr/allstate-selects-sprinklr-drive-social-recruiting-attract-next-generation-talent/ HTTP/1.1" 200 None
-2018-05-01 12:17:26,114:DEBUG:Starting new HTTPS connection (1): www.sprinklr.com
-2018-05-01 12:17:30,418:DEBUG:https://www.sprinklr.com:443 "GET /pr/sap-selects-sprinklr-foundation-data-driven-social-media-strategies HTTP/1.1" 301 0
-2018-05-01 12:17:30,988:DEBUG:https://www.sprinklr.com:443 "GET /pr/sap-selects-sprinklr-foundation-data-driven-social-media-strategies/ HTTP/1.1" 200 None
-2018-05-01 12:17:31,131:DEBUG:Starting new HTTPS connection (1): www.sprinklr.com
-2018-05-01 12:17:35,378:DEBUG:https://www.sprinklr.com:443 "GET /pr/sprinklr-expands-executive-leadership-team-chief-culture-talent-officer HTTP/1.1" 301 0
-2018-05-01 12:17:35,589:ERROR:The pathname '/home/ghostman/Desktop/Project/NewsMon/login/views.py' of this watch <Watch wd=1259 path=/home/ghostman/Desktop/Project/NewsMon/login/views.py mask=4038 proc_fun=None auto_add=False exclude_filter=<function WatchManager.<lambda> at 0x7ff23c025b70> dir=False > has probably changed and couldn't be updated, so it cannot be trusted anymore. To fix this error move directories/files only between watched parents directories, in this case e.g. put a watch on '/home/ghostman/Desktop/Project/NewsMon/login'.
-2018-05-01 12:17:38,813:ERROR:The pathname '/home/ghostman/Desktop/Project/NewsMon/login/views.py' of this watch <Watch wd=493 path=/home/ghostman/Desktop/Project/NewsMon/login/views.py mask=4038 proc_fun=None auto_add=False exclude_filter=<function WatchManager.<lambda> at 0x7fdf0ec27b70> dir=False > has probably changed and couldn't be updated, so it cannot be trusted anymore. To fix this error move directories/files only between watched parents directories, in this case e.g. put a watch on '/home/ghostman/Desktop/Project/NewsMon/login'.
-2018-05-01 12:18:58,944:ERROR:The pathname '/home/ghostman/Desktop/Project/NewsMon/login/views.py' of this watch <Watch wd=558 path=/home/ghostman/Desktop/Project/NewsMon/login/views.py mask=4038 proc_fun=None auto_add=False exclude_filter=<function WatchManager.<lambda> at 0x7f84844b0b70> dir=False > has probably changed and couldn't be updated, so it cannot be trusted anymore. To fix this error move directories/files only between watched parents directories, in this case e.g. put a watch on '/home/ghostman/Desktop/Project/NewsMon/login'.
-2018-05-01 12:19:02,257:ERROR:Internal Server Error: /stories_list/
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ghostman/Desktop/Project/NewsMon/login/views.py", line 107, in add_source
+    if form.is_valid():
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/forms/forms.py", line 179, in is_valid
+    return self.is_bound and not self.errors
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/forms/forms.py", line 174, in errors
+    self.full_clean()
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/forms/forms.py", line 377, in full_clean
+    self._clean_form()
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/forms/forms.py", line 404, in _clean_form
+    cleaned_data = self.clean()
+  File "/home/ghostman/Desktop/Project/NewsMon/login/forms.py", line 65, in clean
+    rss_url__exact=self.cleaned_data['rss_url'], created_by_id=self.user.id
+KeyError: 'rss_url'
+2018-05-02 14:50:13,768:  ERROR:  Internal Server Error: /add_source/
+Traceback (most recent call last):
+  File "/home/ghostman/Desktop/Project/NewsMon/login/forms.py", line 65, in clean
+    rss_url__exact=self.cleaned_data['rss_url'], created_by_id=self.user.id
+KeyError: 'rss_url'
+
+During handling of the above exception, another exception occurred:
+
 Traceback (most recent call last):
   File "/home/ghostman/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
     response = get_response(request)
@@ -217,8 +529,94 @@ Traceback (most recent call last):
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
   File "/home/ghostman/.local/lib/python3.6/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
     return view_func(request, *args, **kwargs)
-  File "/home/ghostman/Desktop/Project/NewsMon/login/views.py", line 330, in stories_list
-    if request.user.id.is_staff or request.user.id.is_superuser:
-AttributeError: 'int' object has no attribute 'is_staff'
-2018-05-01 12:19:45,779:ERROR:The pathname '/home/ghostman/Desktop/Project/NewsMon/login/views.py' of this watch <Watch wd=1360 path=/home/ghostman/Desktop/Project/NewsMon/login/views.py mask=4038 proc_fun=None auto_add=False exclude_filter=<function WatchManager.<lambda> at 0x7ff71e966b70> dir=False > has probably changed and couldn't be updated, so it cannot be trusted anymore. To fix this error move directories/files only between watched parents directories, in this case e.g. put a watch on '/home/ghostman/Desktop/Project/NewsMon/login'.
-2018-05-01 12:26:23,293:ERROR:The pathname '/home/ghostman/Desktop/Project/NewsMon/login/views.py' of this watch <Watch wd=218 path=/home/ghostman/Desktop/Project/NewsMon/login/views.py mask=4038 proc_fun=None auto_add=False exclude_filter=<function WatchManager.<lambda> at 0x7fcc094ebb70> dir=False > has probably changed and couldn't be updated, so it cannot be trusted anymore. To fix this error move directories/files only between watched parents directories, in this case e.g. put a watch on '/home/ghostman/Desktop/Project/NewsMon/login'.
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ghostman/Desktop/Project/NewsMon/login/views.py", line 107, in add_source
+    if form.is_valid():
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/forms/forms.py", line 179, in is_valid
+    return self.is_bound and not self.errors
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/forms/forms.py", line 174, in errors
+    self.full_clean()
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/forms/forms.py", line 377, in full_clean
+    self._clean_form()
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/forms/forms.py", line 404, in _clean_form
+    cleaned_data = self.clean()
+  File "/home/ghostman/Desktop/Project/NewsMon/login/forms.py", line 68, in clean
+    raise forms.ValidationError(_("Invalid Url"))
+AttributeError: module 'django.forms' has no attribute 'V'
+2018-05-02 14:51:02,436:  ERROR:  Internal Server Error: /add_source/
+Traceback (most recent call last):
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ghostman/Desktop/Project/NewsMon/login/views.py", line 107, in add_source
+    if form.is_valid():
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/forms/forms.py", line 179, in is_valid
+    return self.is_bound and not self.errors
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/forms/forms.py", line 174, in errors
+    self.full_clean()
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/forms/forms.py", line 377, in full_clean
+    self._clean_form()
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/forms/forms.py", line 404, in _clean_form
+    cleaned_data = self.clean()
+  File "/home/ghostman/Desktop/Project/NewsMon/login/forms.py", line 65, in clean
+    rss_url__exact=self.cleaned_data['rss_url'], created_by_id=self.user.id
+KeyError: 'rss_url'
+2018-05-02 14:51:36,328:  ERROR:  Internal Server Error: /add_source/
+Traceback (most recent call last):
+  File "/home/ghostman/Desktop/Project/NewsMon/login/forms.py", line 65, in clean
+    rss_url__exact=self.cleaned_data['rss_url'], created_by_id=self.user.id
+KeyError: 'rss_url'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/utils/decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ghostman/Desktop/Project/NewsMon/login/views.py", line 107, in add_source
+    if form.is_valid():
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/forms/forms.py", line 179, in is_valid
+    return self.is_bound and not self.errors
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/forms/forms.py", line 174, in errors
+    self.full_clean()
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/forms/forms.py", line 377, in full_clean
+    self._clean_form()
+  File "/home/ghostman/.local/lib/python3.6/site-packages/django/forms/forms.py", line 404, in _clean_form
+    cleaned_data = self.clean()
+  File "/home/ghostman/Desktop/Project/NewsMon/login/forms.py", line 67, in clean
+    except rss_url.KeyError:
+NameError: name 'rssKeyError' is not defined
+2018-05-02 14:56:29,786:  DEBUG:  Starting new HTTP connection (1): www.workaci.com
+2018-05-02 14:56:32,287:  DEBUG:  http://www.workaci.com:80 "GET /content/how-choose-right-ct-your-application HTTP/1.1" 200 None
+2018-05-02 14:56:33,394:  DEBUG:  Starting new HTTP connection (1): www.workaci.com
+2018-05-02 14:56:36,429:  DEBUG:  http://www.workaci.com:80 "GET /content/how-dcv-improves-your-iaq-co2-sensor HTTP/1.1" 200 None
+2018-05-02 14:56:37,298:  DEBUG:  Starting new HTTP connection (1): www.workaci.com
+2018-05-02 14:56:40,354:  DEBUG:  http://www.workaci.com:80 "GET /content/how-can-3d-printer-change-your-manufacturing-company HTTP/1.1" 200 None
+2018-05-02 15:29:37,171:  DEBUG:  Starting new HTTPS connection (1): www.sprinklr.com
+2018-05-02 15:29:38,965:  DEBUG:  https://www.sprinklr.com:443 "GET /pr/sprinklr-hires-former-microsoft-u-s-cmo-grad-conn-chief-experience-marketing-officer/ HTTP/1.1" 200 None
+2018-05-02 15:29:39,412:  DEBUG:  Starting new HTTPS connection (1): blog.sprinklr.com
+2018-05-02 15:29:41,458:  DEBUG:  https://blog.sprinklr.com:443 "GET /pr/sprinklr-named-second-annual-forbes-2017-cloud-100-list HTTP/1.1" 301 0
+2018-05-02 15:29:43,347:  DEBUG:  https://blog.sprinklr.com:443 "GET /pr/sprinklr-named-second-annual-forbes-2017-cloud-100-list/ HTTP/1.1" 200 None
+2018-05-02 15:29:48,880:  DEBUG:  No feed data in RSS URL:   http://contify.feed43.com/sportzpower-2-april.xml
+2018-05-02 15:29:50,539:  DEBUG:  Starting new HTTPS connection (1): yourstory.com
+2018-05-02 15:29:51,071:  DEBUG:  https://yourstory.com:443 "GET /mystory/a64071424d-how-to-get-web-design HTTP/1.1" 200 None
+2018-05-02 15:29:51,349:  DEBUG:  Starting new HTTPS connection (1): yourstory.com
+2018-05-02 15:29:51,846:  DEBUG:  https://yourstory.com:443 "GET /mystory/46ec8ae9a2-how-to-plan-the-perfec HTTP/1.1" 200 None
+2018-05-02 15:29:52,071:  DEBUG:  Starting new HTTPS connection (1): yourstory.com
+2018-05-02 15:29:59,455:  DEBUG:  get_html_2XX_only() error. HTTPSConnectionPool(host='yourstory.com', port=443): Read timed out. (read timeout=7) on URL: https://yourstory.com/mystory/35580034d3-free-your-mind-and-the
+2018-05-02 15:29:59,456:  DEBUG:  Article parse exception in : https://yourstory.com/mystory/35580034d3-free-your-mind-and-the

@@ -22,7 +22,7 @@
             <div class="content">
               <div class="wrapper" align="center">
                 <section>
-                  <form method="post" action=".">{% csrf_token %}
+                  <form method="post" action="."  id="my-form">{% csrf_token %}
                     <b>
                             <h2>Sign Up</h2>
                     </b>
@@ -94,7 +94,9 @@
                         </tr>
                     </table>
                      <button type="submit" class="small" >Sign Up</button>
-                      <button type="reset" class="small">Reset</button>
+                     <button type="submit" class="small" id="clear-form">Reset</button>
+
+
                   </form>
 
                </section>

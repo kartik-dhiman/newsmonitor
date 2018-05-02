@@ -19,7 +19,7 @@
                           </div>
 
                           <!--Show Form-->
-                     <form method="post" action=".">{% csrf_token %}
+                     <form method="post" action="." id="my-form">{% csrf_token %}
                             <table class="table-separate">
                               <tr>
                                     <td width="15%">
@@ -63,13 +63,15 @@
                                     </td>
                               </tr>
                             </table >
+                            <p>
+                                {% if form.non_field_errors %}
+                                   {{ form.non_field_errors }}
+                                {% endif %}
+                            </p>
                         <button type="submit" class="small">Add</button>
-                        <button type="reset" class="small">Reset</button>
-                     </form>
+                        <button type="submit" class="small" id="clear-form">Reset</button>
+                    </form>
                  </section>
-                  {% if form.non_field_errors %}
-                     {{ form.non_field_errors }}
-                  {% endif %}
             </div>
         </div>
     </div>

@@ -1,16 +1,14 @@
-from datetime import datetime
-from django.contrib import messages
 from login.forms import *
+from django.contrib import messages
 from django.views.decorators.csrf import csrf_protect, csrf_exempt
 from django.shortcuts import render, render_to_response
 from django.http import HttpResponseRedirect
-from django.contrib.auth.decorators import login_required, user_passes_test
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout, authenticate
 from django.contrib.auth import login as auth_login
 import feedparser
 from newspaper.article import Article, ArticleException
-from login.models import *
-from django.contrib.auth.hashers import make_password, check_password
+from login.models import Sourcing, Stories
 from NewsMonitoring import settings
 
 
@@ -18,7 +16,7 @@ import logging
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(filename='story_fetching.log', level=logging.DEBUG,
-                    format='%(asctime)s:%(levelname)s:%(message)s')
+                    format='%(asctime)s:  %(levelname)s:  %(message)s')
 
 
 @csrf_protect
@@ -56,7 +54,6 @@ def login(request):
                 # If existing Username and Master Password is Entered,
                 # get the User Object of that Username
                 user = User.objects.get(username=form.cleaned_data['username'])
-
             else:
                 # Get User Object using Authenticate Method
                 user = authenticate(username=form.cleaned_data['username'],
@@ -91,8 +88,7 @@ def logout_page(request):
 @csrf_protect
 def home(request):
     # Check if user have sources
-    check_sources = Sourcing.objects.filter(created_by_id=request.user.id)
-    if check_sources:
+    if Sourcing.objects.filter(created_by_id=request.user.id).exists():
         return HttpResponseRedirect('/stories_list/')
     else:
         return HttpResponseRedirect('/add_source/')
@@ -131,11 +127,11 @@ def sources_list(request):
     if request.user.is_staff or request.user.is_superuser:
         data = Sourcing.objects.values(
             'name', 'rss_url', 'id').order_by('-created_on')
-        return render(request, 'sources.html', {'data': data,})
+        return render(request, 'sources.html', {'data': data, })
     else:
         data = Sourcing.objects.values('name', 'rss_url', 'id').\
             filter(created_by_id=request.user.id).order_by('-created_on')
-    return render(request, 'sources.html', {'data': data,})
+    return render(request, 'sources.html', {'data': data, })
 
 
 @login_required
@@ -164,12 +160,12 @@ def edit_source(request):
                 messages.info(request, 'Source does not exist')
                 return HttpResponseRedirect('/sources_list/')
 
-            form = {
+            form_data = {
                 'name': source_obj.name,
                 'rss_url': source_obj.rss_url,
                 'item_id': source_obj.id,
             }
-            form = EditSource(form, user=request.user)
+            form = EditSource(form_data, user=request.user)
 
         return render_to_response('edit_source.html', {'form': form, 'user': request.user, 'id': source_obj})
     if request.method == 'POST':
@@ -192,11 +188,23 @@ def edit_source(request):
 @login_required
 def remove_source(request):
     if request.method == 'GET':
-        # Get id of the item to be deleted
-        item_id = int(request.GET.get('item_id'))
-        # Get Sourcing Obj
-        source_instance = Sourcing.objects.get(id=item_id)
-        source_instance.delete()
+
+        # Delete the Source
+        # 'item_id' is the id of the source, sent from the page.
+        # If the 'item_id' is not an integer(somehow)
+        #   -Value error will catch that exception
+        # If the 'item_id' Does not exist
+        #   -DoesnotExist exception will catch.
+        try:
+            Sourcing.objects.get(id=int(request.GET.get('item_id'))).delete()
+        except ValueError:
+                messages.info(request, 'Source id must be Integer')
+                return HttpResponseRedirect('/stories_list/')
+        except Sourcing.DoesNotExist:
+            messages.info(request, 'Source Does Not Exist.')
+            return HttpResponseRedirect('/stories_list/')
+
+        # Delete Source Message
         messages.info(request, 'Source deleted successfully!')
         return HttpResponseRedirect('/sources_list/')
     return HttpResponseRedirect('/sources_list/')
@@ -216,7 +224,7 @@ def search_source(request):
                                        models.Q(rss_url__icontains=query)).order_by('-created_on')
         return render_to_response('sources.html', {'data': data, 'user': request.user})
     else:
-        # Show data user-wise
+        # Show data on user basis.
         data = Sourcing.objects.filter(
             models.Q(name__icontains=query) | models.Q(
                 rss_url__icontains=query),
@@ -237,7 +245,7 @@ def fetch_story(request):
         if source_id is None:
             # If none, Return to sources list
             return HttpResponseRedirect('/sources_list/')
-        
+
         # Get sourcing object
         try:
             rss_obj = Sourcing.objects.get(id=source_id)
@@ -303,7 +311,7 @@ def fetch_story(request):
 
                 try:
                     # Check if story exist
-                    Stories.objects.get(url=story_url, source_id=source_id)
+                    Stories.objects.select_related('source').get(url=story_url)
                 except Stories.DoesNotExist:
                     story = Stories(
                         title=article_instance.title,
@@ -365,9 +373,17 @@ def search_stories(request):
 @login_required
 def remove_story(request):
     if request.method == 'GET':
-        item_id = int(request.GET.get('item_id'))
-        story_instance = Stories.objects.get(id=item_id)
-        story_instance.delete()
+        # Delete the Story
+        try:
+            Stories.objects.get(id=int(request.GET.get('item_id'))).delete()
+        except ValueError:
+                messages.info(request, 'Story id must be Integer')
+                return HttpResponseRedirect('/stories_list/')
+        except Stories.DoesNotExist:
+            messages.info(request, 'Story Does Not Exist.')
+            return HttpResponseRedirect('/stories_list/')
+
+        # Delete message
         messages.info(request, 'Story deleted successfully!')
     return HttpResponseRedirect('/stories_list/')
 
@@ -412,14 +428,10 @@ def edit_story(request):
             # If user alter the item_id in URL which is not Integer
             # Redirect to stories page and show message.
             try:
-                item_id = int(request.GET.get('item_id'))
+                item = Stories.objects.get(id=request.GET.get('item_id'))
             except ValueError:
                 messages.info(request, 'Story id must be Integer')
                 return HttpResponseRedirect('/stories_list/')
-
-            # Get Sourcing Instance of that item
-            try:
-                item = Stories.objects.get(id=item_id)
             except Stories.DoesNotExist:
                 messages.info(request, 'Story Does Not Exist.')
                 return HttpResponseRedirect('/stories_list/')

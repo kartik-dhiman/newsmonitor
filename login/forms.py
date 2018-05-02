@@ -2,7 +2,6 @@
 from django import forms
 from django.utils.translation import ugettext_lazy as _
 from login.models import *
-from django.contrib.auth.forms import AuthenticationForm
 from django.forms.widgets import PasswordInput
 
 
@@ -65,7 +64,8 @@ class AddSource(forms.Form):
             Sourcing.objects.get(
                 rss_url__exact=self.cleaned_data['rss_url'], created_by_id=self.user.id
             )
-
+        except KeyError:
+            raise forms.ValidationError(_("Invalid Url"))
         except Sourcing.DoesNotExist:
             return self.cleaned_data
         raise forms.ValidationError(_("This Url already exist"))
@@ -91,11 +91,13 @@ class AddStory(forms.Form):
     def __init__(self, *args, **kwargs):
         self.user = kwargs.pop('user', None)
         super(AddStory, self).__init__(*args, **kwargs)
-        # Creates a field Source, that queries databse for
+        # Creates a Choice field from Source Query
         if self.user.is_staff or self.user.is_superuser:
-            self.fields['source'] = forms.ModelChoiceField(queryset=Sourcing.objects.all())
+            self.fields['source'] = forms.ModelChoiceField(queryset=Sourcing.objects.select_related('created_by'))
         else:
-            self.fields['source'] = forms.ModelChoiceField(queryset=Sourcing.objects.filter(created_by_id=self.user.id))
+            self.fields['source'] = forms.ModelChoiceField(queryset=
+                                                           Sourcing.objects.select_related('created_by').
+                                                           filter(created_by_id=self.user.id))
 
     title = forms.CharField(
         widget=forms.TextInput(attrs=dict(required=True, max_length=50, placeholder='Title'))
@@ -139,7 +141,7 @@ class CustomAuthForm(forms.Form):
         try:
             User.objects.get(username__exact=self.cleaned_data['username'])
         except User.DoesNotExist:
-            raise forms.ValidationError(_)
+            raise forms.ValidationError(_("Username & Password Does Not Exist."))
         return self.cleaned_data['username']
 
 
@@ -149,9 +151,11 @@ class EditStory(forms.Form):
         super(EditStory, self).__init__(*args, **kwargs)
 
         if self.user.is_staff or self.user.is_superuser:
-            self.fields['source'] = forms.ModelChoiceField(queryset=Sourcing.objects.all())
+            self.fields['source'] = forms.ModelChoiceField(queryset=Sourcing.objects.select_related('created_by'))
         else:
-            self.fields['source'] = forms.ModelChoiceField(queryset=Sourcing.objects.filter(created_by_id=self.user.id))
+            self.fields['source'] = forms.ModelChoiceField(queryset=
+                                                           Sourcing.objects.select_related('created_by').
+                                                           filter(created_by_id=self.user.id))
 
     title = forms.CharField(
         widget=forms.TextInput(attrs=dict(required=True, max_length=500, placeholder='Title'))
