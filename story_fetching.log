@@ -620,3 +620,247 @@ NameError: name 'rssKeyError' is not defined
 2018-05-02 15:29:52,071:  DEBUG:  Starting new HTTPS connection (1): yourstory.com
 2018-05-02 15:29:59,455:  DEBUG:  get_html_2XX_only() error. HTTPSConnectionPool(host='yourstory.com', port=443): Read timed out. (read timeout=7) on URL: https://yourstory.com/mystory/35580034d3-free-your-mind-and-the
 2018-05-02 15:29:59,456:  DEBUG:  Article parse exception in : https://yourstory.com/mystory/35580034d3-free-your-mind-and-the
+2018-05-02 16:02:38,371:  ERROR:  Internal Server Error: /add_story/
+Traceback (most recent call last):
+  File "/home/ghostman/Desktop/Project/NewsMonitoring/venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/home/ghostman/Desktop/Project/NewsMonitoring/venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ghostman/Desktop/Project/NewsMonitoring/venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghostman/Desktop/Project/NewsMonitoring/venv/lib/python3.6/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/ghostman/Desktop/Project/NewsMonitoring/venv/lib/python3.6/site-packages/django/utils/decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/ghostman/Desktop/Project/NewsMon/login/views.py", line 396, in add_story
+    if form.is_valid():
+  File "/home/ghostman/Desktop/Project/NewsMonitoring/venv/lib/python3.6/site-packages/django/forms/forms.py", line 179, in is_valid
+    return self.is_bound and not self.errors
+  File "/home/ghostman/Desktop/Project/NewsMonitoring/venv/lib/python3.6/site-packages/django/forms/forms.py", line 174, in errors
+    self.full_clean()
+  File "/home/ghostman/Desktop/Project/NewsMonitoring/venv/lib/python3.6/site-packages/django/forms/forms.py", line 377, in full_clean
+    self._clean_form()
+  File "/home/ghostman/Desktop/Project/NewsMonitoring/venv/lib/python3.6/site-packages/django/forms/forms.py", line 404, in _clean_form
+    cleaned_data = self.clean()
+  File "/home/ghostman/Desktop/Project/NewsMon/login/forms.py", line 122, in clean
+    url=self.cleaned_data['url'], source_id=self.cleaned_data['source'].id
+KeyError: 'url'
+2018-05-03 17:14:04,111:  WARNING:  Not Found: /favicon.ico
+2018-05-03 17:14:04,147:  WARNING:  Not Found: /favicon.ico
+2018-05-04 16:56:22,873:  DEBUG:  Starting new HTTPS connection (1): news.hpe.com
+2018-05-04 16:56:24,456:  DEBUG:  https://news.hpe.com:443 "GET /survey-says-composability-and-continuous-delivery-accelerate-business-initiatives-and-deliver-a-competitive-advantage/ HTTP/1.1" 200 10022
+2018-05-04 16:56:24,974:  DEBUG:  Starting new HTTPS connection (1): news.hpe.com
+2018-05-04 16:56:26,434:  DEBUG:  https://news.hpe.com:443 "GET /fact-sheet-hpe-synergy-and-hpe-oneview-enhancements/ HTTP/1.1" 200 9832
+2018-05-04 16:56:26,535:  DEBUG:  Starting new HTTPS connection (1): news.hpe.com
+2018-05-04 16:56:27,804:  DEBUG:  https://news.hpe.com:443 "GET /taking-hpes-composable-strategy-to-the-next-level/ HTTP/1.1" 200 13621
+2018-05-04 16:56:27,986:  DEBUG:  Starting new HTTPS connection (1): news.hpe.com
+2018-05-04 16:56:29,462:  DEBUG:  https://news.hpe.com:443 "GET /computerworld-uk-composable-infrastructure-the-next-step-towards-the-software-defined-data-centre/ HTTP/1.1" 200 7861
+2018-05-04 16:56:29,550:  DEBUG:  Starting new HTTPS connection (1): news.hpe.com
+2018-05-04 16:56:30,825:  DEBUG:  https://news.hpe.com:443 "GET /hpe-synergy-gains-momentum-in-the-market-driving-efficiencies-and-creating-new-opportunities-for-customers/ HTTP/1.1" 200 14491
+2018-05-04 16:56:31,287:  DEBUG:  Starting new HTTPS connection (1): news.hpe.com
+2018-05-04 16:56:32,544:  DEBUG:  https://news.hpe.com:443 "GET /external-content/the-top-ten-reasons-to-move-to-composable-infrastructure/ HTTP/1.1" 302 5335
+2018-05-04 16:56:32,554:  DEBUG:  Starting new HTTPS connection (1): h20195.www2.hpe.com
+2018-05-04 16:56:34,751:  DEBUG:  https://h20195.www2.hpe.com:443 "GET /V2/GetPDF.aspx/4AA6-4783ENW.pdf HTTP/1.1" 200 468567
+2018-05-04 16:56:38,302:  DEBUG:  SHIFT_JIS Japanese prober hit error at byte 227
+2018-05-04 16:56:38,303:  DEBUG:  EUC-JP Japanese prober hit error at byte 230
+2018-05-04 16:56:38,305:  DEBUG:  GB2312 Chinese prober hit error at byte 230
+2018-05-04 16:56:38,306:  DEBUG:  EUC-KR Korean prober hit error at byte 230
+2018-05-04 16:56:38,387:  DEBUG:  CP949 Korean prober hit error at byte 28529
+2018-05-04 16:56:38,388:  DEBUG:  Big5 Chinese prober hit error at byte 230
+2018-05-04 16:56:38,388:  DEBUG:  EUC-TW Taiwan prober hit error at byte 229
+2018-05-04 16:56:38,734:  DEBUG:  windows-1251 confidence = 0.042381234646742885, below negative shortcut threshhold 0.05
+2018-05-04 16:56:39,079:  DEBUG:  KOI8-R confidence = 0.04219720215513172, below negative shortcut threshhold 0.05
+2018-05-04 16:56:39,423:  DEBUG:  ISO-8859-5 confidence = 0.042284920914739815, below negative shortcut threshhold 0.05
+2018-05-04 16:56:39,767:  DEBUG:  MacCyrillic confidence = 0.042621479946237134, below negative shortcut threshhold 0.05
+2018-05-04 16:56:40,115:  DEBUG:  IBM866 confidence = 0.043618436281578785, below negative shortcut threshhold 0.05
+2018-05-04 16:56:40,460:  DEBUG:  IBM855 confidence = 0.04239616832730865, below negative shortcut threshhold 0.05
+2018-05-04 16:56:41,470:  DEBUG:  ISO-8859-5 confidence = 0.041386622175777654, below negative shortcut threshhold 0.05
+2018-05-04 16:56:41,814:  DEBUG:  windows-1251 confidence = 0.04194789287473782, below negative shortcut threshhold 0.05
+2018-05-04 16:56:42,159:  DEBUG:  TIS-620 confidence = 0.045095750793718054, below negative shortcut threshhold 0.05
+2018-05-04 16:56:42,975:  DEBUG:  windows-1255 confidence = 0.04353220528610798, below negative shortcut threshhold 0.05
+2018-05-04 16:56:43,324:  DEBUG:  windows-1255 confidence = 0.044180140498050746, below negative shortcut threshhold 0.05
+2018-05-04 16:56:43,761:  DEBUG:  windows-1251 not active
+2018-05-04 16:56:43,761:  DEBUG:  KOI8-R not active
+2018-05-04 16:56:43,761:  DEBUG:  ISO-8859-5 not active
+2018-05-04 16:56:43,761:  DEBUG:  MacCyrillic not active
+2018-05-04 16:56:43,761:  DEBUG:  IBM866 not active
+2018-05-04 16:56:43,761:  DEBUG:  IBM855 not active
+2018-05-04 16:56:43,761:  DEBUG:  ISO-8859-7 Greek confidence = 0.07062544035683728
+2018-05-04 16:56:43,762:  DEBUG:  windows-1253 Greek confidence = 0.07198379743796905
+2018-05-04 16:56:43,762:  DEBUG:  ISO-8859-5 not active
+2018-05-04 16:56:43,762:  DEBUG:  windows-1251 not active
+2018-05-04 16:56:43,762:  DEBUG:  TIS-620 not active
+2018-05-04 16:56:43,762:  DEBUG:  ISO-8859-9 Turkish confidence = 0.10531313025843667
+2018-05-04 16:56:43,762:  DEBUG:  windows-1255 Hebrew confidence = 0.0
+2018-05-04 16:56:43,762:  DEBUG:  windows-1255 not active
+2018-05-04 16:56:43,762:  DEBUG:  windows-1255 not active
+2018-05-04 16:56:43,762:  DEBUG:  no probers hit minimum threshold
+2018-05-04 16:56:43,762:  DEBUG:  utf-8  confidence = 0.010000000000000009
+2018-05-04 16:56:43,762:  DEBUG:  SHIFT_JIS Japanese confidence = 0.01
+2018-05-04 16:56:43,762:  DEBUG:  EUC-JP Japanese confidence = 0.01
+2018-05-04 16:56:43,762:  DEBUG:  GB2312 Chinese confidence = 0.01
+2018-05-04 16:56:43,763:  DEBUG:  EUC-KR Korean confidence = 0.01
+2018-05-04 16:56:43,763:  DEBUG:  CP949 Korean confidence = 0.01
+2018-05-04 16:56:43,763:  DEBUG:  Big5 Chinese confidence = 0.01
+2018-05-04 16:56:43,763:  DEBUG:  EUC-TW Taiwan confidence = 0.01
+2018-05-04 16:56:43,763:  DEBUG:  windows-1251 Russian confidence = 0.042381234646742885
+2018-05-04 16:56:43,763:  DEBUG:  KOI8-R Russian confidence = 0.04219720215513172
+2018-05-04 16:56:43,763:  DEBUG:  ISO-8859-5 Russian confidence = 0.042284920914739815
+2018-05-04 16:56:43,763:  DEBUG:  MacCyrillic Russian confidence = 0.042621479946237134
+2018-05-04 16:56:43,763:  DEBUG:  IBM866 Russian confidence = 0.043618436281578785
+2018-05-04 16:56:43,763:  DEBUG:  IBM855 Russian confidence = 0.04239616832730865
+2018-05-04 16:56:43,763:  DEBUG:  ISO-8859-7 Greek confidence = 0.07062544035683728
+2018-05-04 16:56:43,763:  DEBUG:  windows-1253 Greek confidence = 0.07198379743796905
+2018-05-04 16:56:43,763:  DEBUG:  ISO-8859-5 Bulgairan confidence = 0.041386622175777654
+2018-05-04 16:56:43,764:  DEBUG:  windows-1251 Bulgarian confidence = 0.04194789287473782
+2018-05-04 16:56:43,764:  DEBUG:  TIS-620 Thai confidence = 0.045095750793718054
+2018-05-04 16:56:43,764:  DEBUG:  ISO-8859-9 Turkish confidence = 0.10531313025843667
+2018-05-04 16:56:43,764:  DEBUG:  windows-1255 Hebrew confidence = 0.0
+2018-05-04 16:56:43,764:  DEBUG:  windows-1255 Hebrew confidence = 0.04353220528610798
+2018-05-04 16:56:43,764:  DEBUG:  windows-1255 Hebrew confidence = 0.044180140498050746
+2018-05-04 16:56:43,764:  DEBUG:  windows-1255 Hebrew confidence = 0.044180140498050746
+2018-05-04 16:56:43,808:  DEBUG:  Starting new HTTPS connection (1): news.hpe.com
+2018-05-04 16:56:45,004:  DEBUG:  https://news.hpe.com:443 "GET /external-content/what-is-composable-infrastructure/ HTTP/1.1" 302 5254
+2018-05-04 16:56:45,012:  DEBUG:  Starting new HTTPS connection (1): www.hpe.com
+2018-05-04 16:56:46,006:  DEBUG:  https://www.hpe.com:443 "GET /us/en/what-is/composable-infrastructure.html HTTP/1.1" 200 26703
+2018-05-04 16:56:46,569:  DEBUG:  Starting new HTTPS connection (1): news.hpe.com
+2018-05-04 16:56:48,010:  DEBUG:  https://news.hpe.com:443 "GET /hpe-in-60-synergy-edition/ HTTP/1.1" 200 7481
+2018-05-04 16:56:48,182:  DEBUG:  Starting new HTTPS connection (1): news.hpe.com
+2018-05-04 16:56:49,452:  DEBUG:  https://news.hpe.com:443 "GET /forbes-hpe-synergy-shows-promise-and-progress-with-early-adopters/ HTTP/1.1" 200 8732
+2018-05-04 16:56:51,755:  DEBUG:  Starting new HTTP connection (1): www.kmworld.com
+2018-05-04 16:56:53,587:  DEBUG:  http://www.kmworld.com:80 "GET /Articles/News/News/Smart-Communications-Launches-Spring-2018-Release-124870.aspx HTTP/1.1" 200 14571
+2018-05-04 16:56:54,169:  DEBUG:  Starting new HTTP connection (1): www.kmworld.com
+2018-05-04 16:56:55,093:  DEBUG:  http://www.kmworld.com:80 "GET /Articles/News/News/Lucidworks-Adds-%2450-Million-in-Growth-Funding-124866.aspx HTTP/1.1" 200 14493
+2018-05-04 16:56:55,707:  DEBUG:  Starting new HTTP connection (1): www.kmworld.com
+2018-05-04 16:56:57,613:  DEBUG:  http://www.kmworld.com:80 "GET /Articles/News/News/Docxonomy-Announces-Intelligent-Search-and-File-Management-Solution-124864.aspx HTTP/1.1" 200 14362
+2018-05-04 16:56:58,215:  DEBUG:  Starting new HTTP connection (1): www.kmworld.com
+2018-05-04 16:56:59,062:  DEBUG:  http://www.kmworld.com:80 "GET /Articles/News/News/iManage-Improves-Security-Policy-Manager-and-Threat-Manager-to-Enable-Better-Control-of-Confidential-Data-124827.aspx HTTP/1.1" 200 14087
+2018-05-04 16:56:59,650:  DEBUG:  Starting new HTTP connection (1): www.kmworld.com
+2018-05-04 16:57:01,010:  DEBUG:  http://www.kmworld.com:80 "GET /Articles/News/News/Looker-Unveils-Integration-with-Workplace-by-Facebook-124824.aspx HTTP/1.1" 200 13699
+2018-05-04 16:57:50,893:  DEBUG:  No feed data in RSS URL:   http://contify.feed43.com/br_businesssolutions_news.xml
+2018-05-04 16:57:53,765:  DEBUG:  No feed data in RSS URL:   http://contify.feed43.com/sportzpower-2-april.xml
+2018-05-04 16:57:55,181:  DEBUG:  Starting new HTTPS connection (1): yourstory.com
+2018-05-04 16:57:58,780:  DEBUG:  https://yourstory.com:443 "GET /mystory/619cfc15c6-smart-data-your-influe HTTP/1.1" 200 None
+2018-05-04 16:57:59,058:  DEBUG:  Starting new HTTPS connection (1): yourstory.com
+2018-05-04 16:58:01,600:  DEBUG:  https://yourstory.com:443 "GET /mystory/27c0e5e3e7-i-use-these-5-hacks-as HTTP/1.1" 200 None
+2018-05-04 16:58:01,873:  DEBUG:  Starting new HTTPS connection (1): yourstory.com
+2018-05-04 16:58:04,272:  DEBUG:  https://yourstory.com:443 "GET /mystory/6ed4bd8445-6-ways-drones-are-impa HTTP/1.1" 200 None
+2018-05-04 16:58:04,465:  DEBUG:  Starting new HTTPS connection (1): yourstory.com
+2018-05-04 16:58:05,175:  DEBUG:  https://yourstory.com:443 "GET /mystory/d585e06f2c-5-online-work-to-help HTTP/1.1" 200 None
+2018-05-04 16:58:05,385:  DEBUG:  Starting new HTTPS connection (1): yourstory.com
+2018-05-04 16:58:07,840:  DEBUG:  https://yourstory.com:443 "GET /mystory/a6383a58a7-4-must-read-blogs-for HTTP/1.1" 200 None
+2018-05-04 16:58:08,046:  DEBUG:  Starting new HTTPS connection (1): yourstory.com
+2018-05-04 16:58:10,503:  DEBUG:  https://yourstory.com:443 "GET /mystory/4112de8d6c-5-ways-to-deal-with-an HTTP/1.1" 200 None
+2018-05-04 16:58:10,707:  DEBUG:  Starting new HTTPS connection (1): yourstory.com
+2018-05-04 16:58:11,195:  DEBUG:  https://yourstory.com:443 "GET /mystory/4649ab7cec-the-truth-is-that-you HTTP/1.1" 200 None
+2018-05-04 16:58:11,472:  DEBUG:  Starting new HTTPS connection (1): yourstory.com
+2018-05-04 16:58:13,902:  DEBUG:  https://yourstory.com:443 "GET /mystory/f5126febd3-a-few-things-that-the HTTP/1.1" 200 None
+2018-05-04 16:58:30,318:  DEBUG:  Starting new HTTPS connection (1): news.hpe.com
+2018-05-04 16:58:31,846:  DEBUG:  https://news.hpe.com:443 "GET /survey-says-composability-and-continuous-delivery-accelerate-business-initiatives-and-deliver-a-competitive-advantage/ HTTP/1.1" 200 10021
+2018-05-04 16:58:32,620:  DEBUG:  Starting new HTTPS connection (1): news.hpe.com
+2018-05-04 16:58:33,928:  DEBUG:  https://news.hpe.com:443 "GET /fact-sheet-hpe-synergy-and-hpe-oneview-enhancements/ HTTP/1.1" 200 9833
+2018-05-04 16:58:34,062:  DEBUG:  Starting new HTTPS connection (1): news.hpe.com
+2018-05-04 16:58:35,462:  DEBUG:  https://news.hpe.com:443 "GET /taking-hpes-composable-strategy-to-the-next-level/ HTTP/1.1" 200 13624
+2018-05-04 16:58:35,674:  DEBUG:  Starting new HTTPS connection (1): news.hpe.com
+2018-05-04 16:58:37,053:  DEBUG:  https://news.hpe.com:443 "GET /computerworld-uk-composable-infrastructure-the-next-step-towards-the-software-defined-data-centre/ HTTP/1.1" 200 7861
+2018-05-04 16:58:37,171:  DEBUG:  Starting new HTTPS connection (1): news.hpe.com
+2018-05-04 16:58:38,733:  DEBUG:  https://news.hpe.com:443 "GET /hpe-synergy-gains-momentum-in-the-market-driving-efficiencies-and-creating-new-opportunities-for-customers/ HTTP/1.1" 200 14490
+2018-05-04 16:58:39,227:  DEBUG:  Starting new HTTPS connection (1): news.hpe.com
+2018-05-04 16:58:40,550:  DEBUG:  https://news.hpe.com:443 "GET /external-content/the-top-ten-reasons-to-move-to-composable-infrastructure/ HTTP/1.1" 302 5335
+2018-05-04 16:58:40,557:  DEBUG:  Starting new HTTPS connection (1): h20195.www2.hpe.com
+2018-05-04 16:58:42,547:  DEBUG:  https://h20195.www2.hpe.com:443 "GET /V2/GetPDF.aspx/4AA6-4783ENW.pdf HTTP/1.1" 200 468567
+2018-05-04 16:58:44,441:  DEBUG:  SHIFT_JIS Japanese prober hit error at byte 227
+2018-05-04 16:58:44,442:  DEBUG:  EUC-JP Japanese prober hit error at byte 230
+2018-05-04 16:58:44,443:  DEBUG:  GB2312 Chinese prober hit error at byte 230
+2018-05-04 16:58:44,443:  DEBUG:  EUC-KR Korean prober hit error at byte 230
+2018-05-04 16:58:44,521:  DEBUG:  CP949 Korean prober hit error at byte 28529
+2018-05-04 16:58:44,522:  DEBUG:  Big5 Chinese prober hit error at byte 230
+2018-05-04 16:58:44,523:  DEBUG:  EUC-TW Taiwan prober hit error at byte 229
+2018-05-04 16:58:44,874:  DEBUG:  windows-1251 confidence = 0.042381234646742885, below negative shortcut threshhold 0.05
+2018-05-04 16:58:45,226:  DEBUG:  KOI8-R confidence = 0.04219720215513172, below negative shortcut threshhold 0.05
+2018-05-04 16:58:45,572:  DEBUG:  ISO-8859-5 confidence = 0.042284920914739815, below negative shortcut threshhold 0.05
+2018-05-04 16:58:45,917:  DEBUG:  MacCyrillic confidence = 0.042621479946237134, below negative shortcut threshhold 0.05
+2018-05-04 16:58:46,265:  DEBUG:  IBM866 confidence = 0.043618436281578785, below negative shortcut threshhold 0.05
+2018-05-04 16:58:46,612:  DEBUG:  IBM855 confidence = 0.04239616832730865, below negative shortcut threshhold 0.05
+2018-05-04 16:58:47,630:  DEBUG:  ISO-8859-5 confidence = 0.041386622175777654, below negative shortcut threshhold 0.05
+2018-05-04 16:58:47,977:  DEBUG:  windows-1251 confidence = 0.04194789287473782, below negative shortcut threshhold 0.05
+2018-05-04 16:58:48,322:  DEBUG:  TIS-620 confidence = 0.045095750793718054, below negative shortcut threshhold 0.05
+2018-05-04 16:58:49,141:  DEBUG:  windows-1255 confidence = 0.04353220528610798, below negative shortcut threshhold 0.05
+2018-05-04 16:58:49,485:  DEBUG:  windows-1255 confidence = 0.044180140498050746, below negative shortcut threshhold 0.05
+2018-05-04 16:58:49,881:  DEBUG:  windows-1251 not active
+2018-05-04 16:58:49,882:  DEBUG:  KOI8-R not active
+2018-05-04 16:58:49,882:  DEBUG:  ISO-8859-5 not active
+2018-05-04 16:58:49,882:  DEBUG:  MacCyrillic not active
+2018-05-04 16:58:49,882:  DEBUG:  IBM866 not active
+2018-05-04 16:58:49,882:  DEBUG:  IBM855 not active
+2018-05-04 16:58:49,882:  DEBUG:  ISO-8859-7 Greek confidence = 0.07062544035683728
+2018-05-04 16:58:49,882:  DEBUG:  windows-1253 Greek confidence = 0.07198379743796905
+2018-05-04 16:58:49,882:  DEBUG:  ISO-8859-5 not active
+2018-05-04 16:58:49,883:  DEBUG:  windows-1251 not active
+2018-05-04 16:58:49,883:  DEBUG:  TIS-620 not active
+2018-05-04 16:58:49,883:  DEBUG:  ISO-8859-9 Turkish confidence = 0.10531313025843667
+2018-05-04 16:58:49,883:  DEBUG:  windows-1255 Hebrew confidence = 0.0
+2018-05-04 16:58:49,883:  DEBUG:  windows-1255 not active
+2018-05-04 16:58:49,883:  DEBUG:  windows-1255 not active
+2018-05-04 16:58:49,883:  DEBUG:  no probers hit minimum threshold
+2018-05-04 16:58:49,883:  DEBUG:  utf-8  confidence = 0.010000000000000009
+2018-05-04 16:58:49,883:  DEBUG:  SHIFT_JIS Japanese confidence = 0.01
+2018-05-04 16:58:49,883:  DEBUG:  EUC-JP Japanese confidence = 0.01
+2018-05-04 16:58:49,883:  DEBUG:  GB2312 Chinese confidence = 0.01
+2018-05-04 16:58:49,883:  DEBUG:  EUC-KR Korean confidence = 0.01
+2018-05-04 16:58:49,883:  DEBUG:  CP949 Korean confidence = 0.01
+2018-05-04 16:58:49,884:  DEBUG:  Big5 Chinese confidence = 0.01
+2018-05-04 16:58:49,884:  DEBUG:  EUC-TW Taiwan confidence = 0.01
+2018-05-04 16:58:49,884:  DEBUG:  windows-1251 Russian confidence = 0.042381234646742885
+2018-05-04 16:58:49,884:  DEBUG:  KOI8-R Russian confidence = 0.04219720215513172
+2018-05-04 16:58:49,884:  DEBUG:  ISO-8859-5 Russian confidence = 0.042284920914739815
+2018-05-04 16:58:49,884:  DEBUG:  MacCyrillic Russian confidence = 0.042621479946237134
+2018-05-04 16:58:49,884:  DEBUG:  IBM866 Russian confidence = 0.043618436281578785
+2018-05-04 16:58:49,884:  DEBUG:  IBM855 Russian confidence = 0.04239616832730865
+2018-05-04 16:58:49,884:  DEBUG:  ISO-8859-7 Greek confidence = 0.07062544035683728
+2018-05-04 16:58:49,884:  DEBUG:  windows-1253 Greek confidence = 0.07198379743796905
+2018-05-04 16:58:49,884:  DEBUG:  ISO-8859-5 Bulgairan confidence = 0.041386622175777654
+2018-05-04 16:58:49,884:  DEBUG:  windows-1251 Bulgarian confidence = 0.04194789287473782
+2018-05-04 16:58:49,884:  DEBUG:  TIS-620 Thai confidence = 0.045095750793718054
+2018-05-04 16:58:49,885:  DEBUG:  ISO-8859-9 Turkish confidence = 0.10531313025843667
+2018-05-04 16:58:49,885:  DEBUG:  windows-1255 Hebrew confidence = 0.0
+2018-05-04 16:58:49,885:  DEBUG:  windows-1255 Hebrew confidence = 0.04353220528610798
+2018-05-04 16:58:49,885:  DEBUG:  windows-1255 Hebrew confidence = 0.044180140498050746
+2018-05-04 16:58:49,885:  DEBUG:  windows-1255 Hebrew confidence = 0.044180140498050746
+2018-05-04 16:58:49,964:  DEBUG:  Starting new HTTPS connection (1): news.hpe.com
+2018-05-04 16:58:51,322:  DEBUG:  https://news.hpe.com:443 "GET /external-content/what-is-composable-infrastructure/ HTTP/1.1" 302 5255
+2018-05-04 16:58:51,329:  DEBUG:  Starting new HTTPS connection (1): www.hpe.com
+2018-05-04 16:58:51,676:  DEBUG:  https://www.hpe.com:443 "GET /us/en/what-is/composable-infrastructure.html HTTP/1.1" 200 26703
+2018-05-04 16:58:52,241:  DEBUG:  Starting new HTTPS connection (1): news.hpe.com
+2018-05-04 16:58:53,570:  DEBUG:  https://news.hpe.com:443 "GET /hpe-in-60-synergy-edition/ HTTP/1.1" 200 7482
+2018-05-04 16:58:53,688:  DEBUG:  Starting new HTTPS connection (1): news.hpe.com
+2018-05-04 16:58:55,217:  DEBUG:  https://news.hpe.com:443 "GET /forbes-hpe-synergy-shows-promise-and-progress-with-early-adopters/ HTTP/1.1" 200 8729
+2018-05-04 16:58:56,078:  DEBUG:  Starting new HTTP connection (1): www.kmworld.com
+2018-05-04 16:58:56,810:  DEBUG:  http://www.kmworld.com:80 "GET /Articles/News/News/Smart-Communications-Launches-Spring-2018-Release-124870.aspx HTTP/1.1" 200 14571
+2018-05-04 16:58:57,455:  DEBUG:  Starting new HTTP connection (1): www.kmworld.com
+2018-05-04 16:58:59,407:  DEBUG:  http://www.kmworld.com:80 "GET /Articles/News/News/Lucidworks-Adds-%2450-Million-in-Growth-Funding-124866.aspx HTTP/1.1" 200 14493
+2018-05-04 16:59:00,008:  DEBUG:  Starting new HTTP connection (1): www.kmworld.com
+2018-05-04 16:59:02,737:  DEBUG:  http://www.kmworld.com:80 "GET /Articles/News/News/Docxonomy-Announces-Intelligent-Search-and-File-Management-Solution-124864.aspx HTTP/1.1" 200 14362
+2018-05-04 16:59:03,385:  DEBUG:  Starting new HTTP connection (1): www.kmworld.com
+2018-05-04 16:59:04,089:  DEBUG:  http://www.kmworld.com:80 "GET /Articles/News/News/iManage-Improves-Security-Policy-Manager-and-Threat-Manager-to-Enable-Better-Control-of-Confidential-Data-124827.aspx HTTP/1.1" 200 14087
+2018-05-04 16:59:04,685:  DEBUG:  Starting new HTTP connection (1): www.kmworld.com
+2018-05-04 16:59:05,369:  DEBUG:  http://www.kmworld.com:80 "GET /Articles/News/News/Looker-Unveils-Integration-with-Workplace-by-Facebook-124824.aspx HTTP/1.1" 200 13699
+2018-05-04 16:59:08,996:  DEBUG:  No feed data in RSS URL:   http://contify.feed43.com/sportzpower-2-april.xml
+2018-05-04 16:59:10,515:  DEBUG:  Starting new HTTPS connection (1): yourstory.com
+2018-05-04 16:59:11,056:  DEBUG:  https://yourstory.com:443 "GET /mystory/619cfc15c6-smart-data-your-influe HTTP/1.1" 200 None
+2018-05-04 16:59:11,352:  DEBUG:  Starting new HTTPS connection (1): yourstory.com
+2018-05-04 16:59:12,184:  DEBUG:  https://yourstory.com:443 "GET /mystory/27c0e5e3e7-i-use-these-5-hacks-as HTTP/1.1" 200 None
+2018-05-04 16:59:12,385:  DEBUG:  Starting new HTTPS connection (1): yourstory.com
+2018-05-04 16:59:12,954:  DEBUG:  https://yourstory.com:443 "GET /mystory/6ed4bd8445-6-ways-drones-are-impa HTTP/1.1" 200 None
+2018-05-04 16:59:13,230:  DEBUG:  Starting new HTTPS connection (1): yourstory.com
+2018-05-04 16:59:13,773:  DEBUG:  https://yourstory.com:443 "GET /mystory/d585e06f2c-5-online-work-to-help HTTP/1.1" 200 None
+2018-05-04 16:59:14,101:  DEBUG:  Starting new HTTPS connection (1): yourstory.com
+2018-05-04 16:59:14,682:  DEBUG:  https://yourstory.com:443 "GET /mystory/a6383a58a7-4-must-read-blogs-for HTTP/1.1" 200 None
+2018-05-04 16:59:14,975:  DEBUG:  Starting new HTTPS connection (1): yourstory.com
+2018-05-04 16:59:15,541:  DEBUG:  https://yourstory.com:443 "GET /mystory/4112de8d6c-5-ways-to-deal-with-an HTTP/1.1" 200 None
+2018-05-04 16:59:15,831:  DEBUG:  Starting new HTTPS connection (1): yourstory.com
+2018-05-04 16:59:16,372:  DEBUG:  https://yourstory.com:443 "GET /mystory/4649ab7cec-the-truth-is-that-you HTTP/1.1" 200 None
+2018-05-04 16:59:16,665:  DEBUG:  Starting new HTTPS connection (1): yourstory.com
+2018-05-04 16:59:17,239:  DEBUG:  https://yourstory.com:443 "GET /mystory/f5126febd3-a-few-things-that-the HTTP/1.1" 200 None
+2018-05-09 17:09:35,261:  WARNING:  Not Found: /favicon.ico
+2018-05-09 17:09:35,300:  WARNING:  Not Found: /favicon.ico

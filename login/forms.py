@@ -121,6 +121,8 @@ class AddStory(forms.Form):
             Stories.objects.get(
                 url=self.cleaned_data['url'], source_id=self.cleaned_data['source'].id
             )
+        except KeyError:
+            raise forms.ValidationError(_("Invalid Url"))
         except Stories.DoesNotExist:
             return self.cleaned_data
         raise forms.ValidationError(_("Same Url under this Source already Exists"))

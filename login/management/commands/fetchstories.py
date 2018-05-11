@@ -6,7 +6,8 @@ import feedparser
 from _datetime import datetime
 import logging
 logger = logging.getLogger(__name__)
-
+logging.basicConfig(filename='story_fetching.log', level=logging.DEBUG,
+                    format='%(asctime)s:  %(levelname)s:  %(message)s')
 
 class Command(BaseCommand):
     help = 'Fetch stories of the Sources saved, all at once...!'
