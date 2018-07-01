@@ -864,3 +864,5 @@ KeyError: 'url'
 2018-05-04 16:59:17,239:  DEBUG:  https://yourstory.com:443 "GET /mystory/f5126febd3-a-few-things-that-the HTTP/1.1" 200 None
 2018-05-09 17:09:35,261:  WARNING:  Not Found: /favicon.ico
 2018-05-09 17:09:35,300:  WARNING:  Not Found: /favicon.ico
+2018-07-01 17:14:03,998:  WARNING:  Not Found: /favicon.ico
+2018-07-01 17:14:04,008:  WARNING:  Not Found: /favicon.ico
