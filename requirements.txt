@@ -3,3 +3,5 @@ newspaper3k
 bs4
 beautifulsoup4==4.6.0
 feedparser==5.2.1
+psycopg2
+mysqlclient
